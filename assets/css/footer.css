@@ -1,0 +1,8 @@
+@media screen and (min-height: 1100px) and (max-height: 1200px) and (min-width: 1374px) {
+  .sticky-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

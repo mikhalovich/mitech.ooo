@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Baumans&family=Roboto+Slab:wght@300;400;500;700&display=swap");
+@import url(./checkbox.css);
+@import url(./swiper.css);
+@import url(./footer.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 38 114 171;
+    --color-secondary: 254 229 0;
+    --color-nav: 62 126 180;
+    --color-button: 254 228 0;
+    --color-warning: 254 0 0;
+    --color-cultured: 244 244 244;
+    --color-green: 6 166 127;
+    --color-purple: 66 103 178;
+    --color-pink: 249 77 83;
+  }
+}
