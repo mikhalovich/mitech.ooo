@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-container px-4 mx-auto mt-20">
+  <div class="max-w-container mx-auto mt-20">
     <div class="font-primary text-base font-light text-primary mb-24">
       <div
         class="grid gap-4 grid-cols-1 tablet:grid-cols-3 [&>*]:justify-self-center mb-10"
@@ -80,7 +80,7 @@
             :modules="[SwiperPagination, SwiperNavigation, SwiperKeyboard]"
             :navigation="{
               nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              prevEl: '.swiper-button-prev'
             }"
             :loop="true"
             :pagination="{ clickable: true }"
@@ -128,7 +128,7 @@
             :modules="[SwiperPagination, SwiperNavigation, SwiperKeyboard]"
             :navigation="{
               nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+              prevEl: '.swiper-button-prev'
             }"
             :loop="true"
             :pagination="{ clickable: true }"
@@ -167,11 +167,10 @@
         </div>
       </div>
     </div>
-    <Footer />
   </div>
 </template>
 
 <script setup>
-import sliderClients from "../assets/data/sliderClients.json";
-import sliderPartners from "../assets/data/sliderPartners.json";
+import sliderClients from '../assets/data/sliderClients.json';
+import sliderPartners from '../assets/data/sliderPartners.json';
 </script>

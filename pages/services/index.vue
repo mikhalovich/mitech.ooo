@@ -87,13 +87,11 @@
         </div>
       </div>
     </div>
-
-    <Footer />
   </div>
 </template>
 
 <script setup>
-const pathToTransportaion = "/services/transportation";
-const pathToFreightForwading = "/services/freight-forwarding";
-const pathToSoftwareDevelopment = "/services/software-development";
+const pathToTransportaion = '/services/transportation';
+const pathToFreightForwading = '/services/freight-forwarding';
+const pathToSoftwareDevelopment = '/services/software-development';
 </script>

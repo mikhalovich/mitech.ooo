@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-container px-4 mx-auto mt-10 overflow-hidden">
+  <div class="max-w-container px-4 mt-10 overflow-hidden w-full">
     <header class="flex items-center justify-between">
       <NuxtLink class="font-logo text-5xl font-bold text-secondary" to="/">
         MITech
@@ -31,7 +31,7 @@
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/',
-              'decoration-secondary': location === '/',
+              'decoration-secondary': location === '/'
             }"
           >
             <NuxtLink to="/">Главная</NuxtLink>
@@ -41,7 +41,7 @@
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/about',
-              'decoration-secondary': location === '/about',
+              'decoration-secondary': location === '/about'
             }"
           >
             <NuxtLink to="/about">О нас</NuxtLink>
@@ -57,7 +57,7 @@
               'decoration-secondary':
                 location === '/services' ||
                 location === '/services/transportation' ||
-                location === '/services/freight-forwarding',
+                location === '/services/freight-forwarding'
             }"
           >
             <NuxtLink to="/services">Услуги</NuxtLink>
@@ -67,7 +67,7 @@
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)] last:mr-0"
             :class="{
               underline: location === '/contacts',
-              'decoration-secondary': location === '/contacts',
+              'decoration-secondary': location === '/contacts'
             }"
           >
             <NuxtLink to="/contacts">Контакты</NuxtLink>
@@ -79,7 +79,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted, onUnmounted } from "vue";
+import { computed, onMounted, onUnmounted } from 'vue';
 
 const route = useRoute();
 const location = computed(() => route.path);
@@ -94,9 +94,9 @@ const closeMenu = () => {
 };
 
 onMounted(() => {
-  window.addEventListener("scroll", closeMenu);
+  window.addEventListener('scroll', closeMenu);
 });
 onUnmounted(() => {
-  window.removeEventListener("scroll", closeMenu);
+  window.removeEventListener('scroll', closeMenu);
 });
 </script>

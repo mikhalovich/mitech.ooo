@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky-footer max-w-container mx-auto pb-10">
+  <div class="sticky-footer max-w-container mx-auto pb-10 w-full">
     <div
       class="flex flex-col tablet:flex-row justify-between items-center font-primary text-base font-normal text-primary"
     >

@@ -3,7 +3,7 @@
     <div
       class="flex flex-col laptop:flex-row justify-around desktop:justify-between items-center laptop:items-start mb-24 font-primary text-primary"
     >
-      <div class="max-w-medium mb-8 laptop:mb-0">
+      <div class="max-w-medium mb-8 laptop:mb-0 mr-4">
         <div class="mb-14">
           <h1 class="text-4xlg font-medium mb-4">Задать вопрос</h1>
           <p class="text-base font-light">
@@ -86,7 +86,7 @@
                   class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
                   :class="{
                     'border-warning focus:border-warning outline-warning':
-                      v$.name.$error,
+                      v$.name.$error
                   }"
                   @change="v$.name.$touch"
                 />
@@ -109,7 +109,7 @@
                   :class="{
                     'border-warning focus:border-warning outline-warning':
                       v$.email.$error,
-                    'border-[#42d392] outline-[#42d392] ': !v$.email.$invalid,
+                    'border-[#42d392] outline-[#42d392] ': !v$.email.$invalid
                   }"
                   @change="v$.email.$touch"
                 />
@@ -148,7 +148,7 @@
                   :class="{
                     'border-warning focus:border-warning outline-warning':
                       v$.message.$error,
-                    'border-[#42d392] outline-[#42d392] ': !v$.message.$invalid,
+                    'border-[#42d392] outline-[#42d392] ': !v$.message.$invalid
                   }"
                   @change="v$.message.$touch"
                 ></textarea>
@@ -207,62 +207,58 @@
         </div>
       </form>
     </div>
-
-    <div class="pb-10 font-primary font-normal text-primary">
-      <p>© ООО “ЭмАйТех” 2023</p>
-    </div>
   </div>
 </template>
 
 <script setup>
-import { useVuelidate } from "@vuelidate/core";
+import { useVuelidate } from '@vuelidate/core';
 import {
   required,
   email,
   minLength,
   maxLength,
-  helpers,
-} from "@vuelidate/validators";
+  helpers
+} from '@vuelidate/validators';
 
 const formData = reactive({
-  name: "",
-  email: "",
-  message: "",
-  checkbox: null,
+  name: '',
+  email: '',
+  message: '',
+  checkbox: null
 });
 
 const checkboxObject = reactive({
   value: false,
-  isPressed: false,
+  isPressed: false
 });
 
 const rules = computed(() => {
   return {
     name: {
-      required: helpers.withMessage("Это поле обязательное", required),
+      required: helpers.withMessage('Это поле обязательное', required)
     },
     email: {
-      required: helpers.withMessage("Это поле обязательное", required),
-      email: helpers.withMessage("e-mail введён некорректно", email),
+      required: helpers.withMessage('Это поле обязательное', required),
+      email: helpers.withMessage('e-mail введён некорректно', email)
     },
     message: {
-      required: helpers.withMessage("Это поле обязательное", required),
+      required: helpers.withMessage('Это поле обязательное', required),
       minLength: helpers.withMessage(
-        "Сообщение должно быть длиннее тридцати символов",
+        'Сообщение должно быть длиннее тридцати символов',
         minLength(30)
       ),
       maxLength: helpers.withMessage(
-        "Сообщение не должно быть длиннее пятисот символов",
+        'Сообщение не должно быть длиннее пятисот символов',
         maxLength(500)
-      ),
+      )
     },
 
     checkbox: {
       required: helpers.withMessage(
-        "Для отправки разрешите обработку персональных данных",
+        'Для отправки разрешите обработку персональных данных',
         required
-      ),
-    },
+      )
+    }
   };
 });
 

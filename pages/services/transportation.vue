@@ -79,7 +79,5 @@
         Получить консультацию по услуге
       </button>
     </NuxtLink>
-
-    <Footer class="mt-12 px-4" />
   </div>
 </template>

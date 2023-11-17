@@ -20,10 +20,9 @@
       </div>
       <img src="~/assets/svg/index-page/stock.svg" alt="stock" />
     </div>
-    <Footer />
   </div>
 </template>
 
 <script setup>
-const pathToTransportaion = "/services/transportation";
+const pathToTransportaion = '/services/transportation';
 </script>
