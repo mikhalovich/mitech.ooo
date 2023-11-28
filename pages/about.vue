@@ -71,9 +71,9 @@
         class="flex flex-col desktop:flex-row items-center justify-between last:[&>*]:mt-10 desktop:last:[&>*]:mt-0"
       >
         <div
-          class="flex flex-col justify-between items-center max-w-[24rem] tablet:max-w-2xlg tablet:px-14 pt-10 pb-14 rounded-2xl shadow-normal"
+          class="flex flex-col justify-between items-center max-w-[24rem] tablet:max-w-2xlg tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
         >
-          <h3 class="mb-7 text-4xlg font-medium">Наши клиенты</h3>
+          <h3 class="mb-1 text-4xlg font-medium">Наши клиенты</h3>
 
           <Swiper
             class="w-full"
@@ -103,14 +103,25 @@
 
             <SwiperSlide v-for="client in sliderClients">
               <div class="flex justify-center items-center">
-                <div class="flex flex-col items-center w-96 h-52 mb-4 mx-8">
-                  <img class="w-20 h-20" :src="client.img" alt="client" />
+                <div
+                  class="flex flex-col items-center w-auto px-6 h-52 mb-7 mx-8"
+                >
+                  <img class="w-auto h-14" :src="client.img" alt="client" />
 
-                  <h4 class="pb-2 text-2xl font-normal">
+                  <h4 class="pb-2 text-2xl font-normal text-center">
                     {{ client.name }}
                   </h4>
-                  <p class="text-base text-center">
-                    {{ client.message }}
+                  <p class="text-base text-center mt-1">
+                    {{ client.specialization }}
+                  </p>
+                  <a
+                    :href="`https://${client.website}`"
+                    class="text-xlg text-center"
+                  >
+                    {{ client.website }}
+                  </a>
+                  <p class="text-base text-center mt-1">
+                    {{ client.contacts }}
                   </p>
                 </div>
               </div>
@@ -119,9 +130,9 @@
         </div>
 
         <div
-          class="flex flex-col justify-between items-center max-w-[24rem] tablet:max-w-2xlg tablet:px-14 pt-10 pb-14 rounded-2xl shadow-normal"
+          class="flex flex-col justify-between items-center max-w-[24rem] tablet:max-w-2xlg tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
         >
-          <h3 class="mb-7 text-4xlg font-medium">Наши партнеры</h3>
+          <h3 class="mb-1 text-4xlg font-medium">Наши партнеры</h3>
 
           <Swiper
             class="w-full"
@@ -151,14 +162,25 @@
 
             <SwiperSlide v-for="partner in sliderPartners">
               <div class="flex justify-center items-center">
-                <div class="flex flex-col items-center w-96 h-52 mb-4 mx-8">
-                  <img class="w-20 h-20" :src="partner.img" alt="partner" />
+                <div
+                  class="flex flex-col items-center w-auto px-6 h-52 mb-7 mx-8"
+                >
+                  <img class="w-auto h-14" :src="partner.img" alt="partner" />
 
-                  <h4 class="pb-2 text-2xl font-normal">
+                  <h4 class="pb-2 text-2xl font-normal text-center">
                     {{ partner.name }}
                   </h4>
-                  <p class="text-base text-center">
-                    {{ partner.message }}
+                  <p class="text-base text-center mt-1">
+                    {{ partner.specialization }}
+                  </p>
+                  <a
+                    :href="`https://${partner.website}`"
+                    class="text-xlg text-center"
+                  >
+                    {{ partner.website }}
+                  </a>
+                  <p class="text-base text-center mt-1">
+                    {{ partner.contacts }}
                   </p>
                 </div>
               </div>

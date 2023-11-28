@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky-footer max-w-container mx-auto pb-10 w-full">
+  <div class="max-w-container mx-auto pb-10 w-full mt-6">
     <div
       class="flex flex-col tablet:flex-row justify-between items-center font-primary text-base font-normal text-primary"
     >
@@ -9,11 +9,11 @@
       >
         <div class="flex items-center">
           <img src="~/assets/svg/app-footer/envelope.svg" alt="envelope" />
-          <p class="pl-2">info.mitech@yandex.com</p>
+          <p class="pl-2">contact@mitech.ooo</p>
         </div>
         <div class="flex items-center">
           <img src="~/assets/svg/app-footer/phone.svg" alt="envelope" />
-          <p class="pl-2">+375292929292</p>
+          <p class="pl-2">+375292837757</p>
         </div>
         <div class="flex items-center">
           <img src="~/assets/svg/app-footer/spot.svg" alt="envelope" />
