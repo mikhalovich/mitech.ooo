@@ -4,18 +4,11 @@
       <div>
         <h2 class="text-4xlg mb-6">Разнообразие услуг</h2>
         <p class="font-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare
-          massa eget egestas purus. Vitae turpis massa sed elementum tempus
-          egestas. Dui sapien eget mi proin. Sed risus ultricies tristique nulla
-          aliquet. Elementum tempus egestas sed sed. Cursus risus at ultrices mi
-          tempus imperdiet nulla malesuada pellentesque. Congue nisi vitae
-          suscipit tellus mauris a. Hac habitasse platea dictumst vestibulum.
-          Cursus euismod quis viverra nibh cras pulvinar mattis. Nibh tortor id
-          aliquet lectus proin nibh nisl condimentum. A diam sollicitudin tempor
-          id eu nisl nunc. Mi ipsum faucibus vitae aliquet nec ullamcorper sit
-          amet. Ac ut consequat semper viverra nam. Amet volutpat consequat
-          mauris nunc. Mauris pharetra et ultrices neque ornare aenean.
+          Логистические услуги позволяют сократить время доставки грузов 
+          и минимизировать риски потерь и повреждений. Благодаря 
+          использованию современных технологий и инновационному  подходу, 
+          компания MiTech  может обеспечить высокий уровень сервиса и 
+          удовлетворить потребности самых требовательных клиентов.
         </p>
       </div>
       <div
@@ -34,8 +27,11 @@
               Международные автомобильные грузоперевозки
             </h3>
             <p class="font-light mb-6">
-              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое разное.
-              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое разное.
+              Мы специализируемся на организации автогрузоперевозок по 
+              странам СНГ. Наш опыт и обширная сеть партнеров позволяют 
+              нам осуществлять транспортировки различных видов грузов – 
+              от малогабаритных до крупногабаритных. Независимо от вашего 
+              бизнеса, мы найдем оптимальное для вас решение.
             </p>
 
             <LearnMoreButton :pathToTransportaion="pathToTransportaion" />
@@ -54,9 +50,12 @@
             <h3 class="text-xlg text-center mt-36 mb-2">
               <p>Экспедирование грузов</p>
             </h3>
-            <p class="font-light mb-6">
-              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое разное.
-              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое разное.
+            <p class="font-light mb-11">
+              Мы предоставляем полный спектр услуг по международному 
+              экспедированию, включая таможенное оформление, контроль 
+              качества и отслеживание грузов. Наши экспедиторы 
+              обеспечивают бесперебойный процесс доставки, минимизируя 
+              риски и сокращая время транзита.
             </p>
 
             <LearnMoreButton :pathToFreightForwading="pathToFreightForwading" />
@@ -76,8 +75,10 @@
               Разработка ПО для транспортных компаний
             </h3>
             <p class="font-light mb-6">
-              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое разное.
-              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое разное.
+              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое 
+              разное.
+              Текст заглушка для сео о чем угодно. Бла-бла-бла и всякое 
+              разное.
             </p>
 
             <LearnMoreButton
@@ -91,6 +92,13 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Автомобильные грузоперевозки: перевозка грузов любой сложности',
+  meta: [
+    { name: 'description', content: 'Необходима надежная перевозка грузов по странам СНГ? Качественный сервис и своевременная доставка грузов с MiTech  +375292837757' }
+  ],
+});
+
 const pathToTransportaion = '/services/transportation';
 const pathToFreightForwading = '/services/freight-forwarding';
 const pathToSoftwareDevelopment = '/services/software-development';

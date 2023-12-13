@@ -6,47 +6,30 @@
         <div class="flex flex-col laptop:flex-row mb-4">
           <div class="mb-20 laptop:mb-0">
             <p class="indent-6 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare
-              massa eget egestas purus. Vitae turpis massa sed elementum tempus
-              egestas. Dui sapien eget mi proin. Sed risus ultricies tristique
-              nulla aliquet. Elementum tempus egestas sed sed. Cursus risus at
-              ultrices mi tempus imperdiet nulla malesuada pellentesque. Congue
-              nisi vitae suscipit tellus mauris a. Hac habitasse platea dictumst
-              vestibulum. Cursus euismod quis viverra nibh cras pulvinar mattis.
-              Nibh tortor id aliquet lectus proin nibh nisl condimentum. A diam
-              sollicitudin tempor id eu nisl nunc. Mi ipsum faucibus vitae
-              aliquet nec ullamcorper sit amet. Ac ut consequat semper viverra
-              nam. Amet volutpat consequat mauris nunc. Mauris pharetra et
-              ultrices neque ornare aenean.
+              Услуга по экспедированию грузов включает в себя организацию 
+              транспортировки груза, таможенное оформление и страхование 
+              груза.
             </p>
             <ul class="list-disc [&>li]:ml-6">
               <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Компания берет на себя полный спектр работ, связанных с 
+                доставкой груза от отправителя до получателя,
               </li>
               <li>
-                Ornare massa eget egestas purus. Vitae turpis massa sed
-                elementum tempus egestas. Dui sapien eget mi proin.
+                Оформляет необходимые документы,
               </li>
               <li>
-                Sed risus ultricies tristique nulla aliquet. Elementum tempus
-                egestas sed sed.
+                Выбирает оптимальный маршрут и способ транспортировки, 
               </li>
               <li>
-                Cursus risus at ultrices mi tempus imperdiet nulla malesuada
-                pellentesque. Congue nisi vitae suscipit tellus mauris a. Hac
-                habitasse platea dictumst vestibulum.
-              </li>
-              <li>
-                Cursus euismod quis viverra nibh cras pulvinar mattis. Nibh
-                tortor id aliquet lectus proin nibh nisl condimentum. A diam
-                sollicitudin tempor id eu nisl nunc. Mi ipsum faucibus vitae
-                aliquet nec ullamcorper sit amet. Ac ut consequat semper viverra
-                nam. Amet volutpat consequat mauris nunc. Mauris pharetra et
-                ultrices neque ornare aenean.
+                Защищает груз от потенциальных рисков. 
               </li>
             </ul>
+            <p class="indent-6 mt-4">
+              Такой подход позволяет клиентам сосредоточиться на своих 
+              бизнес-целях и не тратить время и ресурсы на логистические 
+              вопросы.
+            </p>
           </div>
           <img
             class="self-center relative bottom-20 float-right max-w-[16rem] laptop:max-w-md laptop:ml-20"
@@ -54,20 +37,6 @@
             alt="a bus"
           />
         </div>
-        <p class="indent-6 mb-10">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare
-          massa eget egestas purus. Vitae turpis massa sed elementum tempus
-          egestas. Dui sapien eget mi proin. Sed risus ultricies tristique nulla
-          aliquet. Elementum tempus egestas sed sed. Cursus risus at ultrices mi
-          tempus imperdiet nulla malesuada pellentesque. Congue nisi vitae
-          suscipit tellus mauris a. Hac habitasse platea dictumst vestibulum.
-          Cursus euismod quis viverra nibh cras pulvinar mattis. Nibh tortor id
-          aliquet lectus proin nibh nisl condimentum. A diam sollicitudin tempor
-          id eu nisl nunc. Mi ipsum faucibus vitae aliquet nec ullamcorper sit
-          amet. Ac ut consequat semper viverra nam. Amet volutpat consequat
-          mauris nunc. Mauris pharetra et ultrices neque ornare aenean.
-        </p>
       </div>
     </div>
     <NuxtLink to="../contacts">
@@ -79,3 +48,10 @@
     </NuxtLink>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'Перевозка и экспедирование грузов от компании MiTech',
+  meta: { name: 'description', content: 'Экспедирование грузов по РБ, РФ и странам СНГ, +375292837757' }
+});
+</script>

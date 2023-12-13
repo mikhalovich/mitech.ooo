@@ -220,6 +220,11 @@ import {
   helpers
 } from '@vuelidate/validators';
 
+useHead({
+  title: 'Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость',
+  meta: { name: 'description', content: 'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo' }
+});
+
 const formData = reactive({
   name: '',
   email: '',

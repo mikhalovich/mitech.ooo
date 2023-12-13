@@ -6,5 +6,14 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/tailwind.css"],
 
-  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "@zadigetvoltaire/nuxt-gtm"],
+
+  runtimeConfig: {
+    public: {
+      gtm: {
+        id: 'GTM-M62Z5K4M',
+        enabled: true,
+      }
+    }
+  }
 });
