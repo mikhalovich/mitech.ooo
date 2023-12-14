@@ -7,14 +7,14 @@
       <div
         class="flex flex-col laptop:flex-row [&>*]:mb-8 laptop:[&>*]:mb-0 laptop:[&>*]:mr-8 last:[&>*]:mr-0 last:[&>*]:mb-0"
       >
-        <div class="flex items-center">
+        <a class="flex items-center" href="mailto:contact@mitech.ooo">
           <img src="~/assets/svg/app-footer/envelope.svg" alt="envelope" />
           <p class="pl-2">contact@mitech.ooo</p>
-        </div>
-        <div class="flex items-center">
+        </a>
+        <a class="flex items-center" href="tel:+375292837757">
           <img src="~/assets/svg/app-footer/phone.svg" alt="envelope" />
           <p class="pl-2">+375292837757</p>
-        </div>
+        </a>
         <div class="flex items-center">
           <img src="~/assets/svg/app-footer/spot.svg" alt="envelope" />
           <p class="pl-2">ул. Гаспадарчая, 21А, оф. 107, 230005</p>

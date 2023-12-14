@@ -20,8 +20,8 @@
               <p><b>Адрес</b>: РБ, г. Гродно,</p>
               <p>ул. Гаспадарчая, 21А, оф. 107, 230005</p>
             </div>
-            <p><b>Телефон</b>: +375292837757</p>
-            <p><b>e-mail</b>: contact@mitech.ooo</p>
+            <p><b>Телефон</b>: <a href="tel:+375292837757">+375292837757</a></p>
+            <p><b>e-mail</b>: <a href="mailto:contact@mitech.ooo">contact@mitech.ooo</a></p>
           </div>
 
           <div>
