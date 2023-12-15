@@ -16,7 +16,7 @@
       >
         <div class="flex flex-col items-center relative mt-36">
           <img
-            class="absolute bottom-2/3"
+            class="absolute bottom-3/4 mobile-xxl:bottom-2/3"
             src="~/assets/svg/services-pages/bus.svg"
             alt="a bus"
           />
@@ -40,7 +40,7 @@
 
         <div class="flex flex-col items-center relative">
           <img
-            class="absolute bottom-2/3"
+            class="absolute bottom-3/4 mobile-xl:bottom-2/3"
             src="~/assets/svg/services-pages/opened_bus.svg"
             alt="a bus"
           />

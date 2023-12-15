@@ -16,6 +16,8 @@ export default {
 
     extend: {
       screens: {
+        'mobile-xl': '455px',
+        'mobile-xxl': '576px',
         tablet: '768px',
         'max-tablet': { max: '768px' },
         laptop: '1024px',
