@@ -8,6 +8,9 @@
 
 <script setup>
 useHead({
-  title: "MITech",
+  title: 'MITech',
+  meta: [
+  { name: 'google-site-verification', content: 'a0_Z6alQ3eFmrUyx_DhTcxX2UOrrdtEsbfvQ-jXKKnE' }
+  ]
 });
 </script>

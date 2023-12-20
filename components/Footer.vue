@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-container mx-auto pb-10 w-full mt-6">
+  <footer class="max-w-container mx-auto pb-10 w-full mt-6">
     <div
       class="flex flex-col tablet:flex-row justify-between items-center font-primary text-base font-normal text-primary px-10"
     >
@@ -21,5 +21,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
