@@ -11,7 +11,7 @@ useHead({
   title: 'MITech',
   meta: [
   { name: 'google-site-verification', content: 'a0_Z6alQ3eFmrUyx_DhTcxX2UOrrdtEsbfvQ-jXKKnE' },
-  { name: 'yandex-verification', content: '4e1fa97fdfbc999e' }
+  { name: 'yandex-verification', content: 'f5491f05b32e59f1' }
   ]
 });
 </script>
