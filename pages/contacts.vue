@@ -243,7 +243,6 @@ const checkboxObject = reactive({
 });
 
 const rules = computed(() => {
-  console.log(formData.captcha)
   return {
     name: {
       required: helpers.withMessage('Это поле обязательное', required)
