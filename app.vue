@@ -7,6 +7,10 @@
 </template>
 
 <script setup>
+import { useRecaptchaProvider } from 'vue-recaptcha';
+
+useRecaptchaProvider();
+
 useHead({
   title: 'MITech',
   meta: [
