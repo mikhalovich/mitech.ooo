@@ -164,7 +164,7 @@
               Подтвердите, что вы не робот:
               <mark class="text-xl bg-[white] text-warning">*</mark>
             </p>
-            Captcha
+            <button @click="recaptcha">Execute recaptcha</button>
           </div>
 
           <div>
@@ -219,11 +219,14 @@ import {
   maxLength,
   helpers
 } from '@vuelidate/validators';
+import { useReCaptcha } from 'vue-recaptcha-v3';
 
 useHead({
   title: 'Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость',
   meta: { name: 'description', content: 'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo' }
 });
+
+const { executeRecaptcha, recaptchaLoaded } = useReCaptcha()
 
 const formData = reactive({
   name: '',
@@ -269,12 +272,18 @@ const rules = computed(() => {
 
 const v$ = useVuelidate(rules, formData);
 
-const submitForm = () => {
+function submitForm() {
   checkboxObject.isPressed = true;
   v$.value.$validate();
 };
 
 function toggleValue() {
   checkboxObject.value = !checkboxObject.value;
+}
+
+const recaptcha = async () => {
+  await recaptchaLoaded()
+
+  const token = await executeRecaptcha('checkout')
 }
 </script>
