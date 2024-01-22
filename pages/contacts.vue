@@ -164,7 +164,10 @@
               Подтвердите, что вы не робот:
               <mark class="text-xl bg-[white] text-warning">*</mark>
             </p>
-            <Checkbox />
+            <Checkbox v-model = "formData.captcha" />
+            <span v-if="v$.captcha.$error" class="text-sm text-warning">
+              {{ v$.captcha.$errors[0]?.$message }}
+            </span>
           </div>
 
           <div>
@@ -230,7 +233,8 @@ const formData = reactive({
   name: '',
   email: '',
   message: '',
-  checkbox: null
+  checkbox: null,
+  captcha: ''
 });
 
 const checkboxObject = reactive({
@@ -239,6 +243,7 @@ const checkboxObject = reactive({
 });
 
 const rules = computed(() => {
+  console.log(formData.captcha)
   return {
     name: {
       required: helpers.withMessage('Это поле обязательное', required)
@@ -264,7 +269,10 @@ const rules = computed(() => {
         'Для отправки разрешите обработку персональных данных',
         required
       )
-    }
+    },
+    captcha: {
+      required: helpers.withMessage('Это поле обязательное', required)
+    },
   };
 });
 
