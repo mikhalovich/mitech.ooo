@@ -202,6 +202,15 @@
             </div>
           </div>
 
+          <Transition>
+            <p
+              v-if="result"
+              class="text-green-500"
+              :class="{ 'text-red-500': isError }"
+            >
+              {{ result }}
+            </p>
+          </Transition>
           <button
             @click.prevent="submitForm"
             type="submit"
@@ -233,6 +242,8 @@ useHead({
 
 const phone = ref("");
 const city = ref("");
+const result = ref("");
+const isError = ref(false);
 const formData = reactive({
   name: '',
   email: '',
@@ -281,39 +292,49 @@ const rules = computed(() => {
 const v$ = useVuelidate(rules, formData);
 
 async function submitForm() {
-  checkboxObject.isPressed = true;
-  v$.value.$validate();
-  const body = {
-    name: formData.name,
-    email: formData.email,
-    message: formData.message
-  };
-
-  if (city.value) {
-    body.city = city.value;
-  }
-  if (phone.value) {
-    body.phone = phone.value;
-  }
-
-  try {
-    await $fetch("https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender", {
-      method: "POST",
-      body: JSON.stringify(body)
-    });
-    formData = {
-      name: '',
-      email: '',
-      message: '',
-      checkbox: null,
-      captcha: ''
+  if (formData.name && formData.email && formData.message && checkboxObject.value && formData.captcha) {
+    checkboxObject.isPressed = true;
+    v$.value.$validate();
+    const body = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message
     };
-    city.value = '';
-    phone.value = '';
-  } catch (error) {
-    console.log(error);
-  }
 
+    if (city.value) {
+      body.city = city.value;
+    }
+    if (phone.value) {
+      body.phone = phone.value;
+    }
+
+    try {
+      const response = await $fetch('https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender', {
+        method: 'POST',
+        body: JSON.stringify(body)
+      });
+      result.value = response.message;
+      Object.assign(formData, {
+        name: '',
+        email: '',
+        message: '',
+        checkbox: null,
+        captcha: ''
+      });
+      city.value = '';
+      phone.value = '';
+      checkboxObject.value = false;
+      v$.value.$reset();
+    } catch (error) {
+      result.value = 'Что-то пошло не так, попробуйте ещё раз';
+      isError.value = true;
+    } finally {
+      setTimeout(() => {
+        result.value = '';
+        isError.value = false;
+      }, 2000);
+    }
+  }
 };
 
 function toggleValue() {
