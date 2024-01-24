@@ -121,6 +121,7 @@
               <label>
                 <span> Телефон:</span>
                 <input
+                  v-model="phone"
                   class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
                   type="text"
                 />
@@ -129,6 +130,7 @@
               <label>
                 <span> Город:</span>
                 <input
+                  v-model="city"
                   class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
                   type="text"
                 />
@@ -229,6 +231,8 @@ useHead({
   meta: { name: 'description', content: 'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo' }
 });
 
+const phone = ref("");
+const city = ref("");
 const formData = reactive({
   name: '',
   email: '',
@@ -236,7 +240,6 @@ const formData = reactive({
   checkbox: null,
   captcha: ''
 });
-
 const checkboxObject = reactive({
   value: false,
   isPressed: false
@@ -277,9 +280,40 @@ const rules = computed(() => {
 
 const v$ = useVuelidate(rules, formData);
 
-function submitForm() {
+async function submitForm() {
   checkboxObject.isPressed = true;
   v$.value.$validate();
+  const body = {
+    name: formData.name,
+    email: formData.email,
+    message: formData.message
+  };
+
+  if (city.value) {
+    body.city = city.value;
+  }
+  if (phone.value) {
+    body.phone = phone.value;
+  }
+
+  try {
+    await $fetch("https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender", {
+      method: "POST",
+      body
+    });
+    formData = {
+      name: '',
+      email: '',
+      message: '',
+      checkbox: null,
+      captcha: ''
+    };
+    city.value = '';
+    phone.value = '';
+  } catch (error) {
+    console.log(error);
+  }
+
 };
 
 function toggleValue() {
