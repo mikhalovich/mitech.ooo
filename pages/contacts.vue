@@ -299,7 +299,7 @@ async function submitForm() {
   try {
     await $fetch("https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender", {
       method: "POST",
-      body
+      body: JSON.stringify(body)
     });
     formData = {
       name: '',
