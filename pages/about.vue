@@ -200,7 +200,8 @@ import sliderPartners from '../assets/data/sliderPartners.json';
 useHead({
   title: 'О компании MiTech',
   meta: [
-    { name: 'description', content: 'Транспортно-экспедиторская компания "MiTech" – ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов.' }
+    { name: 'description', content: 'Транспортно-экспедиторская компания "MiTech" – ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов.' },
+    { name: 'keywords', content: 'о компании' }
   ],
 });
 </script>
