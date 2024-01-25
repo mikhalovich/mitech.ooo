@@ -20,8 +20,11 @@
               <p><b>Адрес</b>: РБ, г. Гродно,</p>
               <p>ул. Гаспадарчая, 21А, оф. 107, 230005</p>
             </div>
-            <p><b>Телефон</b>: <a href="tel:+375292837757">+375292837757</a></p>
-            <p><b>e-mail</b>: <a href="mailto:contact@mitech.ooo">contact@mitech.ooo</a></p>
+            <!-- <p><b>Телефон</b>: <a href="tel:+375292837757">+375292837757</a></p> -->
+            <p>
+              <b>e-mail</b>:
+              <a href="mailto:contact@mitech.ooo">contact@mitech.ooo</a>
+            </p>
           </div>
 
           <div>
@@ -166,7 +169,7 @@
               Подтвердите, что вы не робот:
               <mark class="text-xl bg-[white] text-warning">*</mark>
             </p>
-            <Checkbox v-model = "formData.captcha" />
+            <Checkbox v-model="formData.captcha" />
             <span v-if="v$.captcha.$error" class="text-sm text-warning">
               {{ v$.captcha.$errors[0]?.$message }}
             </span>
@@ -204,7 +207,10 @@
             @click.prevent="submitForm"
             type="submit"
             class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
-            :class="{ 'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled, 'bg-secondary': !isButtonDisabled }"
+            :class="{
+              'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled,
+              'bg-secondary': !isButtonDisabled
+            }"
           >
             Отправить
           </button>
@@ -226,18 +232,22 @@ import {
   maxLength,
   helpers
 } from '@vuelidate/validators';
-import { Checkbox } from 'vue-recaptcha'
+import { Checkbox } from 'vue-recaptcha';
 
 useHead({
   title: 'Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость',
   meta: [
-    { name: 'description', content: 'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo' },
+    {
+      name: 'description',
+      content:
+        'Заказать и просчитать стоимость международной перевозки. contact@mitech.ooo'
+    },
     { name: 'keywords', content: 'Контакты в Гродно' }
   ]
 });
 
-const phone = ref("");
-const city = ref("");
+const phone = ref('');
+const city = ref('');
 const isAlertShowed = ref(false);
 const checkbox = ref(false);
 const formData = reactive({
@@ -276,13 +286,20 @@ const rules = computed(() => {
     },
     captcha: {
       required: helpers.withMessage('Это поле обязательное', required)
-    },
+    }
   };
 });
 
 const isButtonDisabled = computed(() => {
-  const emailPattern = new RegExp("^.+@.+\\..+$");
-  return !(formData.name && emailPattern.test(formData.email) && formData.message.length >= 30 && formData.message.length <= 500 && checkbox.value && formData.captcha);
+  const emailPattern = new RegExp('^.+@.+\\..+$');
+  return !(
+    formData.name &&
+    emailPattern.test(formData.email) &&
+    formData.message.length >= 30 &&
+    formData.message.length <= 500 &&
+    checkbox.value &&
+    formData.captcha
+  );
 });
 
 const v$ = useVuelidate(rules, formData);
@@ -303,10 +320,13 @@ async function submitForm() {
     }
 
     try {
-      await $fetch('https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender', {
-        method: 'POST',
-        body: JSON.stringify(body)
-      });
+      await $fetch(
+        'https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender',
+        {
+          method: 'POST',
+          body: JSON.stringify(body)
+        }
+      );
       isAlertShowed.value = true;
       Object.assign(formData, {
         name: '',
@@ -321,10 +341,10 @@ async function submitForm() {
       v$.value.$reset();
     } catch (error) {
     } finally {
-      setTimeout(() => isAlertShowed.value = false, 2000);
+      setTimeout(() => (isAlertShowed.value = false), 2000);
     }
   }
-};
+}
 </script>
 
 <style>
