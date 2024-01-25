@@ -175,12 +175,11 @@
           <div>
             <div class="flex">
               <input
-                @click="toggleValue"
+                v-model="checkbox"
                 type="checkbox"
                 class="custom-checkbox"
                 id="checkbox"
                 name="checkbox"
-                value="true"
               />
               <label class="text-sm tablet:text-base font-light" for="checkbox">
                 <p class="flex flex-col tablet:flex-row">
@@ -195,32 +194,26 @@
                 </p>
               </label>
             </div>
-            <div v-if="!checkboxObject.value && checkboxObject.isPressed">
+            <div v-if="!checkbox">
               <p class="text-sm text-warning">
                 {{ v$.checkbox.$errors[0]?.$message }}
               </p>
             </div>
           </div>
-
-          <Transition>
-            <p
-              v-if="result"
-              class="text-green-500"
-              :class="{ 'text-red-500': isError }"
-            >
-              {{ result }}
-            </p>
-          </Transition>
           <button
             @click.prevent="submitForm"
             type="submit"
             class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] bg-secondary hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
+            :class="{ 'cursor-not-allowed bg-[#EBEBE4] hover:shadow-none': isButtonDisabled }"
           >
             Отправить
           </button>
         </div>
       </form>
     </div>
+    <Transition name="fade">
+      <Alert v-if="isAlertShowed" />
+    </Transition>
   </div>
 </template>
 
@@ -242,18 +235,14 @@ useHead({
 
 const phone = ref("");
 const city = ref("");
-const result = ref("");
-const isError = ref(false);
+const isAlertShowed = ref(false);
+const checkbox = ref(false);
 const formData = reactive({
   name: '',
   email: '',
   message: '',
-  checkbox: null,
+  checkbox: checkbox.value,
   captcha: ''
-});
-const checkboxObject = reactive({
-  value: false,
-  isPressed: false
 });
 
 const rules = computed(() => {
@@ -276,7 +265,6 @@ const rules = computed(() => {
         maxLength(500)
       )
     },
-
     checkbox: {
       required: helpers.withMessage(
         'Для отправки разрешите обработку персональных данных',
@@ -289,12 +277,15 @@ const rules = computed(() => {
   };
 });
 
+const isButtonDisabled = computed(() => {
+  const emailPattern = new RegExp("^.+@.+\\..+$");
+  return !(formData.name && emailPattern.test(formData.email) && formData.message.length >= 30 && formData.message.length <= 500 && checkbox.value && formData.captcha);
+});
+
 const v$ = useVuelidate(rules, formData);
 
 async function submitForm() {
-  if (formData.name && formData.email && formData.message && checkboxObject.value && formData.captcha) {
-    checkboxObject.isPressed = true;
-    v$.value.$validate();
+  if (await v$.value.$validate()) {
     const body = {
       name: formData.name,
       email: formData.email,
@@ -309,11 +300,11 @@ async function submitForm() {
     }
 
     try {
-      const response = await $fetch('https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender', {
+      await $fetch('https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender', {
         method: 'POST',
         body: JSON.stringify(body)
       });
-      result.value = response.message;
+      isAlertShowed.value = true;
       Object.assign(formData, {
         name: '',
         email: '',
@@ -323,21 +314,24 @@ async function submitForm() {
       });
       city.value = '';
       phone.value = '';
-      checkboxObject.value = false;
+      checkbox.value = false;
       v$.value.$reset();
     } catch (error) {
-      result.value = 'Что-то пошло не так, попробуйте ещё раз';
-      isError.value = true;
     } finally {
-      setTimeout(() => {
-        result.value = '';
-        isError.value = false;
-      }, 2000);
+      setTimeout(() => isAlertShowed.value = false, 2000);
     }
   }
 };
-
-function toggleValue() {
-  checkboxObject.value = !checkboxObject.value;
-}
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
