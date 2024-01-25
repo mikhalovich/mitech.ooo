@@ -204,7 +204,7 @@
             @click.prevent="submitForm"
             type="submit"
             class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] bg-secondary hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
-            :class="{ 'cursor-not-allowed bg-[#EBEBE4] hover:shadow-none': isButtonDisabled }"
+            :class="{ 'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled }"
           >
             Отправить
           </button>
@@ -281,6 +281,7 @@ const isButtonDisabled = computed(() => {
   const emailPattern = new RegExp("^.+@.+\\..+$");
   return !(formData.name && emailPattern.test(formData.email) && formData.message.length >= 30 && formData.message.length <= 500 && checkbox.value && formData.captcha);
 });
+console.log(isButtonDisabled.value)
 
 const v$ = useVuelidate(rules, formData);
 
