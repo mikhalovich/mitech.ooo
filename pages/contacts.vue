@@ -240,7 +240,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo'
+        'Заказать и просчитать стоимость международной перевозки. contact@mitech.ooo'
     },
     { name: 'keywords', content: 'Контакты в Гродно' }
   ]
