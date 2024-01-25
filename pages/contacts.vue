@@ -203,8 +203,8 @@
           <button
             @click.prevent="submitForm"
             type="submit"
-            class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] bg-secondary hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
-            :class="{ 'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled }"
+            class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
+            :class="{ 'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled, 'bg-secondary': !isButtonDisabled }"
           >
             Отправить
           </button>
