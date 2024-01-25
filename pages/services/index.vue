@@ -2,7 +2,7 @@
   <div class="max-w-container px-4 mx-auto mt-20">
     <div class="text-base font-normal font-primary text-primary mb-4">
       <div>
-        <h2 class="text-4xlg mb-6">Разнообразие услуг</h2>
+        <h1 class="text-4xlg font-medium mb-6">Разнообразие услуг</h1>
         <p class="font-light">
           Логистические услуги позволяют сократить время доставки грузов и
           минимизировать риски потерь и повреждений. Благодаря использованию

@@ -1,6 +1,7 @@
 <template>
   <div class="max-w-container mx-auto mt-20">
     <div class="font-primary text-base font-light text-primary mb-24">
+      <h1 class="text-4xlg font-medium mb-4">О компании</h1>
       <div
         class="grid gap-4 grid-cols-1 tablet:grid-cols-3 [&>*]:justify-self-center mb-10"
       >
