@@ -230,7 +230,10 @@ import { Checkbox } from 'vue-recaptcha'
 
 useHead({
   title: 'Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость',
-  meta: { name: 'description', content: 'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo' }
+  meta: [
+    { name: 'description', content: 'Заказать и просчитать стоимость международной перевозки. +375292837757, contact@mitech.ooo' },
+    { name: 'keywords', content: 'Контакты в Гродно' }
+  ]
 });
 
 const phone = ref("");
@@ -281,7 +284,6 @@ const isButtonDisabled = computed(() => {
   const emailPattern = new RegExp("^.+@.+\\..+$");
   return !(formData.name && emailPattern.test(formData.email) && formData.message.length >= 30 && formData.message.length <= 500 && checkbox.value && formData.captcha);
 });
-console.log(isButtonDisabled.value)
 
 const v$ = useVuelidate(rules, formData);
 
