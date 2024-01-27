@@ -19,5 +19,26 @@
     "specialization": "Крупнейший производитель молочной продукции в Республике Беларусь",
     "website": "www.milk.by",
     "contacts": "+375 152 43 01 72, info@milk.by"
+  },
+  "ClientFour": {
+    "img": "./ntcxxi.png",
+    "name": "ООО \"НТЦ XXI\"",
+    "specialization": "Один из крупнейших производителей сыров «Моцарелла» в Российской Федерации",
+    "website": "www.syrovar.ru",
+    "contacts": "+7 495 151 51 11, info@syrovar.ru"
+  },
+  "ClientFive": {
+    "img": "./marketline.png",
+    "name": "ООО \"Маркет Лайн\"",
+    "specialization": "Один из крупнейших производителей сыров «Моцарелла» в Российской Федерации",
+    "website": "www.market-line.spb.ru",
+    "contacts": "8-812-372-53-50, office@mline.spb.ru"
+  },
+  "ClientSix": {
+    "img": "./tels.svg",
+    "name": "ООО \"Т.Э.Л.С.-БиУай\"",
+    "specialization": "Международный провайдер логистических услуг",
+    "website": "www.telsglobal.ru",
+    "contacts": "+375 17 352-49-31, tels-by@telsgroup.by"
   }
 }

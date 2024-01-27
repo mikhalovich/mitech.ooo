@@ -20,9 +20,9 @@
               alt="calendar"
             />
             <p class="px-6 py-5">
-              Транспортно-экспедиторская компания "MiTech" – ваш 
-              надежный партнер в сфере международных грузоперевозок и 
-              экспедирования грузов, на протяжении 13 лет.
+              Транспортно-экспедиторская компания "MiTech" – ваш надежный
+              партнер в сфере международных грузоперевозок и экспедирования
+              грузов, на протяжении 13 лет.
             </p>
           </div>
         </div>
@@ -41,9 +41,9 @@
               alt="todo"
             />
             <p class="px-6 py-5">
-              Обеспечиваем комплексное обслуживание грузовых 
-              автоперевозок, прозрачную систему управления и 
-              эффективные решения для вашего бизнеса
+              Обеспечиваем комплексное обслуживание грузовых автоперевозок,
+              прозрачную систему управления и эффективные решения для вашего
+              бизнеса
             </p>
           </div>
         </div>
@@ -62,9 +62,9 @@
               alt="planet"
             />
             <p class="px-6 py-5">
-              90% наших клиентов возвращаются к нам с новыми заказами 
-              или рекомендуют нас своим деловым партнерам, благодаря 
-              налаженным процессам и высокому уровню сервиса.
+              90% наших клиентов возвращаются к нам с новыми заказами или
+              рекомендуют нас своим деловым партнерам, благодаря налаженным
+              процессам и высокому уровню сервиса.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@
         class="flex flex-col desktop:flex-row items-center justify-between last:[&>*]:mt-10 desktop:last:[&>*]:mt-0"
       >
         <div
-          class="flex flex-col justify-between items-center max-w-[24rem] tablet:max-w-2xlg tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
+          class="flex flex-col justify-between items-center max-w-container tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
         >
           <h3 class="mb-1 text-4xlg font-medium">Наши клиенты</h3>
 
@@ -86,7 +86,7 @@
             }"
             :loop="true"
             :pagination="{ clickable: true }"
-            :slides-per-view="1"
+            :slides-per-view="2"
             :keyboard="true"
             :grab-cursor="true"
           >
@@ -103,8 +103,8 @@
               />
             </div>
 
-            <SwiperSlide v-for="client in sliderClients">
-              <div class="flex justify-center items-center">
+            <SwiperSlide v-for="client in sliderClients" class="items-center">
+              <div class="flex justify-center items-center w-full">
                 <div
                   class="flex flex-col items-center w-auto px-6 h-52 mb-7 mx-8"
                 >
@@ -127,11 +127,12 @@
                   </p>
                 </div>
               </div>
+              <div class="divider"></div>
             </SwiperSlide>
           </Swiper>
         </div>
 
-        <div
+        <!-- <div
           class="flex flex-col justify-between items-center max-w-[24rem] tablet:max-w-2xlg tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
         >
           <h3 class="mb-1 text-4xlg font-medium">Наши партнеры</h3>
@@ -188,7 +189,7 @@
               </div>
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -201,8 +202,23 @@ import sliderPartners from '../assets/data/sliderPartners.json';
 useHead({
   title: 'О компании MiTech',
   meta: [
-    { name: 'description', content: 'Транспортно-экспедиторская компания "MiTech" – ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов.' },
+    {
+      name: 'description',
+      content:
+        'Транспортно-экспедиторская компания "MiTech" – ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов.'
+    },
     { name: 'keywords', content: 'о компании' }
-  ],
+  ]
 });
 </script>
+
+<style>
+.swiper-slide.swiper-slide-active {
+  display: flex;
+}
+.swiper-slide-active .divider {
+  height: 150px;
+  border-right: 1px solid;
+  width: 0px;
+}
+</style>
