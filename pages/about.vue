@@ -73,7 +73,7 @@
         class="flex flex-col desktop:flex-row items-center justify-between last:[&>*]:mt-10 desktop:last:[&>*]:mt-0"
       >
         <div
-          class="flex flex-col justify-between items-center laptop:max-w-container max-w-2xlg mobile-xl:max-w-services-card tablet:max-w-2xlg tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
+          class="flex flex-col justify-between items-center laptop:max-w-container max-w-services-card tablet:max-w-2xlg tablet:px-8 pt-4 pb-8 rounded-2xl shadow-normal"
         >
           <h3 class="mb-1 text-4xlg font-medium">Наши клиенты</h3>
 
