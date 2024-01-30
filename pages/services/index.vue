@@ -23,9 +23,9 @@
           <div
             class="flex flex-col items-center justify-items-center max-w-2xlg px-5 last:[&>*]:mb-8 border-0 rounded-2xl shadow-normal"
           >
-            <h3 class="text-xlg text-center mt-36 mb-2">
+            <h2 class="text-xlg text-center mt-36 mb-2">
               Международные автомобильные грузоперевозки
-            </h3>
+            </h2>
             <p class="font-light mb-6">
               Мы специализируемся на организации автогрузоперевозок по странам
               СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
@@ -47,9 +47,9 @@
           <div
             class="flex flex-col items-center justify-items-center max-w-2xlg px-5 last:[&>*]:mb-8 border-0 rounded-2xl shadow-normal"
           >
-            <h3 class="text-xlg text-center mt-36 mb-2">
+            <h2 class="text-xlg text-center mt-36 mb-2">
               <p>Экспедирование грузов</p>
-            </h3>
+            </h2>
             <p class="font-light mb-11">
               Мы предоставляем полный спектр услуг по международному
               экспедированию, включая таможенное оформление, контроль качества и
@@ -72,9 +72,9 @@
           <div
             class="flex flex-col items-center justify-items-center max-w-2xlg px-5 last:[&>*]:mb-8 border-0 rounded-2xl shadow-normal"
           >
-            <h3 class="text-xlg text-center mt-32 mb-2">
+            <h2 class="text-xlg text-center mt-32 mb-2">
               Разработка ПО для управления автопарком из электромобилей
-            </h3>
+            </h2>
             <p class="font-light mb-6">
               Мы разрабатываем программные комплексы для ведения автоматизации
               учета электромобилей в автопарках юридических лиц.

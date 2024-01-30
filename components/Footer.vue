@@ -3,7 +3,7 @@
     <div
       class="flex flex-col tablet:flex-row justify-between items-center font-primary text-base font-normal text-primary px-10"
     >
-      <p class="mb-8 tablet:mb-0">© ООО “ЭмАйТех” 2023</p>
+      <p class="mb-8 tablet:mb-0">© ООО “ЭмАйТех” 2024</p>
       <div
         class="flex flex-col laptop:flex-row [&>*]:mb-8 laptop:[&>*]:mb-0 laptop:[&>*]:mr-8 last:[&>*]:mr-0 last:[&>*]:mb-0"
       >
