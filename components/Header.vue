@@ -5,7 +5,12 @@
         MITech
       </NuxtLink>
 
-      <a class="font-primary text-xl font-normal text-navigate mobile-l:ml-auto mobile-l:mr-6 tablet:hidden" href="tel:+375292837757">+375292837757</a>
+      <a
+        class="font-primary text-xl font-normal text-navigate mobile-l:ml-auto mobile-l:mr-6 tablet:hidden"
+        href="tel:+375292837757"
+      >
+        +375292837757
+      </a>
 
       <nav class="font-primary text-2xl font-normal text-navigate">
         <div class="tablet:hidden" @click="toggleMenu">
@@ -24,36 +29,39 @@
           />
         </div>
 
-        <ul
-          class="fixed tablet:static flex flex-col tablet:flex-row items-center w-full bg-cultured/90 tablet:bg-cultured/0 z-20 list-none transition-all duration-300 overflow-x-hidden [&>li]:my-6 tablet:[&>li]:my-0 [&>li]:mr-3 laptop:[&>li]:mr-12 [&>li]:transition-[text-shadow] [&>li]:duration-[0.1s]"
+        <div
+          class="fixed tablet:static flex flex-col tablet:flex-row items-center w-full bg-cultured/90 tablet:bg-cultured/0 z-20 list-none transition-all duration-300 overflow-x-hidden [&>a]:my-6 tablet:[&>a]:my-0 [&>a]:mr-3 laptop:[&>a]:mr-12 [&>a]:transition-[text-shadow] [&>a]:duration-[0.1s]"
           :class="[!isPressed ? 'left-full' : 'left-0']"
         >
-          <li
+          <a
               class="hidden text-xl active:text-secondary tablet:block tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+              href="tel:+375292837757"
             >
-            <a href="tel:+375292837757">+375292837757</a>
-          </li>
-          <li
+            +375292837757
+          </a>
+          <NuxtLink
             @click="toggleMenu"
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/',
               'decoration-secondary': location === '/'
             }"
+            to="/"
           >
-            <NuxtLink to="/">Главная</NuxtLink>
-          </li>
-          <li
+            Главная
+          </NuxtLink>
+          <NuxtLink
             @click="toggleMenu"
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/about',
               'decoration-secondary': location === '/about'
             }"
+            to="/about"
           >
-            <NuxtLink to="/about">О нас</NuxtLink>
-          </li>
-          <li
+            О нас
+          </NuxtLink>
+          <NuxtLink
             @click="toggleMenu"
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
@@ -66,20 +74,22 @@
                 location === '/services/transportation' ||
                 location === '/services/freight-forwarding'
             }"
+            to="/services"
           >
-            <NuxtLink to="/services">Услуги</NuxtLink>
-          </li>
-          <li
+            Услуги
+          </NuxtLink>
+          <NuxtLink
             @click="toggleMenu"
             class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)] last:mr-0"
             :class="{
               underline: location === '/contacts',
               'decoration-secondary': location === '/contacts'
             }"
+            to="/contacts"
           >
-            <NuxtLink to="/contacts">Контакты</NuxtLink>
-          </li>
-        </ul>
+            Контакты
+          </NuxtLink>
+        </div>
       </nav>
     </header>
   </div>
