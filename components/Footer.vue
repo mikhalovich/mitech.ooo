@@ -11,13 +11,13 @@
           <img src="~/assets/svg/app-footer/envelope.svg" alt="envelope" />
           <p class="pl-2">contact@mitech.ooo</p>
         </a>
-        <a class="flex items-center" href="tel:+375292837757">
+        <a class="flex items-center" href="tel:+375297827334">
           <img src="~/assets/svg/app-footer/phone.svg" alt="envelope" />
-          <p class="pl-2">+375292837757</p>
+          <p class="pl-2">+375297827334</p>
         </a>
         <div class="flex items-center">
           <img src="~/assets/svg/app-footer/spot.svg" alt="envelope" />
-          <p class="pl-2">ул. Гаспадарчая, 21А, оф. 107, 230005</p>
+          <p class="pl-2">Гродно, ул. Гаспадарчая, 23/4-1, оф. 205, 230005</p>
         </div>
       </div>
     </div>
