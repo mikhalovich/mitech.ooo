@@ -3,10 +3,16 @@ import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
   css: ["~/assets/css/tailwind.css"],
 
-  modules: ["@nuxtjs/tailwindcss", "nuxt-swiper", "@zadigetvoltaire/nuxt-gtm", "@nuxtjs/robots", "vue-recaptcha/nuxt"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "nuxt-swiper",
+    "@zadigetvoltaire/nuxt-gtm",
+    "@nuxtjs/robots",
+    "vue-recaptcha/nuxt",
+    "@nuxtjs/prismic"
+  ],
 
   runtimeConfig: {
     public: {
@@ -23,5 +29,9 @@ export default defineNuxtConfig({
         v3SiteKey: '6Lcdix8pAAAAAGtU7J-k9JnnWyYg-plgJBrK4Sk7',
       }
     }
+  },
+
+  prismic: {
+    endpoint: "mitech1"
   }
 });

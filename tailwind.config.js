@@ -22,6 +22,7 @@ export default {
         tablet: '768px',
         'max-tablet': { max: '768px' },
         laptop: '1024px',
+        'laptop-xl': '1200px',
         desktop: '1370px'
       },
 

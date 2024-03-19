@@ -13,7 +13,7 @@
       </a>
 
       <nav class="font-primary text-2xl font-normal text-navigate relative">
-        <div class="tablet:hidden" @click="toggleMenu">
+        <div class="laptop:hidden" @click="toggleMenu">
           <img
             v-if="!isPressed"
             src="../assets/svg/burger-open.svg"
@@ -30,18 +30,18 @@
         </div>
 
         <div
-          class="fixed tablet:static flex flex-col tablet:flex-row items-center w-full bg-cultured/90 tablet:bg-cultured/0 z-20 list-none transition-all duration-300 overflow-x-hidden [&>a]:my-6 tablet:[&>a]:my-0 gap-3 laptop:gap-12 [&>a]:transition-[text-shadow] [&>a]:duration-[0.1s]"
+          class="fixed laptop:static flex flex-col laptop:flex-row items-center w-full bg-cultured/90 laptop:bg-cultured/0 z-20 list-none transition-all duration-300 overflow-x-hidden [&>a]:my-6 laptop:[&>a]:my-0 gap-3 laptop-xl:gap-12 [&>a]:transition-[text-shadow] [&>a]:duration-[0.1s]"
           :class="[!isPressed ? 'left-full' : 'left-0']"
         >
           <a
-              class="hidden text-xl active:text-secondary tablet:block tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+              class="hidden text-xl active:text-secondary laptop:block laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
               href="tel:+375297827334"
             >
             +375297827334
           </a>
           <NuxtLink
             @click="toggleMenu"
-            class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/',
               'decoration-secondary': location === '/'
@@ -52,7 +52,7 @@
           </NuxtLink>
           <NuxtLink
             @click="toggleMenu"
-            class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/about',
               'decoration-secondary': location === '/about'
@@ -67,7 +67,7 @@
             @mouseenter="showLinks"
             @mouseleave="hideLinks"
             id="services"
-            class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline:
                 location === '/services' ||
@@ -83,7 +83,7 @@
             Услуги
           </NuxtLink>
           <div v-else class="h-8 my-6 overflow-hidden height-transition" :class="{ '!h-[132px]': isOpened }">
-            <p @click="toggleDropDown" class="text-center">Услуги</p>
+            <p @click="toggleDropDown" class="text-center cursor-pointer">Услуги</p>
             <Transition name="fade">
               <div class="mt-1 overflow-hidden">
                 <AppearingLinks @toggle-menu="toggleMenu" />
@@ -92,7 +92,29 @@
           </div>
           <NuxtLink
             @click="toggleMenu"
-            class="active:text-secondary tablet:active:text-primary tablet:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+            :class="{
+              underline: location === '/blog',
+              'decoration-secondary': location === '/blog'
+            }"
+            to="/blog"
+          >
+            Блог
+          </NuxtLink>
+          <NuxtLink
+            @click="toggleMenu"
+            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
+            :class="{
+              underline: location === '/prices',
+              'decoration-secondary': location === '/prices'
+            }"
+            to="/prices"
+          >
+            Цены
+          </NuxtLink>
+          <NuxtLink
+            @click="toggleMenu"
+            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
             :class="{
               underline: location === '/contacts',
               'decoration-secondary': location === '/contacts'
@@ -131,7 +153,7 @@ const isOpened = ref(false);
 
 const isMobile = computed(() => {
   if (process.client) {
-    return window.innerWidth < 768;
+    return window.innerWidth < 1024;
   }
 });
 

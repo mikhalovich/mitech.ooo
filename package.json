@@ -7,13 +7,17 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "slicemachine": "start-slicemachine"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/prismic": "^3.1.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@slicemachine/adapter-nuxt": "^0.3.37",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "nuxt": "^3.7.4",
+    "slice-machine-ui": "^1.25.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
@@ -22,6 +26,7 @@
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
     "nuxt-swiper": "^1.2.2",
+    "prismic-javascript": "^3.0.2",
     "vue-recaptcha": "^3.0.0-alpha.6"
   }
 }
