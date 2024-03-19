@@ -309,7 +309,8 @@ async function submitForm() {
     const body = {
       name: formData.name,
       email: formData.email,
-      message: formData.message
+      message: formData.message,
+      isContact: true
     };
 
     if (city.value) {
