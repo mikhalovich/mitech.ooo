@@ -463,7 +463,8 @@ const formData = reactive({
   contactByPhone: false,
   contactByEmail: false,
   checkbox: false,
-  captcha: ''
+  captcha: '',
+  isContact: false
 });
 
 const rules = computed(() => {
@@ -541,7 +542,7 @@ async function submitForm() {
 
     try {
       await $fetch(
-        'https://obk14cl9r5.execute-api.eu-north-1.amazonaws.com/default/email-calculator',
+        'https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender',
         {
           method: 'POST',
           body: JSON.stringify(formData)
@@ -569,7 +570,8 @@ async function submitForm() {
         contactByPhone: false,
         contactByEmail: false,
         checkbox: false,
-        captcha: ''
+        captcha: '',
+        isContact: false
       });
       v$.value.$reset();
     } catch (error) {
