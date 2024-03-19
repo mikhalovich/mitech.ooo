@@ -51,13 +51,13 @@ onBeforeMount(async () => {
     const prevPostResult = await client.getSingle('post', { after: `${postResult.id}`, orderings: 'my.post.date' });
     prevPost.value = prevPostResult;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
   try {
     const nextPostResult = await client.getSingle('post', { after: `${postResult.id}` });
     nextPost.value = nextPostResult;
   } catch (error) {
-    throw error;
+    console.error(error);
   }
   isLoading.value = false;
 })
