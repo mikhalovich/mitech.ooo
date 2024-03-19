@@ -541,7 +541,7 @@ async function submitForm() {
 
     try {
       await $fetch(
-        'https://irrqvyipre.execute-api.eu-north-1.amazonaws.com/default/email-calculator',
+        'https://obk14cl9r5.execute-api.eu-north-1.amazonaws.com/default/email-calculator',
         {
           method: 'POST',
           body: JSON.stringify(formData)
