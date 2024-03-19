@@ -13,7 +13,7 @@
         <p class="opacity-80 mb-6">{{ post.date }}</p>
         <prismic-rich-text class="mb-20 o-80 flex flex-col gap-3 indent-4" :field="post.content"></prismic-rich-text>
       </div>
-      <div class="w-full h-full grid items-center grid-cols-2 gap-4 pt-20 mb-16">
+      <div class="w-full h-full grid items-center grid-cols-2 gap-4 pt-20 mb-16" :class="{ 'hidden': !prevPost && !nextPost }">
         <AnotherPostCard
           v-if="prevPost"
           :is-next="false"
