@@ -541,7 +541,7 @@ async function submitForm() {
 
     try {
       await $fetch(
-        'https://ynyuh5c2q7acuc3alm5kqxphce0gaagt.lambda-url.eu-north-1.on.aws/',
+        'https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender',
         {
           method: 'POST',
           body: JSON.stringify(formData)
