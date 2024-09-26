@@ -11,7 +11,8 @@ export default {
   theme: {
     fontFamily: {
       primary: ['Roboto Slab'],
-      logo: ['Baumans']
+      logo: ['Baumans'],
+      'logo-secondary': ['Inter'],
     },
 
     extend: {
@@ -23,7 +24,8 @@ export default {
         'max-tablet': { max: '768px' },
         laptop: '1024px',
         'laptop-xl': '1200px',
-        desktop: '1370px'
+        desktop: '1370px',
+        'desktop-xxl': '1920px',
       },
 
       maxWidth: {
@@ -31,7 +33,8 @@ export default {
         medium: '440px',
         'index-heading': '456px',
         '2xlg': '664px',
-        container: '1376px'
+        container: '1376px',
+        'desktop-xxl': '1920px',
       },
 
       colors: {
@@ -56,7 +59,8 @@ export default {
 
       boxShadow: {
         normal: '2px 2px 15px 1px #00000029',
-        buttonActive: '0px 0px 20px 8px #00000020'
+        buttonActive: '0px 0px 20px 8px #00000020',
+        header: '0px 2px 8px 0px #20212414',
       }
     }
   }
