@@ -21,6 +21,10 @@ useHead({
 </script>
 
 <style>
+body {
+  overflow-x: hidden;
+}
+
 .loader {
   width: 98px;
   height: 98px;

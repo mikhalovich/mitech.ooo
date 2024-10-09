@@ -12,7 +12,7 @@ export default {
     fontFamily: {
       primary: ['Roboto Slab'],
       logo: ['Baumans'],
-      'logo-secondary': ['Inter'],
+      'secondary': ['Inter'],
     },
 
     extend: {
@@ -61,7 +61,8 @@ export default {
         normal: '2px 2px 15px 1px #00000029',
         buttonActive: '0px 0px 20px 8px #00000020',
         header: '0px 2px 8px 0px #20212414',
-      }
+        'logistic-card': '1px 2px 9.2px 0px #20212414',
+      },
     }
   }
 };

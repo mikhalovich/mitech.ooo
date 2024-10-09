@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col min-h-screen items-center justify-between">
-    <Header />
+    <templateHeader />
     <slot />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 <script setup>
