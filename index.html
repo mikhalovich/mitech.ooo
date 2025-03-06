@@ -1,206 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <link rel="stylesheet" href="work.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MITECH_By_Safonov</title>
 </head>
+
 <body>
     <div class="mainPage">
-    <nav class="headNavigation">
-    <div class="headNavigation__logo headNavigation__logo-text">MITech</div>
-        <div class="headNavigation__glavnaya headNavigation__text">Главная страница</div>
-        <div class="headNavigation__blog headNavigation__text">Блог</div>
-        <div class="headNavigation__yslygi">
-            <div class="headNavigation__yslygi_box headNavigation__text">Услуги</div>
-            <div class="headNavigation__yslygi_vector"><img src="galkaV.png" class="headNavigation__yslygi_vector-img"></div>
+        <nav class="headNavigation">
+            <p class="headNavigation__logo headNavigation__logo-text">MITech</p>
+            <p class="headNavigation__mainPage headNavigation__text">Главная страница</p>
+            <p class="headNavigation__blog headNavigation__text">Блог</p>
+            <div class="headNavigation__services">
+                <p class="headNavigation__services_box headNavigation__text">Услуги</p>
+                <div class="headNavigation__services_vector"><img src="servicesvector.png"
+                        class="headNavigation__services_vector-img"></div>
+            </div>
+            <p class="headNavigation__prices headNavigation__text">Цены</p>
+            <p class="headNavigation__contacts headNavigation__text">Контакты</p>
+            <p class="headNavigation__phoneNumber headNavigation__text">+375297827334</p>
+            <button type="button" class="headNavigation__phoneCall_button headNavigation__text">Заказать звонок</button>
+        </nav>
+        <!-- block for mobile version of the site -->
+        <div class="mobileHeadNavigator">
+            <div class="mobileHeadNavigator__hamburger-left">
+                <div class="mobileHeadNavigator__hamburger-MITECH headNavigation__logo-text">MITech</div>
+                <div class="mobileHeadNavigator__hamburger-phone"><img src="phone.png"></div>
+            </div>
+            <div class="mobileHeadNavigator__hamburger-button"><img src="hamburger.png"></div>
         </div>
-        <div class="headNavigation__ceny headNavigation__text">Цены</div>
-        <div class="headNavigation__kontakty headNavigation__text">Контакты</div>
-        <div class="headNavigation__pnoneNumber headNavigation__text">+375297827334</div>
-        <button type="button" class="headNavigation__pnoneCall_button headNavigation__text">Заказать звонок</button>
-</nav>
-<!-- блок с гамбургером для мобилки  -->
-<div class="mobileHeadNavigator">
-    <div class="mobileHeadNavigator__hamburger-left">
-        <div class="mobileHeadNavigator__hamburger-MITECH headNavigation__logo-text">MITech</div>
-        <div class="mobileHeadNavigator__hamburger-phone"><img src="phone.png"></div>
-    </div>
-    <div class="mobileHeadNavigator__hamburger-button"><img src="hamburger.png" ></div>
-</div>
 
-<!-- блок "Логистическая компания..."  -->
-<div class="element1">
-    <!-- блок текста над картинкой с водителем  -->
-        <div class="element1__box1 element1__box1-text">Mi.</div>
-        <div class="element1__box2 element1__box2-text">Логистическая компания, созданная для Вас</div>
-        <div class="element1__box3 element1__box3-text">Доставим Ваш груз быстро, безопасно и экономично</div>
-        <div class="element1__box4"> <!-- блок с картинкой с водителем -->
-            <!-- блок с картинкой с водителем-->
-            <img src="truck-driver.png" class="element1__box4_img">
+        <!-- block №1 about Logistic comapny Mi.   -->
+        <div class="element1">
+            <!-- text block over the picture - 'truck-driver'   -->
+            <div class="element1__box1 element1__box1-text">Mi.</div>
+            <div class="element1__box2 element1__box2-text">Логистическая компания, созданная для Вас</div>
+            <div class="element1__box3 element1__box3-text">Доставим Ваш груз быстро, безопасно и экономично</div>
+            <div class="element1__box4">
+                <!-- block with the picture:truck-driver-->
+                <img src="truck-driver.png" class="element1__box4_img">
+            </div>
+            <!-- text block on the right of the picture -->
+            <div class="element1__box5">
+                <div class="box5__box1"> <!-- block about 13 years -->
+                    <img src="Rectangle 2013(1).png" class="box5__box1_img"> <!-- block with the vertical red line -->
+                    <div class="box5__box1_1">
+                        <div class="box5__box1_1-text">Нам 13 лет</div>
+                        <div class="box5__box1_2-text"><br>Чтобы персонализировать веб-браузер,<br> используйте темы,
+                            ночной режим и<br>
+                            другие параметры.</div>
+                    </div>
+                </div>
+                <div class="box5__box2"> <!-- text block about 150 routes -->
+                    <img src="Rectangle 2014.png" class="box5__box2_img"> <!-- -- block with the vertical blue line -->
+                    <div class="box5__box2_box box5__box2_text">150+ маршрутов</div>
+                </div>
+                <div class="box5__box3"> <!-- text block about 5 tons of cargo -->
+                    <img src="Rectangle 2015.png" class="box5__box3_img"> <!-- block with the vertical blue line -->
+                    <div class="box5__box3_box box5__box3_text">5 тонн доставленных<br> грузов ежемесячно</div>
+                </div>
+                <!-- block with button - feedback -->
+                <button type="button" class="box5___button box5___button_text">Заказать обратную
+                    связь&nbsp;&nbsp;&nbsp;<img src="Frame 1336586038.png" class="box5___button_img"></button>
+            </div>
         </div>
-        <!-- блок с текстом правее от картинки с водителем -->
-            <div class="element1__box5"> 
-    <div class="box5__box1"> <!-- блок Нам 13 лет -->
-    <img src="Rectangle 2013(1).png" class="box5__box1_img"> <!-- блок с палочкой Нам 13 лет -->
-    <div class="box5__box1_1">
-        <div class="box5__box1_1-text">Нам 13 лет</div>
-    <div class="box5__box1_2-text"><br>Чтобы персонализировать веб-браузер,<br> используйте темы, ночной режим и<br>
-        другие параметры.</div>
-    </div>
-</div>
-<div class="box5__box2"> <!-- блок 150+ маршрутов -->
-    <img src="Rectangle 2014.png" class="box5__box2_img"> <!-- блок с палочкой 150+ маршрутов -->
-    <div class="box5__box2_box box5__box2_text">150+ маршрутов</div> <!-- блок с текстом 150+ маршрутов -->
-</div>
-<div class="box5__box3"> <!-- блок с 5 тонн... -->
-    <img src="Rectangle 2015.png" class="box5__box3_img"> <!-- блок с палочкой 5 тонн... -->
-    <div class="box5__box3_box box5__box3_text">5 тонн доставленных<br> грузов ежемесячно</div> <!-- блок с текстом 5 тонн... -->
-</div>   
-            <!-- идет кнопка с обратным вызовом -->
-            <button type="button" class="box5___button box5___button_text">Заказать обратную связь&nbsp;&nbsp;&nbsp;<img src="Frame 1336586038.png" class="box5___button_img"></button>
-        </div>    
-</div>
-<!-- Блок Международные автомобильные грузоперевозки - element2-->
- <div class="element2">
-        <div class="element2__box1 element__box1_text">Международные</div>
-        <div class="element2__box2">
-            <div class="element2__box2_imgBox"><img src="Руль.png" class="element2__box2_img"></div>
-            <div class="element2__box2_textBox element2__box2_text-color element__box2_text">автомобильные</div>
-        </div>
-<div class="element2__box3 element__box1_text">грузоперевозки</div>
-        <div class="element2__box4 element2__box4_text">Логистические услуги позволяют сократить время доставки грузов и минимизировать риски потерь и повреждений.<br> 
-<br>Благодаря использованию современных технологий и инновационному подходу, компания MiTech может обеспечить высокий уровень сервиса и удовлетворить потребности самых требовательных клиентов.</div>
- </div>
 
- <!-- Блок Mitech - разнообразие услуг - element 3 -->
-<div class="element3">
-         <div class="element3__box1 element__box1_text">MiTech –&nbsp;</div>
-         <div class="element3__box2">
-<div class="element3__box2_imgBox"><img src="Разнообразие услуг.png" class="element3__box2_img"></div>
-<div class="element3__box2_textBox element3__box2_text-color element3__box2_text">разнообразие</div>
-         </div>
-    <div class="element3__box3 element__box1_text">услуг</div> <!-- верхняя часть нижняя строка  -->
-        <div class="element3__box4_main">
-    <div class="element3__box4 element3__box4-color1">
-            <div class="element3__box4_1 element3__box4_1-text">ВОСТРЕБОВАНО</div>
-            <div class="element3__box4_2 element3__box4_2-text">Международные грузоперевозки</div>
-            <div class="element3__box4_3 element3__box4_3-text">Мы специализируемся на организации автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от вашего бизнеса, мы найдем оптимальное для вас решение.</div>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="element3__box4_4 element3__box4_4-text">Подробнее о грузоперевозках</a>
+        <!-- block №2 about international road freight transport - element2-->
+        <div class="element2">
+            <div class="element2__box1 element__box1_text">Международные</div>
+            <div class="element2__box2">
+                <div class="element2__box2_imgBox"><img src="steeringWheel.png" class="element2__box2_img"></div>
+                <div class="element2__box2_textBox element2__box2_text-color element__box2_text">автомобильные</div>
+            </div>
+            <div class="element2__box3 element__box1_text">грузоперевозки</div>
+            <p class="element2__box4 element2__box4_text">Логистические услуги позволяют сократить время доставки грузов
+                и минимизировать риски потерь и повреждений.<br>
+                <br>Благодаря использованию современных технологий и инновационному подходу, компания MiTech может
+                обеспечить высокий уровень сервиса и удовлетворить потребности самых требовательных клиентов.
+            </p>
         </div>
-        <div class="element3__box4 element3__box4-color2">
-            <div class="element3__box4_1 element3__box4_1-text-color">ВОСТРЕБОВАНО</div>
-            <div class="element3__box4_2 element3__box4_2-text">Экспедирование<br> грузов</div>
-            <div class="element3__box4_3 element3__box4_3-text">Мы специализируемся на организации автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от вашего бизнеса, мы найдем оптимальное для вас решение.</div>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="element3__box4_4 element3__box4_4-text-color">Подробнее об экспедировании</a>
-        </div>
-        <div class="element3__box4 element3__box4-color3">
-            <div class="element3__box4_1 element3__box4_1-text-color3">ВОСТРЕБОВАНО</div>
-            <div class="element3__box4_2_textBox element3__box4_2-text">Разработка ПО для управления автопарком из электромобилей</div>
-            <div class="element3__box4_3_textBox element3__box4_3_text">Мы разрабатываем программные комплексы для ведения автоматизации учета электромобилей в автопарках юридических лиц.</div>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="element3__box4_4 element3__box4_4-text-color3">Подробнее о разработке ПО</a>
-        </div>
-    </div>
-</div>
- <!-- Блок Mitech - надежная команда - element 4 -->
-  <div class="element4">
-    <div class="element4__box1 element__box1_text">MiTech –&nbsp;</div>
-    <div class="element4__box2">
-<div class="element4__box2_imgBox"><img src="Надежная команда.png" class="element4__box2_img"></div>
-<div class="element4__box2_textBox element4__box2_text-color element__box2_text">надежная</div>
-    </div>
-<div class="element4__box3 element__box1_text">команда</div> <!-- верхняя часть нижняя строка  -->
-<!--  часть с большой картинкой и текстом  -->
-    <div class="image-container"> 
-<div class="element4__box4_textBox element4__box4_text">Транспортно-экспедиторская компания "MiTech" – ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов, на 
-    протяжении 13 лет.</div>
-    <div class="element4__box4_NumberBox element4__box4_Number">1</div>
-    </div>
-  </div>
 
+        <!-- block №3 about variety of services - element3 -->
+        <div class="element3">
+            <div class="element3__box1 element__box1_text">MiTech –&nbsp;</div>
+            <div class="element3__box2">
+                <div class="element3__box2_imgBox"><img src="varietyOfServices.png" class="element3__box2_img"></div>
+                <div class="element3__box2_textBox element3__box2_text-color element3__box2_text">разнообразие</div>
+            </div>
+            <div class="element3__box3 element__box1_text">услуг</div>
+            <div class="element3__box4_main">
+                <div class="element3__box4 element3__box4-color1">
+                    <div class="element3__box4_1 element3__box4_1-text">ВОСТРЕБОВАНО</div>
+                    <div class="element3__box4_2 element3__box4_2-text">Международные грузоперевозки</div>
+                    <div class="element3__box4_3 element3__box4_3-text">Мы специализируемся на организации
+                        автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
+                        транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от
+                        вашего бизнеса, мы найдем оптимальное для вас решение.</div>
+                    <a href="https://tpverstak.ru/flex-cheatsheet/"
+                        class="element3__box4_4 element3__box4_4-text">Подробнее о грузоперевозках</a>
+                </div>
+                <div class="element3__box4 element3__box4-color2">
+                    <div class="element3__box4_1 element3__box4_1-text-color">ВОСТРЕБОВАНО</div>
+                    <div class="element3__box4_2 element3__box4_2-text">Экспедирование<br> грузов</div>
+                    <div class="element3__box4_3 element3__box4_3-text">Мы специализируемся на организации
+                        автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
+                        транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от
+                        вашего бизнеса, мы найдем оптимальное для вас решение.</div>
+                    <a href="https://tpverstak.ru/flex-cheatsheet/"
+                        class="element3__box4_4 element3__box4_4-text-color">Подробнее об экспедировании</a>
+                </div>
+                <div class="element3__box4 element3__box4-color3">
+                    <div class="element3__box4_1 element3__box4_1-text-color3">ВОСТРЕБОВАНО</div>
+                    <div class="element3__box4_2_textBox element3__box4_2-text">Разработка ПО для управления автопарком
+                        из электромобилей</div>
+                    <div class="element3__box4_3_textBox element3__box4_3_text">Мы разрабатываем программные комплексы
+                        для ведения автоматизации учета электромобилей в автопарках юридических лиц.</div>
+                    <a href="https://tpverstak.ru/flex-cheatsheet/"
+                        class="element3__box4_4 element3__box4_4-text-color3">Подробнее о разработке ПО</a>
+                </div>
+            </div>
+        </div>
 
-  <!-- Блок Mitech - гарантия безопасности - element 5 -->
-   <div class="element5">
-    <div class="element5__box1 element__box1_text">MiTech –&nbsp;</div>
-    <div class="element5__box2">
-<div class="element5__box2_imgBox"><img src="гарантиябезопасности.png" class="element5__box2_img"></div>
-<div class="element5__box2_textBox element5__box2_text-color element__box2_text">гарантия</div>
-    </div>
-<div class="element5__box3 element__box1_text">безопасности</div> <!-- верхняя часть нижняя строка  --> 
-    <!-- часть с 4-мя картинками -->
-     <div class="element5__box4_main">
-        <div class="element5__box4"> <!-- блок 1 с картинкой машинка, грузчики и груз  -->
-<div class="element5__box4_box1 element5__box4_box1-text">КРУПНОГАБАРИТНЫЕ ГРУЗЫ</div>
-<div class="element5__box4_box2 element5__box4_box2-text">Безопасная доставка крупных грузов.</div>
-<div class="element5__box4_box3"><img src="Group.png" class="element5__box4_box3-img"></div>
-<div class="element5__box4_box4">+</div>
-        </div>
-        <div class="element5__box5"> <!-- блок 2 без картинки  --> 
-                <div class="element5__box5_box1 element5__box5_box1-text">ТЕХНИКА</div>
-                <div class="element5__box5_box2 element5__box5_box2-text">Если вы не нашли описание своего груза, вы можете связаться с нами для уточнения деталей</div>
-               <div class="element5__box5_box3">+</div>
-        </div>
-         <!-- блок 3 с картинкой молоко  -->
-            <div class="element5__box4">
-                <div class="element5__box4_box1 element5__box4_box1-text">ТОВАРЫ НАРОДНОГО ПОТРЕБЛЕНИЯ</div>
-<div class="element5__box4_box2 element5__box4_box2-text">Мы обещаем надежность и оперативность доставки.</div>
-<div class="element5__box4_box3"><img src="milk.png" class="element5__box4_box3-img2"></div>
-<div class="element5__box4_box4">+</div>
+        <!-- block №4 about our good team - element 4 -->
+        <div class="element4">
+            <div class="element4__box1 element__box1_text">MiTech –&nbsp;</div>
+            <div class="element4__box2">
+                <div class="element4__box2_imgBox"><img src="reliableTeam.png" class="element4__box2_img"></div>
+                <div class="element4__box2_textBox element4__box2_text-color element__box2_text">надежная</div>
             </div>
-        <div class="element5__box5"> <!-- блок 4 без картинки  -->
-                <div class="element5__box5_box1 element5__box5_box1-text">ПРОДУКТЫ</div>
-                <div class="element5__box5_box2 element5__box5_box2-text">Будьте уверены, что наши рефрижераторы справятся.</div>
-                <div class="element5__box5_box3">+</div>
-        </div>
-    </div>
-   </div>
-   <!-- Блок Mitech - довольные клиенты - element 6 -->
-<div class="element6">
-    <div class="element6__box1 element__box1_text">MiTech –&nbsp;</div>
-    <div class="element6__box2">
-<div class="element6__box2_imgBox"><img src="смайлдовольный.png" class="element6__box2_img"></div>
-<div class="element6__box2_textBox element6__box2_text-color element__box2_text">довольные</div>
-    </div>
-<div class="element6__box3 element__box1_text">клиенты</div> <!-- верхняя часть нижняя строка  -->
-    <!-- нижняя часть element6 с заказчиками  -->
-    
-        <!-- основной блок нижней части element6 с заказчиками  -->
-        <div class="element6__box2_box1">
-            <div class="element6__box2_box1Main">
-                <button class="element6__box2_box1Main_1Box"><img src="стрелкаEl6.png" class="element6__box2_box1Main_1Boximg"></button>
-             <!--  блок с информацией о заказчиках  -->
-            <div class="element6__box2_box1Main_2">
-                <div class="element6__box2_box1Main_2AText">ТК “МУЛЬТИПРО”</div>
-                <div class="element6__box2_box1Main_2BText">Группа компаний по производству молочной продукции для HORECA & RETAIL</div>
-                <div class="element6__box2_box1Main_2CText">www.alti.pro</div>
-                <div class="element6__box2_box1Main_2DText">8-800-234-90-97, info@alti.pro</div>
-            </div>
-             <!--  box2_box1Main_3 блок с картинкой  -->
-            <div class="element6__box2_box1Main_3">
-                <div class="element6__box2_box1Main_3A"><img src="alti.png" class="element6__box2_box1Main_3Aimg"></div>
-            </div>
-             <!--  box2_box1Main_4 блок с перегородкой  -->
-            <div class="element6__box2_box1Main_4">
-               <img src="LineEl6.png" class="element6__box2_box1Main_4img">
-            </div>
-            <!--  box2_box1Main_5 блок с картинкой  -->
-            <div class="element6__box2_box1Main_5">
-                <div class="element6__box2_box1Main_3A"><img src="malti.png" alt="vsvsdv" class="element6__box2_box1Main_3Aximg"></div>
-            </div>
-            <div class="element6__box2_box1Main_6">
-                <div class="element6__box2_box1Main_2AText">ТК “МУЛЬТИПРО”</div>
-                <div class="element6__box2_box1Main_2BText">Группа компаний по производству молочной продукции для HORECA & RETAIL</div>
-                <div class="element6__box2_box1Main_2CText">www.alti.pro</div>
-                <div class="element6__box2_box1Main_2DText">8-800-234-90-97, info@alti.pro</div>
-            </div>
-                <button class="element6__box2_box1Main_1Box"><img src="стрелкаEl6левая.png" class="element6__box2_box1Main_1Boximg"></button>
+            <div class="element4__box3 element__box1_text">команда</div>
+            <!-- part of block #3 with the big picture with the text inside -->
+            <div class="image-container">
+                <div class="element4__box4_textBox element4__box4_text">Транспортно-экспедиторская компания "MiTech" –
+                    ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов, на
+                    протяжении 13 лет.</div>
+                <div class="element4__box4_NumberBox element4__box4_Number">1</div>
             </div>
         </div>
-<!-- самая нижняя часть element6 с кружками переключения картинок  -->
-      
+
+        <!-- block №5 about the security guarantee  - element 5 -->
+        <div class="element5">
+            <div class="element5__box1 element__box1_text">MiTech –&nbsp;</div>
+            <div class="element5__box2">
+                <div class="element5__box2_imgBox"><img src="securityGuarantee.png" class="element5__box2_img"></div>
+                <div class="element5__box2_textBox element5__box2_text-color element__box2_text">гарантия</div>
+            </div>
+            <div class="element5__box3 element__box1_text">безопасности</div>
+            <!-- part with four small blocks with pictures -->
+            <div class="element5__box4_main">
+                <div class="element5__box4"> <!-- a part with the picture - 'moovers'  -->
+                    <div class="element5__box4_box1 element5__box4_box1-text">КРУПНОГАБАРИТНЫЕ ГРУЗЫ</div>
+                    <div class="element5__box4_box2 element5__box4_box2-text">Безопасная доставка крупных грузов.</div>
+                    <div class="element5__box4_box3"><img src="moovers.png" class="element5__box4_box3-img"></div>
+                    <div class="element5__box4_box4">+</div>
+                </div>
+                <div class="element5__box5"> <!-- a part without picture  -->
+                    <div class="element5__box5_box1 element5__box5_box1-text">ТЕХНИКА</div>
+                    <div class="element5__box5_box2 element5__box5_box2-text">Если вы не нашли описание своего груза, вы
+                        можете связаться с нами для уточнения деталей</div>
+                    <div class="element5__box5_box3">+</div>
+                </div>
+                <!-- a part with the picture - 'bottle of milk'  -->
+                <div class="element5__box4">
+                    <div class="element5__box4_box1 element5__box4_box1-text">ТОВАРЫ НАРОДНОГО ПОТРЕБЛЕНИЯ</div>
+                    <div class="element5__box4_box2 element5__box4_box2-text">Мы обещаем надежность и оперативность
+                        доставки.</div>
+                    <div class="element5__box4_box3"><img src="milk.png" class="element5__box4_box3-img2"></div>
+                    <div class="element5__box4_box4">+</div>
+                </div>
+                <div class="element5__box5"> <!-- a part without picture  -->
+                    <div class="element5__box5_box1 element5__box5_box1-text">ПРОДУКТЫ</div>
+                    <div class="element5__box5_box2 element5__box5_box2-text">Будьте уверены, что наши рефрижераторы
+                        справятся.</div>
+                    <div class="element5__box5_box3">+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- block №6 about the pleased clients  - element 6 -->
+        <div class="element6">
+            <div class="element6__box1 element__box1_text">MiTech –&nbsp;</div>
+            <div class="element6__box2">
+                <div class="element6__box2_imgBox"><img src="pleased.png" class="element6__box2_img"></div>
+                <div class="element6__box2_textBox element6__box2_text-color element__box2_text">довольные</div>
+            </div>
+            <div class="element6__box3 element__box1_text">клиенты</div>
+            <!-- lower part of element6 with the clients  -->
+            <!-- main block of the lower part of element6 with the clients  -->
+            <div class="element6__box2_box1">
+                <div class="element6__box2_box1Main">
+                    <button class="element6__box2_box1Main_1Box"><img src="arrowEl6Right.png"
+                            class="element6__box2_box1Main_1Boximg"></button>
+                    <!--  block with informations about the clients  -->
+                    <div class="element6__box2_box1Main_2">
+                        <div class="element6__box2_box1Main_2AText">ТК “МУЛЬТИПРО”</div>
+                        <div class="element6__box2_box1Main_2BText">Группа компаний по производству молочной продукции
+                            для HORECA & RETAIL</div>
+                        <div class="element6__box2_box1Main_2CText">www.alti.pro</div>
+                        <div class="element6__box2_box1Main_2DText">8-800-234-90-97, info@alti.pro</div>
+                    </div>
+                    <!--  block with the picture about the client  -->
+                    <div class="element6__box2_box1Main_3">
+                        <div class="element6__box2_box1Main_3A"><img src="alti.png"
+                                class="element6__box2_box1Main_3Aimg"></div>
+                    </div>
+                    <!--  block with the vertical line  -->
+                    <div class="element6__box2_box1Main_4">
+                        <img src="LineEl6.png" class="element6__box2_box1Main_4img">
+                    </div>
+                    <!-- block with the picture about the client -->
+                    <div class="element6__box2_box1Main_5">
+                        <div class="element6__box2_box1Main_3A"><img src="malti.png" alt="vsvsdv"
+                                class="element6__box2_box1Main_3Aximg"></div>
+                    </div>
+                    <div class="element6__box2_box1Main_6">
+                        <div class="element6__box2_box1Main_2AText">ТК “МУЛЬТИПРО”</div>
+                        <div class="element6__box2_box1Main_2BText">Группа компаний по производству молочной продукции
+                            для HORECA & RETAIL</div>
+                        <div class="element6__box2_box1Main_2CText">www.alti.pro</div>
+                        <div class="element6__box2_box1Main_2DText">8-800-234-90-97, info@alti.pro</div>
+                    </div>
+                    <button class="element6__box2_box1Main_1Box"><img src="arrowEl6Left.png"
+                            class="element6__box2_box1Main_1Boximg"></button>
+                </div>
+            </div>
+            <!-- lowest block with the switching points  -->
             <div class="element6__box2_box2Main">
                 <div class="element6__box2_box2Main_1"></div>
                 <div class="element6__box2_box2Main_2"></div>
@@ -208,86 +235,88 @@
                 <div class="element6__box2_box2Main_1"></div>
                 <div class="element6__box2_box2Main_1"></div>
             </div>
-        
-    
-</div>
+        </div>
 
-<!-- Блок ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ - element7 -->
- <div class="element7">
-    <div class="element7__box1_text">Часто задаваемые вопросы</div>
-    <div class="element7__box2">
-        <div class="element7__box2A_text">Сколько по времени занимает грузоперевозка?</div>
-        <div class="element7__box2B"><img src="krestick.png" class="element7__box2B_img"></div>
-    </div>
-    <div class="element7__box2">
-        <div class="element7__box2A_text">Какие документы необходимы для перевозки груза?</div>
-        <div class="element7__box2B"><img src="krestick.png" class="element7__box2B_img"></div>
-    </div>
-    <div class="element7__box2">
-        <div class="element7__box2A_text">Какие расценки у ваших услуг?</div>
-        <div class="element7__box2B"><img src="krestick.png" class="element7__box2B_img"></div>
-    </div>
-    <div class="element7__box2">
-        <div class="element7__box2A_text">Почему нужно обращаться именно в MiTech?</div>
-        <div class="element7__box2B"><img src="krestick.png" class="element7__box2B_img"></div>
-    </div>
- </div>
- <!-- Блок ОСТАЛИСЬ ВОПРОСЫ - element8 -->
- <div class="element8">
- <!-- блок element8 с текстом и картинкой внизу -->
-    <div class="element8__boxLeft">
-        <div class="element8__boxLeft_firstBox">
-            <div class="element8__boxLeft_firstBox_AText">Остались вопросы?</div>
-            <div class="element8__boxLeft_firstBox_BText">Опишите, что Вас интересует, и мы<br> обязательно ответим Вам в течение 10 минут</div>
+        <!-- block №7 about the client's questions - element7 -->
+        <div class="element7">
+            <div class="element7__box1_text">Часто задаваемые вопросы</div>
+            <div class="element7__box2">
+                <div class="element7__box2A_text">Сколько по времени занимает грузоперевозка?</div>
+                <div class="element7__box2B"><img src="plus.png" class="element7__box2B_img"></div>
+            </div>
+            <div class="element7__box2">
+                <div class="element7__box2A_text">Какие документы необходимы для перевозки груза?</div>
+                <div class="element7__box2B"><img src="plus.png" class="element7__box2B_img"></div>
+            </div>
+            <div class="element7__box2">
+                <div class="element7__box2A_text">Какие расценки у ваших услуг?</div>
+                <div class="element7__box2B"><img src="plus.png" class="element7__box2B_img"></div>
+            </div>
+            <div class="element7__box2">
+                <div class="element7__box2A_text">Почему нужно обращаться именно в MiTech?</div>
+                <div class="element7__box2B"><img src="plus.png" class="element7__box2B_img"></div>
+            </div>
         </div>
-        <div class="element8__boxLeft_secondBox">
-            <img src="Frame-finger.png" class="element8__boxLeft_secondBoximg">
-        </div>
-    </div>
 
-    <!-- блок ELEMENT8 с input-->
-    
-     <div class="element8__inputBox">
-        <form class="element8__inputBox_box"><input type="text" placeholder="Имя" class="element8__inputBox_text" required-placeholder=""></form>
-        <form class="element8__inputBox_box"><input type="tel" placeholder="Номер телефона" class="element8__inputBox_text"></form>
-        <form class="element8__inputBox_box"><input type="email" placeholder="E-mail" class="element8__inputBox_text"></form>
-        <form><label class="element8__inputBox_checkboxText">
-            <input type="checkbox" name="" value="" >
-            Даю согласие на <a href="" class="element8__inputBox_checkboxText">обработку персональных данных</a>
-          </label>
-        </form>
-        <button type="button" class="element8__inputBox_Buttonbox  element8__inputBox_ButtonboxText">Оставить заявку</button>
-     </div>
-    
- </div>
- <!-- FOOTER-->
-  <div class="footer">
-    <div class="footer__main">
-        <div class="footer__main_firstBox">
-            <div class="footer__main_firstBox_box1 headNavigation__logo-text">MITech</div>
-            <div class="footer__main_firstBox_box2Text">13 лет перевозим грузы по России, Беларуси и странам СНГ</div>
-        </div>
-        
-            <div class="footer__main_secondBox_1">
-                <div class="footer__main_secondBox_1AText">Беларусь, г. Гродно, 230005</div>
-                <div class="footer__main_secondBox_1BText">ул. Гаспадарчая, 23/4-1, оф. 205</div>
-            </div>
-            <div class="footer__main_secondBox_2">
-                <div class="footer__main_secondBox_2A footer__main_secondBox_1AText">contact@mitech.ooo</div>
-                <div class="footer__main_secondBox_2A footer__main_secondBox_1BText">Почта для связи</div>
-            </div>
-            <div class="footer__main_secondBox_3">
-                <img src="telegram.png" class="footer__main_secondBox_3Aimg">
-                <img src="wacap.png" class="footer__main_secondBox_3Aimg">
-                <div>
-                    <div class="footer__main_secondBox_3C_1Text1">+375297827334</div>
-                    <div class="footer__main_secondBox_3C_1Text2">Ежедневно с 07:00 - 21:00</div>
+        <!-- block №8 'if you have another quetions' - element8 -->
+        <div class="element8">
+            <!-- text block with the picture "fingers" -->
+            <div class="element8__boxLeft">
+                <div class="element8__boxLeft_firstBox">
+                    <div class="element8__boxLeft_firstBox_AText">Остались вопросы?</div>
+                    <div class="element8__boxLeft_firstBox_BText">Опишите, что Вас интересует, и мы<br> обязательно
+                        ответим Вам в течение 10 минут</div>
+                </div>
+                <div class="element8__boxLeft_secondBox">
+                    <img src="Frame-finger.png" class="element8__boxLeft_secondBoximg">
                 </div>
             </div>
-        
+            <!-- block with 'input' form-->
+            <div class="element8__inputBox">
+                <form class="element8__inputBox_box"><input type="text" placeholder="Имя"
+                        class="element8__inputBox_text" required-placeholder=""></form>
+                <form class="element8__inputBox_box"><input type="tel" placeholder="Номер телефона"
+                        class="element8__inputBox_text"></form>
+                <form class="element8__inputBox_box"><input type="email" placeholder="E-mail"
+                        class="element8__inputBox_text"></form>
+                <form><label class="element8__inputBox_checkboxText">
+                        <input type="checkbox" name="" value="">
+                        Даю согласие на <a href="" class="element8__inputBox_checkboxText">обработку персональных
+                            данных</a>
+                    </label>
+                </form>
+                <button type="button" class="element8__inputBox_Buttonbox  element8__inputBox_ButtonboxText">Оставить
+                    заявку</button>
+            </div>
+        </div>
+
+        <!-- FOOTER-->
+        <div class="footer">
+            <div class="footer__main">
+                <div class="footer__main_firstBox">
+                    <div class="footer__main_firstBox_box1 headNavigation__logo-text">MITech</div>
+                    <div class="footer__main_firstBox_box2Text">13 лет перевозим грузы по России, Беларуси и странам СНГ
+                    </div>
+                </div>
+                <div class="footer__main_secondBox_1">
+                    <div class="footer__main_secondBox_1AText">Беларусь, г. Гродно, 230005</div>
+                    <div class="footer__main_secondBox_1BText">ул. Гаспадарчая, 23/4-1, оф. 205</div>
+                </div>
+                <div class="footer__main_secondBox_2">
+                    <div class="footer__main_secondBox_2A footer__main_secondBox_1AText">contact@mitech.ooo</div>
+                    <div class="footer__main_secondBox_2A footer__main_secondBox_1BText">Почта для связи</div>
+                </div>
+                <div class="footer__main_secondBox_3">
+                    <img src="telegram.png" class="footer__main_secondBox_3Aimg">
+                    <img src="whatsapp.png" class="footer__main_secondBox_3Aimg">
+                    <div>
+                        <div class="footer__main_secondBox_3C_1Text1">+375297827334</div>
+                        <div class="footer__main_secondBox_3C_1Text2">Ежедневно с 07:00 - 21:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  
-</div>
 </body>
+
 </html>
