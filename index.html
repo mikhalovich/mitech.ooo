@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="work.css">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MITECH_By_Safonov</title>
@@ -12,7 +13,7 @@
     <div class="mainPage">
         <nav class="headNavigation">
             <p class="headNavigation__logo headNavigation__logo-text">MITech</p>
-            <p class="headNavigation__mainPage headNavigation__text">Главная страница</p>
+            <p class="headNavigation__mainPage headNavigation__text-mainPage">Главная страница</p>
             <p class="headNavigation__blog headNavigation__text">Блог</p>
             <div class="headNavigation__services">
                 <p class="headNavigation__services_box headNavigation__text">Услуги</p>
@@ -21,8 +22,8 @@
             </div>
             <p class="headNavigation__prices headNavigation__text">Цены</p>
             <p class="headNavigation__contacts headNavigation__text">Контакты</p>
-            <p class="headNavigation__phoneNumber headNavigation__text">+375297827334</p>
-            <button type="button" class="headNavigation__phoneCall_button headNavigation__text">Заказать звонок</button>
+            <p class="headNavigation__phoneNumber headNavigation__text-phoneNumber">+375297827334</p>
+            <button type="button" class="headNavigation__phoneCall_button headNavigation__text-phoneCall">Заказать звонок</button>
         </nav>
         <!-- block for mobile version of the site -->
         <div class="mobileHeadNavigator">
@@ -33,7 +34,7 @@
             <div class="mobileHeadNavigator__hamburger-button"><img src="hamburger.png"></div>
         </div>
 
-        <!-- block №1 about Logistic comapny Mi.   -->
+        <!-- block №1 about Logistic company Mi.   -->
         <div class="element1">
             <!-- text block over the picture - 'truck-driver'   -->
             <div class="element1__box1 element1__box1-text">Mi.</div>
@@ -76,11 +77,10 @@
                 <div class="element2__box2_textBox element2__box2_text-color element__box2_text">автомобильные</div>
             </div>
             <div class="element2__box3 element__box1_text">грузоперевозки</div>
-            <p class="element2__box4 element2__box4_text">Логистические услуги позволяют сократить время доставки грузов
-                и минимизировать риски потерь и повреждений.<br>
-                <br>Благодаря использованию современных технологий и инновационному подходу, компания MiTech может
+            <div class="element2__box4"><p class="element2__box4_text">Логистические услуги позволяют сократить время доставки грузов
+                и минимизировать риски потерь и повреждений.<br><br>Благодаря использованию современных технологий и инновационному подходу, компания MiTech может
                 обеспечить высокий уровень сервиса и удовлетворить потребности самых требовательных клиентов.
-            </p>
+            </p></div>
         </div>
 
         <!-- block №3 about variety of services - element3 -->
@@ -88,7 +88,7 @@
             <div class="element3__box1 element__box1_text">MiTech –&nbsp;</div>
             <div class="element3__box2">
                 <div class="element3__box2_imgBox"><img src="varietyOfServices.png" class="element3__box2_img"></div>
-                <div class="element3__box2_textBox element3__box2_text-color element3__box2_text">разнообразие</div>
+                <div class="element3__box2_textBox element3__box2_text-color element__box2_text">разнообразие</div>
             </div>
             <div class="element3__box3 element__box1_text">услуг</div>
             <div class="element3__box4_main">
@@ -122,6 +122,18 @@
                         class="element3__box4_4 element3__box4_4-text-color3">Подробнее о разработке ПО</a>
                 </div>
             </div>
+           
+                <div class="element3__box4-mobile">
+                    <div class="element3__box4_1 element3__box4_1-text-color">ВОСТРЕБОВАНО</div>
+                    <div class="element3__box4_2 element3__box4_2-text">Экспедирование<br> грузов</div>
+                    <div class="element3__box4_3 element3__box4_3-text">Мы специализируемся на организации
+                        автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
+                        транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от
+                        вашего бизнеса, мы найдем оптимальное для вас решение.</div>
+                    <a href="https://tpverstak.ru/flex-cheatsheet/"
+                        class="element3__box4_4 element3__box4_4-text-color">Подробнее об экспедировании</a>
+                </div>
+            
         </div>
 
         <!-- block №4 about our good team - element 4 -->
@@ -178,6 +190,14 @@
                     <div class="element5__box5_box3">+</div>
                 </div>
             </div>
+            <div class="element5__box4_main-mobile">
+                <div class="element5__box4"> <!-- a part with the picture - 'moovers'  -->
+                    <div class="element5__box4_box1 element5__box4_box1-text">КРУПНОГАБАРИТНЫЕ ГРУЗЫ</div>
+                    <div class="element5__box4_box2 element5__box4_box2-text">Безопасная доставка крупных грузов.</div>
+                    <div class="element5__box4_box3"><img src="moovers.png" class="element5__box4_box3-img"></div>
+                    <div class="element5__box4_box4">+</div>
+                </div>
+            </div>
         </div>
 
         <!-- block №6 about the pleased clients  - element 6 -->
@@ -192,8 +212,7 @@
             <!-- main block of the lower part of element6 with the clients  -->
             <div class="element6__box2_box1">
                 <div class="element6__box2_box1Main">
-                    <button class="element6__box2_box1Main_1Box"><img src="arrowEl6Right.png"
-                            class="element6__box2_box1Main_1Boximg"></button>
+                    <button class="element6__box2_box1Main_1Box"><img src="arrowEl6Right.png"></button>
                     <!--  block with informations about the clients  -->
                     <div class="element6__box2_box1Main_2">
                         <div class="element6__box2_box1Main_2AText">ТК “МУЛЬТИПРО”</div>
@@ -223,8 +242,7 @@
                         <div class="element6__box2_box1Main_2CText">www.alti.pro</div>
                         <div class="element6__box2_box1Main_2DText">8-800-234-90-97, info@alti.pro</div>
                     </div>
-                    <button class="element6__box2_box1Main_1Box"><img src="arrowEl6Left.png"
-                            class="element6__box2_box1Main_1Boximg"></button>
+                    <button class="element6__box2_box1Main_1Box"><img src="arrowEl6Left.png"></button>
                 </div>
             </div>
             <!-- lowest block with the switching points  -->
@@ -294,7 +312,7 @@
         <div class="footer">
             <div class="footer__main">
                 <div class="footer__main_firstBox">
-                    <div class="footer__main_firstBox_box1 headNavigation__logo-text">MITech</div>
+                    <div class="footer__main_firstBox_box1 footer__main_firstBox_box1-logo-text">MITech</div>
                     <div class="footer__main_firstBox_box2Text">13 лет перевозим грузы по России, Беларуси и странам СНГ
                     </div>
                 </div>
@@ -303,8 +321,8 @@
                     <div class="footer__main_secondBox_1BText">ул. Гаспадарчая, 23/4-1, оф. 205</div>
                 </div>
                 <div class="footer__main_secondBox_2">
-                    <div class="footer__main_secondBox_2A footer__main_secondBox_1AText">contact@mitech.ooo</div>
-                    <div class="footer__main_secondBox_2A footer__main_secondBox_1BText">Почта для связи</div>
+                    <div class="footer__main_secondBox_2A footer__main_secondBox_2AText">contact@mitech.ooo</div>
+                    <div class="footer__main_secondBox_2A footer__main_secondBox_2BText">Почта для связи</div>
                 </div>
                 <div class="footer__main_secondBox_3">
                     <img src="telegram.png" class="footer__main_secondBox_3Aimg">
