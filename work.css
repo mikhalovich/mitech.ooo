@@ -3720,10 +3720,10 @@ height: 22px;   */
     }
 
     .element8__inputBox {
-        /* width: 43%;
-        height: 75%; */
-        width: 392px;
-        height: 244px;
+        width: 89%;
+        height: 68%;
+        /* width: 392px;
+        height: 244px; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -3731,10 +3731,10 @@ height: 22px;   */
     }
 
     .element8__inputBox_box {
-        /* width: 96%;
-        height: 18%; */
-        width: 370px;
-        height: 44px;
+        width: 94%;
+        height: 18%;
+        /* width: 370px;
+        height: 44px; */
         border-radius: 8px;
         border: 1px solid rgba(0, 0, 0, 1);
         padding-left: 20px;
@@ -3763,10 +3763,10 @@ height: 22px;   */
     }
 
     .element8__inputBox_Buttonbox {
-        /* width: 100%;
-        height: 18%; */
-        width: 392px;
-        height: 44px;
+        width: 100%;
+        height: 18%;
+        /* width: 392px;
+        height: 44px; */
         border-radius: 8px;
         background: rgba(255, 187, 0, 1);
         /* border: none; */
