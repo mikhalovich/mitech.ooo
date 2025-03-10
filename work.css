@@ -1677,7 +1677,7 @@ height: 22px;   */
         height: 19px;
         margin-left: 20px;
         margin-top: 36px;
-        border: solid 
+        /* border: solid  */
     }
 
     .element3__box4_4-text {
@@ -1951,16 +1951,16 @@ height: 22px;   */
     .element4__box2_imgBox {
         /* width: 18%;
         height: 100%;  */
-        width: 41px;
-        height: 41px;
+        width: 32px;
+        height: 32px;
         /* border: solid;   */
     }
 
     .element4__box2_img {
         /* width: 55%;
         height: 55%; */
-        width: 32px;
-        height: 32px;
+        width: 23px;
+        height: 23px;
         /* rotate: -24.19 deg; */
         color: #227C3B;
         align-content: center
