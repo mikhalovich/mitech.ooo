@@ -1673,11 +1673,11 @@ height: 22px;   */
     .element3__box4_4 {
         /* width: 91%; 
         height: 5%;  */
-        width: 260px;
+        /* width: 260px; */
         height: 19px;
         margin-left: 20px;
         margin-top: 36px;
-        /* border: solid  */
+        border: solid 
     }
 
     .element3__box4_4-text {
