@@ -551,7 +551,31 @@ table {
     text-align: center;
     vertical-align: auto
 }
-
+@media (max-width: 576px) {
+    
+    .description_firstText {
+        font-family: 'OpenSans-Bold';
+        font-size: 1.625rem;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center
+    }
+    .description_secondText {
+        font-family: 'OpenSans';
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.3;
+        text-align: left
+    }
+    
+    .description_thirstText {
+        font-family: 'OpenSans-Bold';
+        font-size: 1.625rem;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center
+    }
+}
 /* block №2 about international road freight transport - element2 */
 .internationalTransportation {
     display: flex;
@@ -560,8 +584,8 @@ table {
     align-content: flex-start;
     width: 73%;
     max-width: 1044px;
-    height: 461px; 
-    margin: 68px auto 0
+    height: 461x; 
+    margin: 68px auto 0 auto
 }
 
 .internationalTransportation__imgTextBlock {
@@ -586,22 +610,14 @@ table {
 .internationalTransportation__description_secondText-color {
     color: rgba(250, 180, 8, 1);
 }
-.description_thirstText {
-    font-family: 'OpenSans-Bold';
-    width: 100%;
-    font-size: 3.625rem;
-    font-weight: 700;
-    line-height: 0.9;
-    text-align: center;
-    vertical-align: auto
-}
+
 .internationalTransportation__textBlock {
     width: 98%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 45px;
+    margin-top: 32px;
     height: 276px; 
     border-radius: 20px;
     background: rgba(255, 255, 255, 1);
@@ -624,31 +640,9 @@ table {
     .internationalTransportation {
         width: 386px;
         height: 334px;
-        margin: 36px auto 0
+        margin: 36px auto 0 auto
     }
 
-    .description_firstText {
-        font-family: 'OpenSans-Bold';
-        font-size: 1.625rem;
-        font-weight: 700;
-        line-height: 1.3;
-        text-align: center
-    }
-    .description_secondText {
-        font-family: 'OpenSans';
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 1.3;
-        text-align: left
-    }
-    
-    .description_thirstText {
-        font-family: 'OpenSans-Bold';
-        font-size: 1.625rem;
-        font-weight: 700;
-        line-height: 1.3;
-        text-align: center
-    }
     .internationalTransportation__imgTextBlock {
         display: flex;
         flex-direction: row;
@@ -678,7 +672,7 @@ table {
         border-radius: 20px;
         background: rgba(255, 255, 255, 1);
         box-shadow: 0px 4px 10px 0px rgba(32, 33, 36, 0.1);
-        margin-top: 25px
+        margin-top: auto
     }
 
     .internationalTransportation__textBlock_text {
@@ -701,7 +695,7 @@ table {
     width: 91%;
     max-width: 1312px;
     height: 625px;
-    margin: 64px auto 0
+    margin: 64px auto 0 auto
 }
 .services__imgTextBlock {
     display: flex;
@@ -838,15 +832,7 @@ table {
         justify-content: center;
         width: 363px;
         height: 462px;
-        margin: 36px auto 0
-    }
-
-    .description_firstText {
-        font-family: 'OpenSans-Bold';
-        font-size: 1.625rem;
-        font-weight: 700;
-        line-height: 1.36;
-        text-align: center;
+        margin: 36px auto 0 auto
     }
 
     .services__imgTextBlock {
@@ -994,17 +980,9 @@ table {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 36px auto 0
+        margin: 36px auto 0 auto
     }
-
-    .description_firstText {
-        font-family: 'OpenSans-Bold';
-        font-size: 1.625rem;
-        font-weight: 700;
-        line-height: 1.36;
-        text-align: center
-    }
-
+    
     .team__imgTextBlock {
         display: flex;
         flex-direction: row;
