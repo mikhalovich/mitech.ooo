@@ -6,88 +6,90 @@
     <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MITECH_By_Safonov</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>MITECH_By_Safonov_tailwind</title>
 </head>
 
 <body>
-    <header class="headNavigation-main">
-        <ul class="headNavigation">
-            <li class="headNavigation__logo">
-                <p class="headNavigation__textLogo">MITech</p>
+    <header class="w-full shadow-[0_4px_0_0_rgba(0,0,0,0.1)] bg-[#ffffff] hidden sm:block">
+        <ul class="flex flex-row items-center h-16 max-w-[1440px] my-0 mx-auto">
+            <li class="mr-12 ml-16">
+                <p class="font-[BaumansRegular] text-[#1b1c1e] text-4xl font-normal leading-[1.19]">MITech</p>
             </li>
-            <li class="headNavigation__mainPage">
-                <p class="headNavigation__text">Главная страница</p>
+            <li class="mr-7">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Главная страница</p>
             </li>
-            <li class="headNavigation__blog">
-                <p class="headNavigation__text">Блог</p>
+            <li class="mr-7">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Блог</p>
             </li>
-            <li class="headNavigation__services">
-                <p class="headNavigation__text">Услуги</p>
+            <li class="mr-1.5">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Услуги</p>
             </li>
             <li class="headNavigation__services_vector"></li>
-            <li class="headNavigation__prices">
-                <p class="headNavigation__text">Цены</p>
+            <li class="mr-7">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Цены</p>
             </li>
-            <li class="headNavigation__contacts">
-                <p class="headNavigation__text">Контакты</pclass>
+            <li class="mr-auto">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Контакты</pclass>
             </li>
-            <li class="headNavigation__phoneNumber">
-                <p class="headNavigation__textPhoneNumber">+375297827334</p>
+            <li class="mr-8">
+                <p class="font-[OpenSans] text-[#202124] font-normal text-base">+375297827334</p>
             </li>
-            <button type="button" class="headNavigation__phoneCall_button">
-                <p class="headNavigation__textPhoneCall">Заказать звонок</p>
+            <button type="button" class="w-44 h-9 mr-16	rounded-lg bg-[#ffe795]">
+                <p class="text-[1rem] font-bold font-[Product Sans] text-[#202124]">Заказать звонок</p>
             </button>
         </ul>
     </header>
     <!-- block for mobile version of the site -->
-    <div class="mobileHeadNavigator">
-        <p class="mobileHeadNavigator__hamburger_logoMitech headNavigation__textLogo">MITech</p>
-        <img src="phone.svg" alt="imgPhone" class="mobileHeadNavigator__hamburger_imgPhone">
-        <img src="hamburger.svg" alt="imgButton" class="mobileHeadNavigator__hamburger_imgButton">
+    <div class="flex flex-row content-center items-center w-112 h-16 sm:hidden my-0 mx-auto shadow-[0_4px_5px_0_rgba(0,0,0,0.05)]">
+        <p class="ml-5 mr-3 font-baumans font-normal text-2xl leading-[1.19] text-[rgba(27,28,30,1)]">MITech</p>
+        <img src="phone.svg" alt="imgPhone" class="h-11 w-11 mr-auto border-0">
+        <img src="hamburger.svg" alt="imgButton" class="h-14 w-14 mt-1 mr-5 border-0">
     </div>
-
+  
     <!-- block №1 about Logistic company Mi.   -->
-    <div class="intro">
+     <!-- изменить высоту элемента по итогу -->
+    <div class="flex flex-col justify-start items-center w-[388px] h-[900px] md:flex-row md:justify-center md:flex-wrap md:w-[1028px] md:h-[829px] mt-9 mx-auto mb-0">
         <!-- text block over the picture - 'truck-driver'   -->
-        <p class="intro__logo intro__logoText">Mi.</p>
-        <p class="intro__sloganText">Логистическая компания, созданная для Вас</p>
-        <p class="intro__sloganPromiseText">Доставим Ваш груз быстро, безопасно и экономично</p>
-        <img src="truck-driver.png" alt="truckDriver" class="intro__img">
+        <p class="w-[56px] h-[56px] md:w-[64px] md:h-[64px] rounded-[50%] font-[OpenSans] text-2xl md:text-[2rem] font-normal text-center content-center text-[#fab408] bg-[#fef6db]">Mi.</p>
+        <p class="font-[OpenSans-Bold] text-[#202124] mt-3	text-center font-bold text-3xl md:text-[4rem] md:leading-[1.09]">Логистическая компания, созданная для Вас</p>
+        <p class="font-[OpenSans] text-[#000000] mt-3 text-center font-normal	text-sm md:text-[1.5rem] md:leading-[1.25]">Доставим Ваш груз быстро, безопасно и экономично</p>
+        <img src="truck-driver.png" alt="truckDriver" class="w-80 h-80 mt-4 mx-auto mb-0 rounded-3xl md:w-[500px] md:h-[500px] md:mr-[48px] border-none">
         <!-- text block on the right of the picture -->
-        <div class="intro__companyHistory">
-            <div class="intro__companyHistory_age"> <!-- block about 13 years -->
-                <p class="intro__companyHistory_ageText">Нам 13 лет</p>
-                <p class="intro__companyHistory_ageTextAfter">Чтобы персонализировать веб-браузер, используйте темы,
+        <div class="flex self-end flex-col justify-between md:justify-evenly mt-3 mx-auto mb-0 w-[368px] h-[327px] md:w-[46%] md:h-[500px] md:ml-auto md:mt-[12px]">
+            <div class="w-[368px] h-[100px] md:w-[96%] md:h-[137px] flex flex-col justify-between border-l-4 border-l-[#177531]"> <!-- block about 13 years -->
+                <p class="text-black font-bold text-[1.25rem] md:text-[1.75rem] leading-[1.36] font-[OpenSans-Bold] ml-[16px] md:ml-[40px]">Нам 13 лет</p>
+                <p class="content-center font-normal font-[OpenSans] leading-[1.2] text-sm md:text-[1.125rem] md:leading-[1.33] text-[#5f6368] ml-[16px] md:ml-[40px]">Чтобы персонализировать веб-браузер, используйте темы,
                     ночной режим и другие параметры.</p>
             </div>
-            <div class="intro__companyHistory_routes"> <!-- text block about 150 routes -->
-                <p class="intro__companyHistory_routesText">150+ маршрутов</p>
+            <div class="w-[368px] h-[74px] md:w-[96%] md:h-[90px] content-center border-r-4 border-r-[#f1f3f4] md:border-r-0 md:border-l-4 md:border-l-[#f1f3f4]"> <!-- text block about 150 routes -->
+                <p class="font-[OpenSans-Bold] text-left leading-[1.36] font-bold text-[1.25rem] md:text-[1.75rem] md:leading-[1.215] ml-[16px] md:ml-[40px] text-[#202124]">150+ маршрутов</p>
             </div>
-            <div class="intro__companyHistory_tones"> <!-- text block about 5 tons of cargo -->
-                <div class="intro__companyHistory_tonesText">5 тонн доставленных<br> грузов ежемесячно</div>
+            <div class="w-[368px] h-[74px] content-center border-l-4 border-l-[#f1f3f4]"> <!-- text block about 5 tons of cargo -->
+                <div class="font-[OpenSans-Bold] text-left leading-[1.36] font-bold text-[1.25rem] md:text-[1.75rem] md:leading-[1.215] ml-[16px] md:ml-[40px] text-[#202124]">5 тонн доставленных<br> грузов ежемесячно</div>
             </div>
             <!-- block with button - feedback -->
-            <button type="button" class="intro___button">
-                <p class="intro___buttonText">Заказать обратную связь</p>
-                <img alt="feedback" src="feedback.svg" class="intro__buttonImg">
+            <button type="button" class="flex flex-row justify-center items-center w-[249px] h-[43px] md:w-[274px] md:h-[46px] rounded-[32px] bg-[#c7e7d0] text-center mr-auto ml-auto md:ml-0">
+                <p class="font-[OpenSans] text-[0.875rem] md:text-[1rem] font-medium leading-[1.36] text-center content-center text-[#177531]">Заказать обратную связь</p>
+                <img alt="feedback" src="feedback.svg" class="w-[14px] h-[14px] ml-[10px]">
             </button>
         </div>
     </div>
 
-    <!-- block №2 about international road freight transport - element2-->
-    <div class="internationalTransportation">
-        <p class="description_firstText">Международные</p>
-        <div class="internationalTransportation__imgTextBlock">
-            <img src="steeringWheel.svg" alt="steeringWheel" class="internationalTransportation__imgTextBlock_img">
-            <p class="description_secondText internationalTransportation__description_secondText-color">автомобильные
+    <!-- block №2 about international road freight transport - element2--> 
+    <div class="w-[386px] h-[334px] sm:h-[461px] md:h-[545px] xl:h-[461px] flex flex-col md:flex-row md:flex-wrap justify-center md:content-start md:w-[73%] md:max-w-[1044px] mt-[36px] md:mt-[68px] mr-auto ml-auto border-[5px]">
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold leading-[1.3] text-center md:text-[3.625rem] md:leading-[1.36] lg:mb-[10px] xl:leading-[1.1] md:mr-auto md:ml-auto">Международные</p>
+        <div class="flex flex-row align-middle items-center justify-evenly rounded-[48px] mr-auto ml-auto bg-[#fef6db] w-[240px] md:w-[500px] h-[41px] md:h-[74px] md:pb-[7px]">
+            <img src="steeringWheel.svg" alt="steeringWheel" class="w-[32px] h-[32px] md:w-[58px] md:h-[58px] md:ml-[10px] md:mt-[5px]">
+            <p class="font-[OpenSans] text-[1.5rem] font-semibold leading-[1.3] text-left md:text-[3.125rem] md:leading-[1] md:mr-[10px] text-[#fab408]">автомобильные
             </p>
         </div>
-        <p class="description_thirstText">грузоперевозки</p>
-        <div class="internationalTransportation__textBlock">
-            <p class="internationalTransportation__textBlock_text">Логистические услуги позволяют сократить время
-                доставки грузов
-                и минимизировать риски потерь и повреждений.</p>
-            <p class="internationalTransportation__textBlock_text">Благодаря использованию современных технологий и
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold text-center leading-[1.3] md:text-[3.625rem] md:leading-[0.9] md:mr-auto md:ml-auto mb-auto">грузоперевозки</p>
+        <div class="flex flex-col items-center w-[100%] md:w-[97%] h-[203px] rounded-[20px] bg-[#ffffff] shadow-[0_4px_10px_0_rgba(32,33,36,0.1)] md:h-[276px] mt-[20px] lg:mt-[46px]">
+            <p class="font-[OpenSans] text-[0.875rem] leading-[1.36] text-center font-normal text-[#000000] w-[338px] mt-auto mb-auto md:text-[1.5rem] md:w-[87%] md:leading-[1.25]">Логистические услуги позволяют сократить время
+                доставки грузов и минимизировать риски потерь и повреждений.</p>
+            <p class="font-[OpenSans] text-[0.875rem] leading-[1.36] text-center font-normal text-[#000000] w-[338px] mb-auto md:text-[1.5rem] md:w-[87%] md:leading-[1.25]">Благодаря использованию современных технологий и
                 инновационному подходу, компания MiTech может
                 обеспечить высокий уровень сервиса и удовлетворить потребности самых требовательных клиентов.
             </p>
@@ -95,276 +97,271 @@
     </div>
 
     <!-- block №3 about variety of services - element3 -->
-    <div class="services">
-        <p class="description_firstText">MiTech –</p>
-        <div class="services__imgTextBlock">
-            <img alt="service" src="varietyOfServices.svg" class="services__imgTextBlock_img">
-            <p class="description_secondText services__description_secondText-color">разнообразие</p>
+    <div class="flex flex-wrap content-start justify-center w-[363px] h-[450px] mt-[36px] md:mt-[64px] mr-auto ml-auto md:w-[91%] md:h-[593px] border-[5px]">
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold leading-[1.5] text-center md:text-[3.625rem] md:leading-[1.36] lg:mb-[10px] xl:leading-[1.1] mr-[8px]">MiTech –</p>
+        <div class="w-[220px] md:w-[460px] h-[41px] md:h-[80px] flex flex-row  align-middle items-center justify-evenly rounded-[48px] bg-[#E8F0FE]">
+            <img alt="service" src="varietyOfServices.svg" class="w-[25px] h-[25px] md:w-[50px] md:h-[50px] text-center md:ml-[10px] md:mr-[8px]">
+            <p class="font-[OpenSans] text-[1.5rem] font-semibold leading-[1.3] md:text-[3.125rem] md:leading-[3] mb-[5px] md:mr-[20px] text-[#1967d2]">разнообразие</p>
         </div>
-        <div class="description_thirstText">услуг</div>
-        <div class="services__informationBlock services__informationBlock-color1">
-            <p class="services__informationBlock_textOne">Востребовано</p>
-            <p class="services__informationBlock_textTwo">Международные грузоперевозки</p>
-            <p class="services__informationBlock_textThree">Мы специализируемся на организации
+        <div class="font-[OpenSans-Bold] text-[1.625rem] font-bold text-center leading-[1.3] w-[80%] md:text-[3.625rem] md:leading-[0.9]">услуг</div>
+        <div class="hidden sm:flex flex-col w-[28%] h-[71%] pt-5 pb-5 pl-[28px] pr-[28px] rounded-[16px] bg-[#e5eefe] mr-[24px] mt-[32px]">
+            <p class="font-[OpenSans] text-[0.875rem] font-medium leading-[1.36] mb-[8px] text-left text-[#185ccc] uppercase">Востребовано</p>
+            <p class="font-[OpenSans-Bold] text-[2.25rem] lg:text-[1.3rem] xl:text-[2rem] font-bold leading-[1.36] mb-[16px] text-[#202124]">Международные грузоперевозки</p>
+            <p class="font-[OpenSans] text-[1rem] lg:text-[0.875rem] font-normal leading-[1.36] mb-auto text-[#202124]">Мы специализируемся на организации
                 автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
                 транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от
                 вашего бизнеса, мы найдем оптимальное для вас решение.</p>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="services__informationBlock_textFour">Подробнее о
+            <a href="https://tpverstak.ru/flex-cheatsheet/" class="font-[OpenSans] text-[1rem] font-semibold leading-[1.36] no-underline text-[#185ccc]">Подробнее о
                 грузоперевозках</a>
         </div>
-        <div class="services__informationBlock services__informationBlock-color2">
-            <p class="services__informationBlock_textOne-color">Востребовано</p>
-            <p class="services__informationBlock_textTwo">Экспедирование грузов</p>
-            <p class="services__informationBlock_textThree">Мы специализируемся на организации
+        <div class="hidden sm:flex flex-col w-[28%] h-[71%] pt-5 pb-5 pl-[28px] pr-[28px] rounded-[16px] bg-[#fef6db] mr-[24px] mt-[32px]">
+            <p class="font-[OpenSans] text-[0.875rem] font-medium leading-[1.36] mb-[8px] text-left text-[#fab408] uppercase">Востребовано</p>
+            <p class="font-[OpenSans-Bold] text-[2.25rem] lg:text-[1.3rem] xl:text-[2rem] font-bold leading-[1.36] mb-[16px] text-[#202124]">Экспедирование грузов</p>
+            <p class="font-[OpenSans] text-[1rem] lg:text-[0.875rem] font-normal leading-[1.36] mb-auto text-[#202124]">Мы специализируемся на организации
                 автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
                 транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от
                 вашего бизнеса, мы найдем оптимальное для вас решение.</p>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="services__informationBlock_textFour-color">Подробнее
+            <a href="https://tpverstak.ru/flex-cheatsheet/" class="font-[OpenSans] text-[1rem] font-semibold leading-[1.36] no-underline text-[#fab408]">Подробнее
                 об экспедировании</a>
         </div>
-        <div class="services__informationBlock services__informationBlock-color3">
-            <p class="services__informationBlock_textOne-color3">Востребовано</p>
-            <p class="services__informationBlock_textTwo">Разработка ПО для управления автопарком из электромобилей</p>
-            <p class="services__informationBlock_textThree">Мы разрабатываем программные комплексы
+        <div class="hidden sm:flex flex-col w-[28%] h-[71%] pt-5 pb-5 pl-[28px] pr-[28px] rounded-[16px] bg-[#c7e7d0] mt-[32px]">
+            <p class="font-[OpenSans] text-[0.875rem] font-medium leading-[1.36] mb-[8px] text-left text-[#227c3b] uppercase">Востребовано</p>
+            <p class="font-[OpenSans-Bold] text-[2.25rem] lg:text-[1.3rem] xl:text-[2rem] font-bold leading-[1.36] mb-[16px] text-[#202124]">Разработка ПО для управления автопарком из электромобилей</p>
+            <p class="font-[OpenSans] text-[1rem] lg:text-[0.875rem] font-normal leading-[1.36] mb-auto text-[#202124]">Мы разрабатываем программные комплексы
                 для ведения автоматизации учета электромобилей в автопарках юридических лиц.</p>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="services__informationBlock_textFour-color3">Подробнее
+            <a href="https://tpverstak.ru/flex-cheatsheet/" class="font-[OpenSans] text-[1rem] font-semibold leading-[1.36] no-underline text-[#227c3b]">Подробнее
                 о разработке ПО</a>
         </div>
 
-        <!-- For mobile version for block of services -->
-        <div class="services__informationBlock-mobile services__informationBlock-color2">
-            <p class="services__informationBlock_textOne-color">Востребовано</p>
-            <p class="services__informationBlock_textTwo">Экспедирование грузов</p>
-            <p class="services__informationBlock_textThree">Мы специализируемся на организации
+        <!-- For MOBILE version of block 'services' -->
+        <div class="mt-[20px] flex flex-col w-[300px] h-[350px] rounded-[16px] bg-[#fef6db] pt-4 pb-4 pl-5 pr-5 sm:hidden">
+            <p class="font-[OpenSans] text-[0.875rem] font-medium leading-[1.36] mb-[8px] text-[#fab408] uppercase">Востребовано</p>
+            <p class="font-[OpenSans-Bold] text-[1.25rem] font-bold leading-[1.36] mb-[12px] text-[#202124]">Экспедирование грузов</p>
+            <p class="font-[OpenSans] text-[0.875rem] font-normal leading-[1.36] mb-auto text-[#202124]">Мы специализируемся на организации
                 автогрузоперевозок по странам СНГ. Наш опыт и обширная сеть партнеров позволяют нам осуществлять
                 транспортировки различных видов грузов – от малогабаритных до крупногабаритных. Независимо от
                 вашего бизнеса, мы найдем оптимальное для вас решение.</p>
-            <a href="https://tpverstak.ru/flex-cheatsheet/" class="services__informationBlock_textFour-color">Подробнее
+            <a href="https://tpverstak.ru/flex-cheatsheet/" class="font-[OpenSans] text-[1rem] font-semibold leading-[1.36] no-underline text-[#fab408]">Подробнее
                 об экспедировании</a>
         </div>
     </div>
 
     <!-- block №4 about our good team - element 4 -->
-    <div class="team">
-        <p class="description_firstText">MiTech –</p>
-        <div class="team__imgTextBlock">
-            <img alt="team" src="reliableTeam.svg" class="team__imgTextBlock_img">
-            <p class="description_secondText team__description_secondText-color">надежная</p>
+    <div class="w-[360px] h-[332px] flex flex-wrap justify-center content-center mt-[36px] md:mt-[64px] mb-0 ml-auto mr-auto md:w-[91%] md:h-[798px] md:max-w-[1312px] border-[5px]">
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold leading-[1.5] text-center md:text-[3.625rem] md:leading-[1.36] lg:mb-[10px] xl:leading-[1.1] mr-[8px]">MiTech –</p>
+        <div class="w-[170px] md:w-[358px] h-[41px] md:h-[80px] flex flex-row  align-middle items-center justify-evenly rounded-[48px] bg-[#dff1e4]">
+            <img alt="team" src="reliableTeam.svg" class="w-[23px] h-[23px] md:w-[43px] md:h-[43px] text-center md:ml-[10px] md:mr-[10px]">
+            <p class="font-[OpenSans] text-[1.5rem] font-semibold leading-[1.3] mb-[5px] md:text-[3.125rem] md:leading-[3] md:mr-[20px] text-[#227c3b]">надежная</p>
         </div>
-        <p class="description_thirstText">команда</p>
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold text-center leading-[1.3] w-[80%] md:text-[3.625rem] md:leading-[0.9]">команда</p>
         <!-- part of block #3 with the big picture with the text inside -->
-        <div class="team__imageContainer">
-            <p class="team__imageContainer_textFirst">Транспортно-экспедиторская компания "MiTech" –
+        <div class="w-[360px] h-[240px] rounded-[16px] bg-[#0000007f] bg-cover bg-center bg-no-repeat bg-[url(image%2032.png)] sm:w-[71%] sm:h-[78%] flex flex-col justify-end mt-[20px] md:mt-[32px]">
+            <p class="font-[OpenSans] text-[0.875rem] text-center font-normal leading-[1.1] text-[#ffffff] w-[71%] md:w-[61%] md:text-[1.875rem] md:leading-[1.2]  ml-auto mr-auto">Транспортно-экспедиторская компания "MiTech" –
                 ваш надежный партнер в сфере международных грузоперевозок и экспедирования грузов, на
                 протяжении 13 лет.</p>
-            <p class="team__imageContainer_textNumber">1</p>
+            <p class="font-[productsans font-serif] text-[3.5rem] md:text-[11.25rem] md:leading-[1.213] font-bold text-[#ffffff] opacity-50 text-right content-end mr-[36px] md:mr-[83px] xl:mr-[70px] mb-[20px] md:mb-[10px]">1</p>
         </div>
     </div>
 
     <!-- block №5 about the guarantees of security  - element 5 -->
-    <div class="guarantees">
-        <p class="description_firstText">MiTech –</p>
-        <div class="guarantees__imgTextBlock">
-            <img alt="garante" src="securityGuarantee.svg" class="guarantees__imgTextBlock_img">
-            <p class="description_secondText guarantees__description_secondText-color">гарантия</p>
+    <div class="w-[360px] h-[396px] flex flex-row  flex-wrap justify-center content-center mt-[36px] md:mt-[64px] mb-0 ml-auto mr-auto md:w-[91%] md:h-[530px] md:max-w-[1308px] md:flex-row md:flex-wrap border-[5px]">
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold leading-[1.5] text-center md:text-[3.625rem] md:leading-[1.36] lg:mb-[10px] xl:leading-[1.1] mr-[8px]">MiTech –</p>
+        <div class="w-[170px] md:w-[328px] h-[41px] md:h-[80px] flex flex-row  align-middle items-center justify-evenly rounded-[48px] bg-[#fef6db]">
+            <img alt="garante" src="securityGuarantee.svg" class="w-[24px] h-[29px] md:w-[44px] md:h-[54px] text-center md:ml-[10px] md:mr-[10px]">
+            <p class="font-[OpenSans] text-[1.5rem] font-semibold leading-[1.3] mb-[5px] md:text-[3.125rem] md:leading-[3] md:mr-[20px] text-[#fab408]">гарантия</p>
         </div>
-        <p class="description_thirstText">безопасности</p>
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold text-center leading-[1.3] w-[80%] md:text-[3.625rem] md:leading-[0.9]">безопасности</p>
         <!-- part with four small blocks with pictures -->
-        <div class="guarantees__imgBlock"> <!-- a part with the picture - 'moovers'  -->
-            <p class="guarantees__imgBlock_textOne">Крупногабаритные грузы</p>
-            <p class="guarantees__imgBlock_textTwo">Безопасная доставка крупных грузов.</p>
-            <img alt="moovers" src="moovers.png" class="guarantees__imgBlock_imgMoovers">
-            <button type="button" class="guarantees__imgBlock_button">
-                <p class="guarantees__textBlock_buttonText">+</p>
+        <div class="hidden sm:flex w-[25%] h-[66%] flex-col content-end rounded-[16px] bg-[#ffcb4d] pt-[16px] pb-[16px] pr-[20px] pl-[28px] mr-auto mt-[32px]"> <!-- a part with the picture - 'moovers'  -->
+            <p class="font-[OpenSans] text-[0.875rem] font-normal leading-[1.36] uppercase text-[#202124]">Крупногабаритные грузы</p>
+            <p class="font-[OpenSans] text-[1.125rem] font-bold mt-[8px]">Безопасная доставка крупных грузов.</p>
+            <img alt="moovers" src="moovers.png" class="w-[83%] h-[24%] text-center mt-auto self-center">
+            <button type="button" class="flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] rounded-[50%] mr-0 ml-auto mt-auto mb-0">
+                <p class="font-[OpenSans] text-[1.5rem] text-[#fab408] text-center">+</p>
             </button>
         </div>
-        <div class="guarantees__textBlock"> <!-- a part without picture  -->
-            <p class="guarantees__textBlock_textOne">Техника</p>
-            <p class="guarantees__textBlock_textTwo">Если вы не нашли описание своего груза, вы
+        <!-- a part without picture  -->
+        <div class="hidden sm:flex w-[22%] h-[52%] flex-col content-end rounded-[16px] bg-[#fff5ca] pt-[16px] pb-[16px] pr-[20px] pl-[28px] mr-auto mt-[32px]"> 
+            <p class="font-[OpenSans] text-[0.875rem] font-normal leading-[100%] uppercase text-[#fab408]">Техника</p>
+            <p class="font-[OpenSans] xl:text-[1.5rem] md:text-[1.25rem] font-bold leading-[1] mt-[8px]">Если вы не нашли описание своего груза, вы
                 можете связаться с нами для уточнения деталей</p>
-            <button type="button" class="guarantees__textBlock_button">
-                <p class="guarantees__textBlock_buttonText">+</p>
+            <button type="button" class="flex justify-center items-center w-[30px] h-[30px] bg-[#fab408] rounded-[50%] mr-0 ml-auto mt-auto mb-0">
+                <p class="font-[OpenSans] text-[1.5rem] text-[#FFFFFF] text-center">+</p>
             </button>
         </div>
         <!-- a part with the picture - 'bottle of milk'  -->
-        <div class="guarantees__imgBlock">
-            <p class="guarantees__imgBlock_textOne">Товары народного потребления</p>
-            <p class="guarantees__imgBlock_textTwo">Мы обещаем надежность и оперативность
+        <div class="hidden sm:flex w-[25%] h-[66%] flex-col content-end rounded-[16px] bg-[#ffcb4d] pt-[16px] pb-[16px] pr-[20px] pl-[28px] mr-auto mt-[32px]">
+            <p class="font-[OpenSans] text-[0.875rem] font-normal leading-[1.36] uppercase text-[#202124]">Товары народного потребления</p>
+            <p class="font-[OpenSans] text-[1.125rem] font-bold mt-[8px] leading-[1.36]">Мы обещаем надежность и оперативность
                 доставки.</p>
-            <img alt="milk" src="milk.png" class="guarantees__imgBlock_imgMilk">
-            <button type="button" class="guarantees__imgBlock_button">
-                <p class="guarantees__textBlock_buttonText">+</p>
+            <img alt="milk" src="milk.png" class="w-[32%] h-[55%] text-center mt-auto self-center">
+            <button type="button" class="flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] rounded-[50%] mr-0 ml-auto mt-auto mb-0">
+                <p class="font-[OpenSans] text-[1.5rem] text-[#fab408] text-center">+</p>
             </button>
         </div>
-        <div class="guarantees__textBlock"> <!-- a part without picture  -->
-            <p class="guarantees__textBlock_textOne">Продукты</p>
-            <p class="guarantees__textBlock_textTwo">Будьте уверены, что наши рефрижераторы
+        <!-- a part without picture  -->
+        <div class="hidden sm:flex w-[22%] h-[52%] flex-col content-end rounded-[16px] bg-[#fff5ca] pt-[16px] pb-[16px] pr-[20px] pl-[28px] mt-[32px]"> 
+            <p class="font-[OpenSans] text-[0.875rem] font-normal leading-[100%] uppercase text-[#fab408]">Продукты</p>
+            <p class="font-[OpenSans] xl:text-[1.5rem] md:text-[1.35rem] font-bold leading-[100%] mt-[8px]">Будьте уверены, что наши рефрижераторы
                 справятся.</p>
-            <button type="button" class="guarantees__textBlock_button">
-                <p class="guarantees__textBlock_buttonText">+</p>
+            <button type="button" class="flex justify-center items-center w-[30px] h-[30px] bg-[#fab408] rounded-[50%] mr-0 ml-auto mt-auto mb-0">
+                <p class="font-[OpenSans] text-[1.5rem] text-[#FFFFFF] text-center">+</p>
             </button>
         </div>
-        <!-- one small block to mobile version of guarantees -->
-        <div class="guarantees__imgBlock_mobile"> <!-- a part with the picture - 'moovers'  -->
-            <p class="guarantees__imgBlock_textOne">Крупногабаритные грузы</p>
-            <p class="guarantees__imgBlock_textTwo">Безопасная доставка крупных грузов.</p>
-            <img alt="moovers" src="moovers.png" class="guarantees__imgBlock_imgMoovers">
-            <button type="button" class="guarantees__imgBlock_button">
-                <p class="guarantees__textBlock_buttonText">+</p>
+        <!-- a MOBILE part with the picture - 'bottle of milk'  -->
+        <div class="sm:hidden flex w-[331px] h-[304px] flex-col content-end rounded-[16px] bg-[#ffcb4d] pt-[16px] pb-[16px] pr-[20px] pl-[28px] ml-auto mr-auto mt-[16px]">
+            <p class="font-[OpenSans] text-[0.875rem] font-normal leading-[1.36] uppercase text-[#202124]">Товары народного потребления</p>
+            <p class="font-[OpenSans] text-[1.125rem] font-bold mt-[8px]">Мы обещаем надежность и оперативность
+                доставки.</p>
+            <img alt="milk" src="milk.png" class="w-[32%] h-[55%] text-center mt-auto self-center">
+            <button type="button" class="flex justify-center items-center w-[30px] h-[30px] bg-[#ffffff] rounded-[50%] mr-0 ml-auto mt-auto mb-0">
+                <p class="font-[OpenSans] text-[1.5rem] text-[#fab408] text-center">+</p>
             </button>
         </div>
     </div>
 
     <!-- block №6 about the pleased clients  - element 6 -->
-    <div class="clients">
-        <p class="description_firstText">MiTech –</p>
-        <div class="clients__imgTextBlock">
-            <img alt="pleasedSmile" src="pleased.svg" class="clients__imgTextBlock_img">
-            <p class="description_secondText clients__description_secondText-color">довольные</p>
+    <div class="w-[390px] h-[336px] flex flex-row flex-wrap justify-center content-center mt-[36px] md:mt-[64px] mb-0 ml-auto mr-auto md:w-[83%] md:h-[548px] md:max-w-[1200px] md:flex-row md:flex-wrap">
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold leading-[1.5] text-center md:text-[3.625rem] md:leading-[1.36] lg:mb-[10px] xl:leading-[1.1] mr-[8px]">MiTech –</p>
+        <div class="w-[170px] md:w-[378px] h-[38px] md:h-[80px] flex flex-row  align-middle items-center justify-evenly rounded-[48px] bg-[#e8f0fe]">
+            <img alt="pleasedSmile" src="pleased.svg" class="w-[23px] h-[23px] md:w-[44px] md:h-[54px] text-center md:ml-[15px] md:mr-[10px]">
+            <p class="font-[OpenSans] text-[1.5rem] font-semibold leading-[1.3] mb-[5px] md:text-[3.125rem] md:leading-[1] md:mr-[20px] text-[#1967d2]">довольные</p>
         </div>
-        <p class="description_thirstText">клиенты</p>
+        <p class="font-[OpenSans-Bold] text-[1.625rem] font-bold text-center leading-[1.3] w-[80%] md:text-[3.625rem] md:leading-[1] md:mb-[39px]">клиенты</p>
         <!-- part of element6 with the clients  -->
-        <div class="clients__informationOfClients">
-            <button type="button" class="clients__buttonSliderLeft"><img alt="arrow" src="arrowEl6Right.svg"
-                    class="clients__buttonSlider"></button>
+        <div class="hidden md:flex md:flex-row items-center md:w-[100%] md:h-[49%] mt-[39px] rounded-[28px] bg-[#ffffff] shadow-[0_4px_19px_0_rgba(0,0,0,0.1)]">
+            <button type="button" class="w-[40px] h-[40px] rounded-[50%] bg-[#1967d2] md:ml-[16px] md:mr-[56px]"><img alt="arrow" src="arrowEl6Right.svg"
+                    class="m-auto"></button>
             <!--  block with informations about the clients  -->
-            <div class="clients__informationOfClients_infoLeft">
-                <p class="clients__informationOfClients_infoName">ТК “МУЛЬТИПРО”</p>
-                <p class="clients__informationOfClients_infoAbout">Группа компаний по производству молочной продукции
+            <div class="w-[31%] flex flex-col justify-between items-center">
+                <p class="font-[OpenSans] text-[1.25rem] font-bold text-[#1967d2] leading-[2] text-center">ТК “МУЛЬТИПРО”</p>
+                <p class="font-[OpenSans] text-[1rem] font-normal text-[#1b1c1e] leading-[1.625] text-center">Группа компаний по производству молочной продукции
                     для HORECA & RETAIL</p>
-                <p class="clients__informationOfClients_infoWebsite">www.alti.pro</p>
-                <p class="clients__informationOfClients_infoContacts">8-800-234-90-97, info@alti.pro</p>
+                <p class="font-[OpenSans] text-[1.25rem] font-bold text-[#1b1c1e] leading-[2] text-center">www.alti.pro</p>
+                <p class="font-[OpenSans] text-[1rem] font-normal text-[#1b1c1e] leading-[1.625] text-center">8-800-234-90-97, info@alti.pro</p>
             </div>
             <!--  block with the picture about the client  -->
-            <div class="clients__informationOfClients_logoOne">
-                <img alt="clien" src="alti.svg" class="clients__informationOfClients_logoImg">
+            <div class="flex items-center justify-center w-[100px] h-[100px] mb-[260px] rounded-[26px] bg-[#ffffff] shadow-[0_4px_13px_0_rgba(0,0,0,0.25)]">
+                <img alt="clien" src="alti.svg" class="w-[px] h-[43px]">
             </div>
             <!--  block with the vertical line  -->
-            <div class="clients__informationOfClients_verticalLine"></div>
+            <div class="h-[58%] ml-[21px] mr-[21px] border-l-[#f1f3f4] border-[2px] border-solid border-[#1967D2]"></div>
             <!--  block with the picture about the client  -->
-            <div class="clients__informationOfClients_logoTwo">
-                <img src="malti.svg" alt="client" class="clients__informationOfClients_logoImg">
+            <div class="flex items-center justify-center w-[100px] h-[100px] mt-[260px] rounded-[26px] bg-[#ffffff] shadow-[0_4px_13px_0_rgba(0,0,0,0.25)]">
+                <img src="malti.svg" alt="client" class="w-[px] h-[43px]">
             </div>
             <!--  block with informations about the clients  -->
-            <div class="clients__informationOfClients_infoRight">
-                <p class="clients__informationOfClients_infoName">ТК “МУЛЬТИПРО”</p>
-                <p class="clients__informationOfClients_infoAbout">Группа компаний по производству молочной продукции
+            <div class="w-[31%] flex flex-col justify-between items-center">
+                <p class="font-[OpenSans] text-[1.25rem] font-bold text-[#1967d2] leading-[2]">ТК “МУЛЬТИПРО”</p>
+                <p class="font-[OpenSans] text-[1rem] font-normal text-[#1b1c1e] leading-[1.625] text-center">Группа компаний по производству молочной продукции
                     для HORECA & RETAIL</p>
-                <p class="clients__informationOfClients_infoWebsite">www.alti.pro</p>
-                <p class="clients__informationOfClients_infoContacts">8-800-234-90-97, info@alti.pro</p>
+                <p class="font-[OpenSans] text-[1.25rem] font-bold text-[#1b1c1e] leading-[2] text-center">www.alti.pro</p>
+                <p class="font-[OpenSans] text-[1rem] font-normal text-[#1b1c1e] leading-[1.625] text-center">8-800-234-90-97, info@alti.pro</p>
             </div>
-            <button type="button" class="clients__buttonSliderRight"><img alt="arrow" src="arrowEl6Left.svg"
-                    class="clients__buttonSlider"></button>
+            <button type="button" class="w-[40px] h-[40px] rounded-[50%] bg-[#1967d2] md:mr-[16px] md:ml-[56px]"><img alt="arrow" src="arrowEl6Left.svg"
+                    class="m-auto"></button>
         </div>
         <!-- lowest block with the switching points -->
-        <ul class="clients__informationOfClients_switchingPoints">
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-            <li class="clients__informationOfClients_switchingPointsTwo"></li>
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
+        <ul class="hidden md:w-[90px] md:h-[10px] md:flex md:justify-between md:items-center md:mt-[69px]">
+            <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+            <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid bg-[#1967d2] border-[#c5c5c5]"></li>
+            <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+            <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+            <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
         </ul>
-    </div>
-    <!-- mobile block clients__informationOfClients -->
-    <div class="clients-Mobile">
-        <p class="description_firstText-Mobile">MiTech –</p>
-        <div class="clients__imgTextBlock-Mobile">
-            <img alt="pleasedSmile" src="pleased.svg" class="clients__imgTextBlock_img-Mobile">
-            <p class="description_secondText-Mobile clients__description_secondText-color">довольные</p>
-        </div>
-        <p class="description_thirstText-Mobile">клиенты</p>
-        <div class="clients__informationOfClients_mobile">
+    
+    <!-- mobile block information Of Clients -->
+        <div class="md:hidden w-[390px] h-[208px] rounded-[28px] bg-[#ffffff] shadow-[0_4px_19px_0_rgba(0,0,0,0.1)] flex flex-row flex-wrap items-center ml-auto mr-auto mt-[32px]">
             <!--  block with the picture about the client  -->
-            <div class="clients__informationOfClients_logoOne-mobile">
-                <img alt="clien" src="alti.svg" class="clients__informationOfClients_logoImg-mobile">
+            <div class="w-[60px] h-[60px] ml-[290px] mt-[-30px] rounded-[12px] bg-[#ffffff] shadow-[0_4px_13px_0_rgba(0,0,0,0.25)] flex items-center justify-center">
+                <img alt="clien" src="alti.svg" class="w-[40px] h-[25px]">
             </div>
-            <button type="button" class="clients__buttonSliderLeft-mobile"><img alt="arrow"
-                    src="arrowEl6Right.svg"></button>
+            <button type="button" class="w-[40px] h-[40px] rounded-[50%] bg-[#1967d2] ml-[16px] mb-[32px]"><img alt="arrow" class="m-auto" src="arrowEl6Right.svg"></button>
             <!--  block with informations about the clients  -->
-            <div class="clients__informationOfClients_infoLeft-mobile">
-                <p class="clients__informationOfClients_infoName-mobile">ТК “МУЛЬТИПРО”</p>
-                <p class="clients__informationOfClients_infoAbout-mobile">Группа компаний по производству молочной
+            <div class="w-[246px] h-[140px] flex flex-col justify-between items-center ml-[16px]">
+                <p class="font-[OpenSans] text-[1rem] font-bold text-[#1967d2] leading-[1.3] text-center">ТК “МУЛЬТИПРО”</p>
+                <p class="font-[OpenSans] text-[0.875rem] font-normal text-[#1b1c1e] leading-[1.36] text-center">Группа компаний по производству молочной
                     продукции
                     для HORECA & RETAIL</p>
-                <p class="clients__informationOfClients_infoWebsite-mobile">www.alti.pro</p>
-                <p class="clients__informationOfClients_infoContacts-mobile">8-800-234-90-97, info@alti.pro</p>
+                <p class="font-[OpenSans] text-[1rem] font-bold text-[#1b1c1e] leading-[2] text-center">www.alti.pro</p>
+                <p class="font-[OpenSans] text-[0.875rem] font-normal text-[#1b1c1e] leading-[1.625] text-center">8-800-234-90-97, info@alti.pro</p>
             </div>
-            <button type="button" class="clients__buttonSliderRight-mobile"><img alt="arrow"
+            <button type="button" class="w-[40px] h-[40px] rounded-[50%] bg-[#1967d2] ml-[16px] mb-[32px]"><img alt="arrow" class="m-auto"
                     src="arrowEl6Left.svg"></button>
-        </div>
-        <ul class="clients__informationOfClients_switchingPoints">
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-            <li class="clients__informationOfClients_switchingPointsTwo"></li>
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-            <li class="clients__informationOfClients_switchingPointsOne"></li>
-        </ul>
+                </div>
+                    <ul class="w-[90px] h-[10px] flex justify-between items-center mt-[16px] mr-auto ml-auto md:hidden">
+                        <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+                        <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid bg-[#1967d2] border-[#c5c5c5]"></li>
+                        <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+                        <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+                        <li class="w-[10px] h-[10px] rounded-[50%] border-[1px] border-solid border-[#c5c5c5]"></li>
+                    </ul>
     </div>
 
     <!-- block №7 about the client's questions - element7   -->
-    <div class="questions">
-        <ul class="questions__text_main">Часто задаваемые вопросы</ul>
-        <li class="questions__stringQuestion">
-            <p class="questions__text">Сколько по времени занимает грузоперевозка?</p>
-            <img alt="plus" src="plus.svg" class="questions__img">
+    <div class="w-[425px] h-[227px] mt-[36px] md:mt-[64px] mr-auto ml-auto flex flex-col justify-between items-center md:w-[77%] md:max-w-[1110px] md:h-[328px]">
+        <ul class="w-[380px] h-[35px] md:w-[100%] md:h-[29%] font-[OpenSans-Bold] text-[1.625rem] md:text-[2.875rem] font-bold leading-[1.36] text-center">Часто задаваемые вопросы</ul>
+        <li class="w-[425px] h-[40px] md:w-[100%] md:h-[17%] flex flex-row justify-center items-center border-b border-solid border-[#dadce0] pr-[10px] pl-[10px]">
+            <p class="font-[OpenSans] md:text-[1.5rem] text-[0.875rem] font-medium w-[95%]">Сколько по времени занимает грузоперевозка?</p>
+            <img alt="plus" src="plus.svg" class="w-[15px] h-[15px] md:w-[20px] md:h-[20px]">
         </li>
-        <li class="questions__stringQuestion">
-            <p class="questions__text">Какие документы необходимы для перевозки груза?</p>
-            <img alt="plus" src="plus.svg" class="questions__img">
+        <li class="w-[425px] h-[40px] md:w-[100%] md:h-[17%] flex flex-row justify-center items-center border-b border-solid border-[#dadce0] pr-[10px] pl-[10px]">
+            <p class="font-[OpenSans] md:text-[1.5rem] text-[0.875rem] font-medium w-[95%]">Какие документы необходимы для перевозки груза?</p>
+            <img alt="plus" src="plus.svg" class="w-[15px] h-[15px] md:w-[20px] md:h-[20px]">
         </li>
-        <li class="questions__stringQuestion">
-            <p class="questions__text">Какие расценки у ваших услуг?</p>
-            <img alt="plus" src="plus.svg" class="questions__img">
+        <li class="w-[425px] h-[40px] md:w-[100%] md:h-[17%] flex flex-row justify-center items-center border-b border-solid border-[#dadce0] pr-[10px] pl-[10px]">
+            <p class="font-[OpenSans] md:text-[1.5rem] text-[0.875rem] font-medium w-[95%]">Какие расценки у ваших услуг?</p>
+            <img alt="plus" src="plus.svg" class="w-[15px] h-[15px] md:w-[20px] md:h-[20px]">
         </li>
-        <li class="questions__stringQuestion">
-            <p class="questions__text">Почему нужно обращаться именно в MiTech?</p>
-            <img alt="plus" src="plus.svg" class="questions__img">
+        <li class="w-[425px] h-[40px] md:w-[100%] md:h-[17%] flex flex-row justify-center items-center border-b border-solid border-[#dadce0] pr-[10px] pl-[10px]">
+            <p class="font-[OpenSans] md:text-[1.5rem] text-[0.875rem] font-medium w-[95%]">Почему нужно обращаться именно в MiTech?</p>
+            <img alt="plus" src="plus.svg" class="w-[15px] h-[15px] md:w-[20px] md:h-[20px]">
         </li>
     </div>
 
     <!-- block №8 'if you have another quetions' - element8 -->
-    <div class="leaveRequest">
+    <div class="max-w-[440px] md:max-w-[1312px] h-[357px] md:h-[428px] bg-[#fef6db] flex flex-col md:flex-row justify-between md:justify-start items-center mt-[36px] mr-auto ml-auto md:mt-[64px] md:rounded-[16px]">
         <!-- text block with the picture "fingers" -->
-        <div class="leaveRequest__imgTextBlock">
-            <p class="leaveRequest__imgTextBlock_question">Остались вопросы?</p>
-            <p class="leaveRequest__imgTextBlock_textAfterQuestion">Опишите, что Вас интересует, и мы обязательно
+        <div class="w-[392px] md:w-[46%] h-[69px] md:h-[100%] flex flex-col justify-between md:justify-end items-center md:items-start mt-[10px]">
+            <p class="font-[OpenSans-Bold] text-[1.25rem] md:text-[3.25rem] font-bold text-left leading-[100%] md:leading-[1] md:mb-[20px] md:ml-[68px] text-[#ffbb00]">Остались вопросы?</p>
+            <p class="font-[OpenSans] text-[0.875rem] md:text-[1.25rem] font-normal text-[#000000] leading-[1.36] text-center md:text-left md:ml-[68px]">Опишите, что Вас интересует, и мы обязательно
                 ответим Вам в течение 10 минут.</p>
-            <img src="Frame-finger.png" alt="fingerImg" class="leaveRequest__imgTextBlock_img">
+            <img src="Frame-finger.png" alt="fingerImg" class="hidden md:block md:w-[50%] md:h-[54%] md:rounded-[16px] mb-[5px]">
         </div>
         <!-- block with 'input' form-->
-        <form class="leaveRequest__inputForm">
-            <label class="leaveRequest__inputForm_input"><input type="text" placeholder="Имя"
-                    class="leaveRequest__inputForm_inputText" required-placeholder=""></label>
-            <label class="leaveRequest__inputForm_input"><input type="tel" placeholder="Номер телефона"
-                    class="leaveRequest__inputForm_inputText"></label>
-            <label class="leaveRequest__inputForm_input"><input type="email" placeholder="E-mail"
-                    class="leaveRequest__inputForm_inputText"></label>
-            <label class="leaveRequest__inputForm_checkboxText"><input type="checkbox" name="" value="">
-                Даю согласие на <a href="" class="leaveRequest__inputForm_checkboxText">обработку персональных
+        <form class="m-auto w-[89%] h-[68%] flex flex-col justify-between md:w-[43%] md:h-[75%] md:ml-[64px]">
+            <label class="w-[95%] md:w-[96%] h-[18%] md:h-[18%] pl-[20px] rounded-[8px] content-center bg-[#fef6db] border-[1px] border-solid border-[#000000]"><input type="text" placeholder="Имя"
+                    class="font-[OpenSans] text-[0.75rem] md:text-[1.125rem] font-normal leading-[1.36] border-none bg-[#fef6db] text-[#000000] text-left" required-placeholder=""></label>
+            <label class="w-[95%] md:w-[96%] h-[18%] md:h-[18%] pl-[20px] rounded-[8px] content-center bg-[#fef6db] border-[1px] border-solid border-[#000000]"><input type="tel" placeholder="Номер телефона"
+                    class="font-[OpenSans] text-[0.75rem] md:text-[1.125rem] font-normal leading-[1.36] border-none bg-[#fef6db] text-[#000000] text-left"></label>
+            <label class="w-[95%] md:w-[96%] h-[18%] md:h-[18%] pl-[20px] rounded-[8px] content-center bg-[#fef6db] border-[1px] border-solid border-[#000000]"><input type="email" placeholder="E-mail"
+                    class="font-[OpenSans] text-[0.75rem] md:text-[1.125rem] font-normal leading-[1.36] border-none bg-[#fef6db] text-[#000000] text-left"></label>
+            <label class="font-[OpenSans] text-[0.75rem] md:text-[1rem] font-normal leading-[1.36] text-left text-[#000000]"><input type="checkbox" name="" value="">
+                Даю согласие на <a href="" class="font-[OpenSans] text-[0.75rem] md:text-[1rem] font-normal leading-[1.36] text-left text-[#000000]">обработку персональных
                     данных</a></label>
             <button type="button"
-                class="leaveRequest__inputForm_buttonBox  leaveRequest__inputForm_buttonBoxText">Оставить
+                class="w-[95%] h-[18%] rounded-[8px] bg-[#ffbb00] md:w-[96%] md:h-[18%] font-[OpenSans] leading-[1.36] text-[0.875rem] md:text-[1.25rem] font-bold text-center text-[#000000]">Оставить
                 заявку</button>
         </form>
     </div>
 
     <!-- FOOTER-->
-    <div class="footer">
-        <p class="footer__aboutCompany_logo">MITech</p>
-        <p class="footer__aboutCompany_text">13 лет перевозим грузы по России, Беларуси и странам СНГ</p>
-        <div class="footer__address">
-            <p class="footer__address_countryCity">Беларусь, г. Гродно, 230005</p>
-            <p class="footer__address_streetOffice">ул. Гаспадарчая, 23/4-1, оф. 205</p>
+    <div class="w-[440px] h-[282px] md:max-w-[1440px] md:w-[100%] md:h-[150px] bg-[#ffffff] flex content-evenly flex-row flex-wrap md:items-center pl-[20px] mt-[36px] md:mt-[64px] ml-auto mr-auto shadow-[0_-4px_5px_0_rgba(0,0,0,0.05)] md:rounded-tl-[0] md:rounded-tr-[0] md:rounded-br-[32px] md:rounded-bl-[32px]">
+        <p class="font-[BaumansRegular] text-[1.75rem] md:text-[3rem] font-normal leading-[1.19] ml-0 md:ml-[64px] text-[#1b1c1e]">MITech</p>
+        <p class="w-[231px] md:w-[16%] font-[OpenSans] text-[0.875rem] md:font-normal font-medium leading-[1.43] text-left ml-[12px]">13 лет перевозим грузы по России, Беларуси и странам СНГ</p>
+        <div class="w-[300px] h-[46px] ml-0 md:w-[18%] md:h-[46px] md:ml-[121px]">
+            <p class="w-[246px] h-[23px] font-[OpenSans] text-[1rem] font-medium md:font-normal leading-[1.36] text-left text-[#000000]">Беларусь, г. Гродно, 230005</p>
+            <p class="w-[246px] font-[OpenSans] text-[1rem] font-normal leading-[1.36] text-left text-[#969696]">ул. Гаспадарчая, 23/4-1, оф. 205</p>
         </div>
-        <div class="footer__mailBox">
-            <p class="footer__mailBox_mail">contact@mitech.ooo</p>
-            <p class="footer__mailBox_text">Почта для связи</p>
+        <div class="w-[420px] ml-0 md:ml-[48px] md:w-[11%] md:h-[46px]">
+            <p class="font-[OpenSans] text-[1rem] leading-[1.36] font-medium md:font-normal text-left text-[#1b1c1e]">contact@mitech.ooo</p>
+            <p class="font-[OpenSans] text-[1rem] leading-[1.36] font-normal text-left text-[#969696]">Почта для связи</p>
         </div>
-        <img src="telegram.svg" alt="telegramImg" class="footer__contacts_imgTelegram">
-        <img src="whatsapp.svg" alt="whatsappImg" class="footer__contacts_imgWhatsapp">
-        <div class="footer__contacts">
-            <p class="footer__contacts_phoneNumber">+375297827334</p>
-            <p class="footer__contacts_workingHours">Ежедневно с 07:00 - 21:00</p>
+        <img src="telegram.svg" alt="telegramImg" class="ml-0 md:ml-[48px] w-[38px] h-[38px] content-center md:w-[44px] md:h-[44px]">
+        <img src="whatsapp.svg" alt="whatsappImg" class="ml-[8px] w-[38px] h-[38px] content-center md:w-[44px] md:h-[44px]">
+        <div class="w-[198px] h-[46px] flex flex-col justify-between md:w-[14%] md:h-[46px] md:items-start ml-[12px]">
+            <p class="w-[198px] h-[22px] font-[OpenSans] text-[1rem] font-medium leading-[1.36] text-left text-[#1b1c1e]">+375297827334</p>
+            <p class="w-[198px] h-[22px] font-[OpenSans] text-[1rem] font-normal leading-[1.36] text-left text-[#969696]">Ежедневно с 07:00 - 21:00</p>
         </div>
     </div>
 
