@@ -29,7 +29,9 @@
     outline: 0;
     outline-offset: 0;
 }
-
+.blackout {
+ background: linear-gradient(270.03deg, rgba(0, 0, 0, 0) 0.02%, rgba(0, 0, 0, 0.5) 85.45%)
+}
 /* FONTS for the site */
 @font-face {
     font-family: 'BaumansRegular';
