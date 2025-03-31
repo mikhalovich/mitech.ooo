@@ -1,0 +1,76 @@
+.headNavigation__services_vector {
+    height: 5px; 
+    width: 8px; 
+    margin-top: 4px;
+    margin-right: 1.75rem;
+    position: relative
+    }
+    .headNavigation__services_vector:before, 
+    .headNavigation__services_vector:after {
+    content: "";
+    height: 50%; 
+    width: 50%;
+    position: absolute; 
+    top: 0;
+    background: rgb(95, 99, 104);
+    }
+    .headNavigation__services_vector:before {
+    left: 0;
+    transform: skew(0deg, 45deg)
+    }
+    .headNavigation__services_vector:after {
+    right: 0;
+    transform: skew(0deg, -45deg)
+    }
+
+:active,
+:hover,
+:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.blackout {
+ background: linear-gradient(270.03deg, rgba(0, 0, 0, 0) 0.02%, rgba(0, 0, 0, 0.5) 85.45%)
+}
+/* FONTS for the site */
+@font-face {
+    font-family: 'BaumansRegular';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Baumans'), url('https://fonts.cdnfonts.com/s/15460/Baumans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'productsans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('productsans'), url('productsans.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), url('OpenSans-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Regular'), url('OpenSans-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Open Sans Medium'), url('OpenSans-Medium.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNShampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+}
