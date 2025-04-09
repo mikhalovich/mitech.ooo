@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="feedback.css">
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>MITECH_By_Safonov_tailwind</title>
+</head>
+
+<body>
+    <header class="w-full shadow-[0_4px_0_0_rgba(0,0,0,0.1)] bg-[#ffffff] hidden sm:block">
+        <ul class="flex flex-row items-center h-16 max-w-[1440px] my-0 mx-auto">
+            <li class="mr-12 ml-16">
+                <p class="font-[BaumansRegular] text-[#1b1c1e] text-4xl font-normal leading-[1.19]">MITech</p>
+            </li>
+            <li class="mr-7">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Главная
+                    страница</p>
+            </li>
+            <li class="mr-7">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Блог</p>
+            </li>
+            <li class="mr-1.5">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Услуги</p>
+            </li>
+            <li class="headNavigation__services_vector"></li>
+            <li class="mr-7">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Цены</p>
+            </li>
+            <li class="mr-auto">
+                <p class="font-[OpenSans] text-[#5f6368] hover:text-[black] text-base text-center font-bold">Контакты
+                    </pclass>
+            </li>
+            <li class="mr-8">
+                <p class="font-[OpenSans] text-[#202124] font-normal text-base">+375297827334</p>
+            </li>
+            <button type="button" class="w-44 h-9 mr-16	rounded-lg bg-[#ffe795]">
+                <p class="text-[1rem] font-bold font-[Product Sans] text-[#202124]">Заказать звонок</p>
+            </button>
+        </ul>
+    </header>
+    <!-- block for mobile version of the site -->
+    <div
+        class="flex flex-row content-center items-center w-112 h-16 sm:hidden mt-0 mb-0 ml-auto mr-auto shadow-[0_4px_5px_0_rgba(0,0,0,0.05)]">
+        <p class="ml-5 mr-3 font-baumans font-normal text-2xl leading-[1.19] text-[rgba(27,28,30,1)]">MITech</p>
+        <img src="phone.svg" alt="imgPhone" class="h-11 w-11 mr-auto border-0">
+        <img src="hamburger.svg" alt="imgButton" class="h-14 w-14 mt-1 mr-5 border-0">
+    </div>
+
+    <!-- block about feedback - feedBackPage -->
+    <div
+        class="flex flex-wrap content-start justify-center w-[423px] mt-[32px] md:mt-[36px] mr-auto ml-auto md:w-[1312px] md:max-w-[100%]">
+        <p
+            class="font-[OpenSans-Bold] text-[1.625rem] font-bold leading-[1.5] text-center md:text-[3.625rem] md:leading-[1.36] lg:mb-[10px] xl:leading-[1.1] mr-[8px]">
+            MiTech –</p>
+        <div
+            class="w-[140px] md:w-[285px] h-[41px] md:h-[80px] flex flex-row  align-middle items-center justify-evenly rounded-[48px] bg-[#E1F7E3]">
+            <img alt="service" src="imgFeedBackPage.svg"
+                class="w-[32px] h-[32px] md:w-[58px] md:h-[58px] text-center md:ml-[10px] md:mr-[5px]">
+            <p
+                class="font-[OpenSans] text-[1.5rem] font-semibold leading-[1.3] md:text-[3.125rem] md:leading-[3] mb-[5px] mr-[5px] md:mr-[20px] text-[#177531]">
+                всегда</p>
+        </div>
+        <p
+            class="font-[OpenSans-Bold] text-[1.625rem] font-bold text-center leading-[1.3] w-[80%] md:text-[3.625rem] md:leading-[0.9]">
+            на связи</p>
+    </div>
+    <p
+        class="font-[OpenSans] text-[0.875rem] md:text-[1.5rem] font-normal text-[#000000] w-[386px] md:w-[960px] ml-auto mr-auto mt-[16px] md:mt-[20px] text-center">
+        Менеджеры компании с радостью ответят на ваши вопросы, произведут расчет стоимости услуг и подготовят
+        индивидуальное коммерческое предложение.
+    </p>
+    <!--  form with contacts to feedback --> 
+    <div class="flex flex-col md:flex-row mr-auto ml-auto">
+        <form
+            class="w-[416px] md:w-[640px] md:max-w-[100%] border-[1px] bodrer-[#EBEBEB] rounded-[16px] shadow-[0_4px_10px_0_#0000001A]  mt-[32px] mb-[32px] md:mb-[64px] mr-auto md:mr-[34px] ml-auto flex flex-col flex-wrap order-2 md:order-1">
+            <div
+                class="flex flex-row items-center justify-between w-[235px] md:w-[360px] mt-[16px] ml-[16px] md:mt-[24px] md:ml-[24px] mb-[16px] md:mb-[24px]">
+                <div
+                    class="w-[30px] h-[30px] md:w-[36px] md:h-[36px] rounded-[8px] shadow-[0_4px_4px_0_#0000001A] flex items-center justify-center">
+                    <img alt="direction" src="imgMessage.svg" class="w-[20px] h-[20px]">
+                </div>
+                <p class="font-[OpenSans-Bold] text-[1.25rem] md:text-[2rem] font-bold leading-[1.1] text-center">
+                    Обратная связь</p>
+                <div
+                    class="w-[20px] h-[20px] rounded-[50%] border-[1px] bg-[#FCFCFC] border-[#EBEBEB] flex items-center justify-center">
+                    <p class="font-[OpenSans-Bold] md:text-[1rem] text-[#969696] text-center">?</p>
+                </div>
+            </div>
+            <hr class="border-[1px] bg-[#EBEBEB]">
+            <div class="flex flex-row">
+                <label
+                    class="w-[182px] md:w-[44%] h-[73px] md:h-[81px] flex flex-col justify-between md:ml-[24px] ml-[16px] mt-[16px] md:mt-[24px] mr-[24px] font-[OpenSans-Bold] text-[1rem] md:text-[1.25rem] font-bold">ФИО
+                    <input type="text"
+                        class="w-[182px] md:w-[100%] h-[43px] md:h-[46px] border-[1px] pl-[16px] border-[#EBEBEB] hover:border-[#ADADAD] focus:border-[#BEAC7F] focus:shadow-[0_0_8px_0_#FAB4084D] focus:text-[#000000] font-[OpenSans] text-[0.875rem] md:text-[1rem] font-medium text-[#CFCFCF] rounded-[8px] leading-[1.375] bg-[#FCFCFC]"
+                        placeholder="Введите ФИО">
+                </label>
+
+                <label
+                    class="w-[182px] md:w-[44%] h-[73px] md:h-[81px] flex flex-col justify-between mt-[16px] md:mt-[24px] font-[OpenSans-Bold] text-[1rem] md:text-[1.25rem] font-bold">Телефон
+                    <input type="text"
+                        class="w-[182px] md:w-[100%] h-[43px] md:h-[46px] border-[1px] pl-[16px] border-[#EBEBEB] hover:border-[#ADADAD] focus:border-[#BEAC7F] focus:shadow-[0_0_8px_0_#FAB4084D] focus:text-[#000000] font-[OpenSans] text-[0.875rem] md:text-[1rem] font-medium text-[#CFCFCF] rounded-[8px] leading-[1.375] bg-[#FCFCFC]"
+                        placeholder="Введите телефон">
+                </label>
+            </div>
+            <div class="flex flex-row mt-[16px]">
+                <label
+                    class="w-[182px] md:w-[44%] h-[73px] md:h-[81px] flex flex-col justify-between md:ml-[24px] ml-[16px] mr-[24px] font-[OpenSans-Bold] text-[1rem] md:text-[1.25rem] font-bold">Email
+                    <input type="email"
+                        class="w-[182px] md:w-[100%] h-[43px] md:h-[46px] border-[1px] pl-[16px] border-[#EBEBEB] hover:border-[#ADADAD] focus:border-[#BEAC7F] focus:shadow-[0_0_8px_0_#FAB4084D] focus:text-[#000000] font-[OpenSans] text-[0.875rem] md:text-[1rem] font-medium text-[#CFCFCF] rounded-[8px] leading-[1.375] bg-[#FCFCFC]"
+                        placeholder="Введите почту">
+                </label>
+
+                <label
+                    class="w-[182px] md:w-[44%] h-[73px] md:h-[81px] flex flex-col justify-between font-[OpenSans-Bold] text-[1rem] md:text-[1.25rem] font-bold">Город
+
+                    <input type="text"
+                        class="w-[182px] md:w-[100%] h-[43px] md:h-[46px] border-[1px] pl-[16px] font-[OpenSans] text-[0.875rem] border-[#EBEBEB] hover:border-[#ADADAD] focus:border-[#BEAC7F] focus:shadow-[0_0_8px_0_#FAB4084D] focus:text-[#000000] md:text-[1rem] font-medium text-[#CFCFCF] rounded-[8px] leading-[1.375] bg-[#FCFCFC]"
+                        placeholder="Введите город">
+                </label>
+            </div>
+            <label
+                class="w-[384px] md:w-[93%] h-[190px] md:h-[193px] flex flex-col justify-between mt-[16px]  font-[OpenSans-Bold] text-[1rem] md:text-[1.25rem] font-bold md:ml-[24px] ml-[16px]">Комментарии
+                <textarea
+                    class="resize-none w-[384px] md:w-[100%] h-[190px] md:h-[158px] border-[1px] font-medium text-[#CFCFCF] font-[OpenSans] text-[0.875rem] pl-[16px] border-[#EBEBEB] hover:border-[#ADADAD] focus:border-[#BEAC7F] focus:shadow-[0_0_8px_0_#FAB4084D] focus:text-[#000000] pt-[12px] mt-[8px] md:text-[1rem] rounded-[8px] leading-[1.375] bg-[#FCFCFC]"
+                    placeholder="Любые замечания/пожелания"></textarea>
+            </label>
+            <label
+                class="font-[OpenSans] text-[0.875rem] md:text-[1rem] mt-[17px] md:mt-[20px] font-normal leading-[1.36] text-left text-[#000000] flex flex-row md:mr-auto ml-[16px] md:ml-[24px]">
+                <input type="checkbox" name="" value="" class="mr-[8px]">
+                Я согласен на<a href=""
+                    class="font-[OpenSans] text-[0.875rem] md:text-[1rem] font-normal leading-[1.36] text-left text-[#000000]">
+                    &nbsp;обработку персональных
+                    данных</a></label>
+            <button type="button"
+                class="w-[93%] h-[59px]  rounded-[16px] bg-[#C7E7CA] border-[2px] border-[#1775314D]  md:mt-[20px] mt-[16px] mb-[24px] ml-auto mr-auto md:w-[93%] md:h-[70px] font-[OpenSans-Bold] leading-[1.36] text-[1.25rem] md:text-[1.5rem] font-bold text-center text-[#177531] ">Отправить</button>
+        </form>
+        <div
+            class="md:w-[640px] md:max-w-[100%] w-[416px]  mr-auto ml-auto md:ml-0  mt-[16px] md:mt-[32px] order-1 md:order-2">
+            <div
+                class="md:w-[100%] w-[416px] h-[404px] md:h-[400px] rounded-[16px] border-[3px] bg-[url(mapFedback.svg)] bg-no-repeat bg-cover">
+            </div>
+            <ul class="mt-[20px]">
+                <li class="flex flex-row font-[OpenSans] font-normal text-[0.875rem] md:text-[1.25rem]">
+                    <p class="font-[OpenSans] font-bold">Адрес:&nbsp;</p>РБ, г. Гродно, ул. Гаспадарчая, 23/4-1, оф.
+                    205, 230005
+                </li>
+                <li
+                    class="flex flex-row font-[OpenSans] font-normal text-[0.875rem] md:text-[1.25rem] mt-[8px] md:mt-[12px]">
+                    <p class="font-[OpenSans] font-bold">Телефон:&nbsp;</p>+375297827334
+                </li>
+                <li
+                    class="flex flex-row font-[OpenSans] font-normal text-[0.875rem] md:text-[1.25rem] mt-[8px] md:mt-[12px]">
+                    <p class="font-[OpenSans] font-bold">Email:&nbsp;</p>contact@mitech.ooo
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- FOOTER-->
+    <div
+        class="w-[440px] h-[282px] md:max-w-[1440px] md:w-[100%] md:h-[150px] bg-[#ffffff] flex content-evenly flex-row flex-wrap md:items-center pl-[20px]   ml-auto mr-auto shadow-[0_-4px_5px_0_rgba(0,0,0,0.05)] md:rounded-tl-[0] md:rounded-tr-[0] md:rounded-br-[32px] md:rounded-bl-[32px]">
+        <p
+            class="font-[BaumansRegular] text-[1.75rem] md:text-[3rem] font-normal leading-[1.19] ml-0 md:ml-[4%] text-[#1b1c1e]">
+            MITech</p>
+        <p
+            class="w-[231px] md:w-[16%] font-[OpenSans] text-[0.875rem] md:font-normal font-medium leading-[1.43] text-left ml-[12px]">
+            13 лет перевозим грузы по России, Беларуси и странам СНГ</p>
+        <div class=" h-[46px] ml-0 mr-[50px] md:mr-0 md:h-[46px] md:ml-[7%]">
+            <p class="font-[OpenSans] text-[1rem] font-medium md:font-normal leading-[1.36] text-left text-[#000000]">
+                Беларусь, г. Гродно, 230005</p>
+            <p class="font-[OpenSans] text-[1rem] font-normal leading-[1.36] text-left text-[#969696]">ул.
+                Гаспадарчая, 23/4-1, оф. 205</p>
+        </div>
+        <div class="h-[46px] ml-0 md:ml-[3%] mr-[350px] md:mr-0  md:h-[46px]">
+            <p class="font-[OpenSans] text-[1rem] leading-[1.36] font-medium md:font-normal text-left text-[#1b1c1e]">
+                contact@mitech.ooo</p>
+            <p class="font-[OpenSans] text-[1rem] leading-[1.36] font-normal text-left text-[#969696]">Почта для связи
+            </p>
+        </div>
+        <img src="telegram.svg" alt="telegramImg"
+            class="ml-0 md:ml-[48px] w-[38px] h-[38px] content-center md:w-[44px] md:h-[44px]">
+        <img src="whatsapp.svg" alt="whatsappImg"
+            class="ml-[8px] w-[38px] h-[38px] content-center md:w-[44px] md:h-[44px]">
+        <div class="h-[46px] flex flex-col justify-between md:h-[46px] md:items-start ml-[12px]">
+            <p class=" h-[22px] font-[OpenSans] text-[1rem] font-medium leading-[1.36] text-left text-[#1b1c1e]">
+                +375297827334</p>
+            <p class=" h-[22px] font-[OpenSans] text-[1rem] font-normal leading-[1.36] text-left text-[#969696]">
+                Ежедневно с 07:00 - 21:00</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
