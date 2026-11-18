@@ -7,6 +7,7 @@
   display: inline-flex;
   align-items: center;
   user-select: none;
+  cursor: pointer;
 }
 .custom-checkbox + label::before {
   content: "";
@@ -15,24 +16,38 @@
   height: 24px;
   flex-shrink: 0;
   flex-grow: 0;
-  border: 3px solid #fee500;
-  margin-right: 0.5em;
+  box-sizing: border-box;
+  border: 2px solid rgb(var(--color-text-main));
+  border-radius: 4px;
+  margin-right: 12px;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 50% 50%;
+  background-size: 16px 16px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
+/* checked: тёмная галочка */
 .custom-checkbox:checked + label::before {
-  border-color: #fee500;
-  background-color: white;
-  background-image: url(~/assets/svg/contacts-page/checkbox.svg);
-  background-size: cover;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8.5l3.5 3.5L13 4.5' stroke='%23202124' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
-/* стили при наведении курсора на checkbox */
+/* hover */
 .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
-  border-color: #fee500;
+  border-color: rgb(var(--color-primary));
 }
-/* стили для активного состояния чекбокса (при нажатии на него) */
+/* active (нажатие) */
 .custom-checkbox:not(:disabled):active + label::before {
-  background-color: white;
-  border-color: #fee500;
+  border-color: rgb(var(--color-primary-hover));
+}
+/* focus с клавиатуры */
+.custom-checkbox:focus-visible + label::before {
+  border-color: rgb(var(--color-primary));
+  box-shadow: 0 0 0 2px rgb(var(--color-yellow-soft));
+}
+/* ошибка */
+.custom-checkbox.is-error + label::before {
+  border-color: rgb(var(--color-error));
+}
+.custom-checkbox:disabled + label {
+  cursor: not-allowed;
+  opacity: 0.5;
 }

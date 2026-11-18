@@ -89,7 +89,7 @@
                   class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
                   :class="{
                     'border-warning focus:border-warning outline-warning':
-                      v$.name.$error
+                      v$.name.$error,
                   }"
                   @change="v$.name.$touch"
                 />
@@ -112,7 +112,7 @@
                   :class="{
                     'border-warning focus:border-warning outline-warning':
                       v$.email.$error,
-                    'border-[#42d392] outline-[#42d392] ': !v$.email.$invalid
+                    'border-[#42d392] outline-[#42d392] ': !v$.email.$invalid,
                   }"
                   @change="v$.email.$touch"
                 />
@@ -153,7 +153,7 @@
                   :class="{
                     'border-warning focus:border-warning outline-warning':
                       v$.message.$error,
-                    'border-[#42d392] outline-[#42d392] ': !v$.message.$invalid
+                    'border-[#42d392] outline-[#42d392] ': !v$.message.$invalid,
                   }"
                   @change="v$.message.$touch"
                 ></textarea>
@@ -209,7 +209,7 @@
             class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
             :class="{
               'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled,
-              'bg-secondary': !isButtonDisabled
+              'bg-secondary': !isButtonDisabled,
             }"
           >
             Отправить
@@ -224,74 +224,77 @@
 </template>
 
 <script setup>
-import { useVuelidate } from '@vuelidate/core';
+import { useVuelidate } from "@vuelidate/core";
 import {
   required,
   email,
   minLength,
   maxLength,
-  helpers
-} from '@vuelidate/validators';
-import { Checkbox } from 'vue-recaptcha';
+  helpers,
+} from "@vuelidate/validators";
+import { Checkbox } from "vue-recaptcha";
 
 useHead({
-  title: 'Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость',
+  title: "Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content:
-        'Контакты MiTech /Адрес: РБ, г. Гродно, ул. Гаспадарчая, 23/4-1, оф. 205, 230005. Тел.: +375297827334, contact@mitech.ooo. Схема проезда'
+        "Контакты MiTech /Адрес: РБ, г. Гродно, ул. Гаспадарчая, 23/4-1, оф. 205, 230005. Тел.: +375297827334, contact@mitech.ooo. Схема проезда",
     },
-    { name: 'keywords', content: 'контакты транспортной компании, адрес транспортной компании' }
-  ]
+    {
+      name: "keywords",
+      content: "контакты транспортной компании, адрес транспортной компании",
+    },
+  ],
 });
 
-const phone = ref('');
-const city = ref('');
+const phone = ref("");
+const city = ref("");
 const isAlertShowed = ref(false);
 const checkbox = ref(false);
 const formData = reactive({
-  name: '',
-  email: '',
-  message: '',
+  name: "",
+  email: "",
+  message: "",
   checkbox: checkbox.value,
-  captcha: ''
+  captcha: "",
 });
 
 const rules = computed(() => {
   return {
     name: {
-      required: helpers.withMessage('Это поле обязательное', required)
+      required: helpers.withMessage("Это поле обязательное", required),
     },
     email: {
-      required: helpers.withMessage('Это поле обязательное', required),
-      email: helpers.withMessage('e-mail введён некорректно', email)
+      required: helpers.withMessage("Это поле обязательное", required),
+      email: helpers.withMessage("e-mail введён некорректно", email),
     },
     message: {
-      required: helpers.withMessage('Это поле обязательное', required),
+      required: helpers.withMessage("Это поле обязательное", required),
       minLength: helpers.withMessage(
-        'Сообщение должно быть длиннее тридцати символов',
-        minLength(30)
+        "Сообщение должно быть длиннее тридцати символов",
+        minLength(30),
       ),
       maxLength: helpers.withMessage(
-        'Сообщение не должно быть длиннее пятисот символов',
-        maxLength(500)
-      )
+        "Сообщение не должно быть длиннее пятисот символов",
+        maxLength(500),
+      ),
     },
     checkbox: {
       required: helpers.withMessage(
-        'Для отправки разрешите обработку персональных данных',
-        required
-      )
+        "Для отправки разрешите обработку персональных данных",
+        required,
+      ),
     },
     captcha: {
-      required: helpers.withMessage('Это поле обязательное', required)
-    }
+      required: helpers.withMessage("Это поле обязательное", required),
+    },
   };
 });
 
 const isButtonDisabled = computed(() => {
-  const emailPattern = new RegExp('^.+@.+\\..+$');
+  const emailPattern = new RegExp("^.+@.+\\..+$");
   return !(
     formData.name &&
     emailPattern.test(formData.email) &&
@@ -310,7 +313,7 @@ async function submitForm() {
       name: formData.name,
       email: formData.email,
       message: formData.message,
-      isContact: true
+      isContact: true,
     };
 
     if (city.value) {
@@ -322,22 +325,22 @@ async function submitForm() {
 
     try {
       await $fetch(
-        'https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender',
+        "https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender",
         {
-          method: 'POST',
-          body: JSON.stringify(body)
-        }
+          method: "POST",
+          body: JSON.stringify(body),
+        },
       );
       isAlertShowed.value = true;
       Object.assign(formData, {
-        name: '',
-        email: '',
-        message: '',
+        name: "",
+        email: "",
+        message: "",
         checkbox: null,
-        captcha: ''
+        captcha: "",
       });
-      city.value = '';
-      phone.value = '';
+      city.value = "";
+      phone.value = "";
       checkbox.value = false;
       v$.value.$reset();
     } catch (error) {
