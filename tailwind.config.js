@@ -10,53 +10,72 @@ export default {
 
   theme: {
     fontFamily: {
-      primary: ['Roboto Slab'],
-      logo: ['Baumans']
+      sans: ['"Open Sans"', 'sans-serif'],
+      primary: ['"Open Sans"', 'sans-serif'],
+      logo: ['Baumans', 'cursive']
     },
 
     extend: {
       screens: {
-        'mobile-l': '410px',
-        'mobile-xl': '455px',
-        'mobile-xxl': '576px',
+        mobile: '440px',
         tablet: '768px',
         'max-tablet': { max: '768px' },
         laptop: '1024px',
-        'laptop-xl': '1200px',
-        desktop: '1370px'
+        desktop: '1440px'
       },
 
       maxWidth: {
-        'services-card': '432px',
-        medium: '440px',
-        'index-heading': '456px',
-        '2xlg': '664px',
-        container: '1376px'
+        container: '1312px',
+        'container-service': '1158px',
+        'container-blog': '1044px',
+        'container-narrow': '960px'
       },
 
       colors: {
-        primary: 'rgb(var(--color-primary) / 1)',
-        secondary: 'rgb(var(--color-secondary) / 1)',
-        navigate: 'rgb(var(--color-nav) / 1)',
-        button: 'rgb(var(--color-button) / 1)',
-        warning: 'rgb(var(--color-warning) / 1)',
-        cultured: 'rgb(var(--color-cultured) / 1)',
-        greenCard: 'rgb(var(--color-green) / 0.1)',
-        purpleCard: 'rgb(var(--color-purple) / 0.1)',
-        pinkCard: 'rgb(var(--color-pink) / 0.1)'
+        bg: {
+          main: 'rgb(var(--color-bg-main) / <alpha-value>)',
+          subtle: 'rgb(var(--color-bg-subtle) / <alpha-value>)'
+        },
+        surface: {
+          cream: 'rgb(var(--color-surface-cream) / <alpha-value>)',
+          blue: 'rgb(var(--color-surface-blue) / <alpha-value>)',
+          'blue-alt': 'rgb(var(--color-surface-blue-alt) / <alpha-value>)',
+          green: 'rgb(var(--color-surface-green) / <alpha-value>)',
+          beige: 'rgb(var(--color-surface-beige) / <alpha-value>)'
+        },
+        content: {
+          main: 'rgb(var(--color-text-main) / <alpha-value>)',
+          muted: 'rgb(var(--color-text-muted) / <alpha-value>)',
+          light: 'rgb(var(--color-text-light) / <alpha-value>)',
+          blog: 'rgb(var(--color-text-blog) / <alpha-value>)'
+        },
+        primary: {
+          DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+          hover: 'rgb(var(--color-primary-hover) / <alpha-value>)'
+        },
+        amber: 'rgb(var(--color-amber) / <alpha-value>)',
+        'yellow-soft': 'rgb(var(--color-yellow-soft) / <alpha-value>)',
+        accent: {
+          blue: 'rgb(var(--color-blue) / <alpha-value>)',
+          'blue-hover': 'rgb(var(--color-blue-hover) / <alpha-value>)',
+          green: 'rgb(var(--color-green) / <alpha-value>)',
+          'green-hover': 'rgb(var(--color-green-hover) / <alpha-value>)'
+        },
+        border: {
+          DEFAULT: 'rgb(var(--color-border) / <alpha-value>)',
+          light: 'rgb(var(--color-border-light) / <alpha-value>)'
+        },
+        error: {
+          DEFAULT: 'rgb(var(--color-error) / <alpha-value>)',
+          dark: 'rgb(var(--color-error-dark) / <alpha-value>)'
+        }
       },
 
-      fontSize: {
-        base: ['16px', '21px'],
-        xlg: ['23px', '30px'],
-        '3xlg': ['32px', '42px'],
-        '4xlg': ['40px', '53px'],
-        lg: ['56px', '64px']
-      },
-
-      boxShadow: {
-        normal: '2px 2px 15px 1px #00000029',
-        buttonActive: '0px 0px 20px 8px #00000020'
+      borderRadius: {
+        input: '8px',
+        card: '16px',
+        'card-lg': '20px',
+        'card-xl': '24px'
       }
     }
   }

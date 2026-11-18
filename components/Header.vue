@@ -1,143 +1,161 @@
 <template>
-  <div class="max-w-container mobile-l:px-4 mt-10 w-full">
-    <header class="flex items-center justify-between">
-      <NuxtLink class="font-logo text-5xl font-bold text-secondary" to="/">
-        MITech
-      </NuxtLink>
+  <header class="relative z-30 w-full bg-bg-main shadow-sm">
+    <div class="mx-auto flex h-16 w-full max-w-container items-center justify-between px-5 laptop:h-auto laptop:py-3 laptop:px-0">
+      <!-- Логотип + (мобильный) телефон -->
+      <div class="flex items-center gap-3 laptop:gap-12">
+        <NuxtLink class="font-logo text-3xl text-content-main laptop:text-4xl" to="/">
+          MITech
+        </NuxtLink>
 
-      <a
-        class="font-primary text-xl font-normal text-navigate mobile-l:ml-auto mobile-l:mr-6 tablet:hidden"
-        href="tel:+375297827334"
-      >
-        +375297827334
-      </a>
-
-      <nav class="font-primary text-2xl font-normal text-navigate relative">
-        <div class="laptop:hidden" @click="toggleMenu">
-          <img
-            v-if="!isPressed"
-            src="../assets/svg/burger-open.svg"
-            alt=""
-            class="w-12 h-12 duration-300"
-          />
-
-          <img
-            v-else
-            src="../assets/svg/burger-close.svg"
-            alt=""
-            class="w-12 h-12 rotate-45"
-          />
-        </div>
-
-        <div
-          class="fixed laptop:static flex flex-col laptop:flex-row items-center w-full bg-cultured/90 laptop:bg-cultured/0 z-20 list-none transition-all duration-300 overflow-x-hidden [&>a]:my-6 laptop:[&>a]:my-0 gap-3 laptop-xl:gap-12 [&>a]:transition-[text-shadow] [&>a]:duration-[0.1s]"
-          :class="[!isPressed ? 'left-full' : 'left-0']"
+        <a
+          class="flex h-10 w-10 items-center justify-center rounded-input bg-yellow-soft laptop:hidden"
+          href="tel:+375297827334"
+          aria-label="Позвонить"
         >
-          <a
-              class="hidden text-xl active:text-secondary laptop:block laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-              href="tel:+375297827334"
-            >
-            +375297827334
-          </a>
+          <img src="../assets/svg/app-header/phone.svg" alt="" class="h-6 w-6" />
+        </a>
+
+        <!-- Навигация -->
+        <nav class="hidden laptop:flex laptop:items-center laptop:gap-7 font-primary text-base font-bold text-content-muted">
           <NuxtLink
-            @click="toggleMenu"
-            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-            :class="{
-              underline: location === '/',
-              'decoration-secondary': location === '/'
-            }"
+            class="hover:text-content-main"
+            :class="{ '!text-content-main': location === '/' }"
             to="/"
           >
-            Главная
+            О компании
           </NuxtLink>
           <NuxtLink
-            @click="toggleMenu"
-            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-            :class="{
-              underline: location === '/about',
-              'decoration-secondary': location === '/about'
-            }"
-            to="/about"
-          >
-            О нас
-          </NuxtLink>
-          <NuxtLink
-            v-if="!isMobile"
-            @click="toggleMenu"
-            @mouseenter="showLinks"
-            @mouseleave="hideLinks"
-            id="services"
-            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-            :class="{
-              underline:
-                location === '/services' ||
-                location === '/services/transportation' ||
-                location === '/services/freight-forwarding',
-              'decoration-secondary':
-                location === '/services' ||
-                location === '/services/transportation' ||
-                location === '/services/freight-forwarding'
-            }"
-            to="/services"
-          >
-            Услуги
-          </NuxtLink>
-          <div v-else class="h-8 my-6 overflow-hidden height-transition" :class="{ '!h-[132px]': isOpened }">
-            <p @click="toggleDropDown" class="text-center cursor-pointer">Услуги</p>
-            <Transition name="fade">
-              <div class="mt-1 overflow-hidden">
-                <AppearingLinks @toggle-menu="toggleMenu" />
-              </div>
-            </Transition>
-          </div>
-          <NuxtLink
-            @click="toggleMenu"
-            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-            :class="{
-              underline: location === '/blog',
-              'decoration-secondary': location === '/blog'
-            }"
+            class="hover:text-content-main"
+            :class="{ '!text-content-main': location === '/blog' }"
             to="/blog"
           >
             Блог
           </NuxtLink>
+          <div class="relative">
+            <NuxtLink
+              id="services"
+              class="flex items-center gap-[5px] hover:text-content-main"
+              :class="{ '!text-content-main': isServicesPage }"
+              to="/services"
+              @mouseenter="showLinks"
+              @mouseleave="hideLinks"
+            >
+              Услуги
+              <img src="../assets/svg/app-header/chevron.svg" alt="" class="-rotate-90" />
+            </NuxtLink>
+            <Transition name="fade">
+              <div
+                v-if="isHovered && !isMobile"
+                id="links"
+                class="absolute left-0 top-full z-30 pt-3"
+                @mouseenter="showLinks"
+                @mouseleave="hideLinks"
+              >
+                <div class="w-max rounded-card bg-bg-main px-6 py-4 font-primary text-base font-medium text-content-muted shadow-md [&_a:hover]:text-content-main [&_li]:py-1">
+                  <AppearingLinks @toggle-menu="toggleMenu" />
+                </div>
+              </div>
+            </Transition>
+          </div>
           <NuxtLink
-            @click="toggleMenu"
-            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-            :class="{
-              underline: location === '/prices',
-              'decoration-secondary': location === '/prices'
-            }"
+            class="hover:text-content-main"
+            :class="{ '!text-content-main': location === '/prices' }"
             to="/prices"
           >
             Цены
           </NuxtLink>
           <NuxtLink
-            @click="toggleMenu"
-            class="active:text-secondary laptop:active:text-primary laptop:active:[text-shadow:_0_1px_0_rgb(0_0_0_/_50%)]"
-            :class="{
-              underline: location === '/contacts',
-              'decoration-secondary': location === '/contacts'
-            }"
+            class="hover:text-content-main"
+            :class="{ '!text-content-main': location === '/contacts' }"
             to="/contacts"
           >
             Контакты
           </NuxtLink>
-          <Transition name="fade">
-            <div
-              v-if="isHovered && !isMobile"
-              @mouseenter="showLinks"
-              @mouseleave="hideLinks"
-              id="links"
-              class="absolute top-8 right-0 pt-[10px]"
-            >
+        </nav>
+      </div>
+
+      <!-- Телефон + кнопка (десктоп) -->
+      <div class="hidden items-center gap-8 laptop:flex">
+        <a class="font-primary text-base font-normal text-black" href="tel:+375297827334">
+          +375297827334
+        </a>
+        <NuxtLink
+          class="rounded-input bg-yellow-soft px-4 py-2 font-primary text-base font-bold text-black hover:bg-primary-hover"
+          to="/contacts"
+        >
+          Заказать звонок
+        </NuxtLink>
+      </div>
+
+      <!-- Бургер (мобильный) -->
+      <button
+        type="button"
+        class="flex h-10 w-10 items-center justify-center rounded-input bg-bg-main shadow-md laptop:hidden"
+        aria-label="Меню"
+        @click="toggleMenu"
+      >
+        <img src="../assets/svg/app-header/menu.svg" alt="" />
+      </button>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div
+      class="fixed inset-x-0 bottom-0 top-16 z-20 bg-black/45 transition-opacity duration-300 laptop:hidden"
+      :class="isPressed ? 'opacity-100' : 'pointer-events-none opacity-0'"
+      @click.self="closeMenu"
+    >
+      <nav
+        class="h-full w-[342px] max-w-full overflow-y-auto bg-bg-main px-8 pt-10 font-primary text-base font-bold text-content-muted transition-transform duration-300"
+        :class="isPressed ? 'translate-x-0' : '-translate-x-full'"
+      >
+        <div class="flex flex-col gap-5">
+          <NuxtLink
+            class="border-b border-border pb-2"
+            :class="{ 'text-content-main': location === '/' }"
+            to="/"
+            @click="toggleMenu"
+          >
+            Главная страница
+          </NuxtLink>
+          <NuxtLink
+            class="border-b border-border pb-2"
+            :class="{ 'text-content-main': location === '/blog' }"
+            to="/blog"
+            @click="toggleMenu"
+          >
+            Блог
+          </NuxtLink>
+
+          <div class="overflow-hidden transition-[height] duration-200 ease-linear" :class="isOpened ? 'h-48' : 'h-8'">
+            <div class="flex cursor-pointer items-center gap-[5px] border-b border-border pb-2" @click="toggleDropDown">
+              <span :class="{ 'text-content-main': isServicesPage }">Услуги</span>
+              <img src="../assets/svg/app-header/chevron.svg" alt="" class="rotate-90" />
+            </div>
+            <div class="mt-2 pl-3 font-medium [&_a]:block [&_a]:border-b [&_a]:border-border-light [&_a]:pb-2 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-[10px]">
               <AppearingLinks @toggle-menu="toggleMenu" />
             </div>
-          </Transition>
+          </div>
+
+          <NuxtLink
+            class="border-b border-border pb-2"
+            :class="{ 'text-content-main': location === '/prices' }"
+            to="/prices"
+            @click="toggleMenu"
+          >
+            Цены
+          </NuxtLink>
+          <NuxtLink
+            class="border-b border-border pb-2"
+            :class="{ 'text-content-main': location === '/contacts' }"
+            to="/contacts"
+            @click="toggleMenu"
+          >
+            Контакты
+          </NuxtLink>
         </div>
       </nav>
-    </header>
-  </div>
+    </div>
+  </header>
 </template>
 
 <script setup>
@@ -146,6 +164,7 @@ import { computed, onMounted, onUnmounted } from 'vue';
 const route = useRoute();
 const router = useRouter();
 const location = computed(() => route.path);
+const isServicesPage = computed(() => location.value.startsWith('/services'));
 
 const isPressed = ref(false);
 const isHovered = ref(false);
@@ -168,18 +187,18 @@ const showLinks = () => {
   isHovered.value = true;
 };
 const hideLinks = (event) => {
-  if (!event.toElement.id) {
+  const target = event.relatedTarget || event.toElement;
+  if (!target || !target.id) {
     isHovered.value = false;
   }
 };
-const toggleDropDown = () => 
-{
+const toggleDropDown = () => {
   if (isOpened.value) {
-    router.push("/services");
+    router.push('/services');
     isPressed.value = false;
   }
   isOpened.value = !isOpened.value;
-}
+};
 
 onMounted(() => {
   window.addEventListener('scroll', closeMenu);
@@ -198,9 +217,5 @@ onUnmounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-
-.height-transition {
-  transition: height 0.2s linear;
 }
 </style>

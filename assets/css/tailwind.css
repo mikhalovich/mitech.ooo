@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Roboto+Slab:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Open+Sans:wght@400;500;600;700&display=swap');
 @import url(./checkbox.css);
 @import url(./swiper.css);
 
@@ -8,14 +8,41 @@
 
 @layer base {
   :root {
-    --color-primary: 38 114 171;
-    --color-secondary: 254 229 0;
-    --color-nav: 62 126 180;
-    --color-button: 254 228 0;
-    --color-warning: 254 0 0;
-    --color-cultured: 244 244 244;
-    --color-green: 6 166 127;
-    --color-purple: 66 103 178;
-    --color-pink: 249 77 83;
+    /* Backgrounds */
+    --color-bg-main: 255 255 255;       /* #FFFFFF */
+    --color-bg-subtle: 252 252 252;   /* #FCFCFC */
+    --color-surface-cream: 254 246 219; /* #FEF6DB */
+    --color-surface-blue: 242 245 251;  /* #F2F5FB */
+    --color-surface-blue-alt: 232 240 254; /* #E8F0FE */
+    --color-surface-green: 199 231 208; /* #C7E7D0 */
+    --color-surface-beige: 244 242 233; /* #F4F2E9 */
+
+    /* Text */
+    --color-text-main: 32 33 36;        /* #202124 */
+    --color-text-muted: 95 99 104;      /* #5F6368 */
+    --color-text-light: 150 150 150;    /* #969696 */
+    --color-text-blog: 44 55 63;        /* #2C373F */
+
+    /* Brand & Accents */
+    --color-primary: 255 187 0;         /* #FFBB00 */
+    --color-primary-hover: 236 173 0;   /* #ECAD00 */
+    --color-amber: 251 180 6;           /* #FBB406 */
+    --color-yellow-soft: 255 231 149;   /* #FFE795 */
+    --color-blue: 25 103 210;           /* #1967D2 */
+    --color-blue-hover: 13 75 160;      /* #0D4BA0 */
+    --color-green: 23 117 49;           /* #177531 */
+    --color-green-hover: 13 83 32;      /* #0D5320 */
+
+    /* Borders & States */
+    --color-border: 218 220 224;        /* #DADCE0 */
+    --color-border-light: 235 235 235;  /* #EBEBEB */
+    --color-error: 227 17 17;           /* #E31111 */
+    --color-error-dark: 173 0 0;        /* #AD0000 */
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(var(--color-text-main));
+    background-color: rgb(var(--color-bg-main));
   }
 }

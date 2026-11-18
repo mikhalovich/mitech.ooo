@@ -18,17 +18,16 @@
   width: 16px !important;
   height: 16px !important;
   opacity: 1 !important;
-  background: rgba(254, 229, 0, 0.4) !important;
+  background: rgba(25, 103, 210, 0.3) !important;
 }
 
 .swiper-pagination-bullet-active {
   width: 16px !important;
   height: 16px !important;
   opacity: 1 !important;
-  background: rgba(254, 229, 0, 1) !important;
+  background: rgba(25, 103, 210, 1) !important;
 }
 
-/* disable the ability to highlight text */
 .unselectable {
   -moz-user-select: none;
   -khtml-user-select: none;

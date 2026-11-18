@@ -6,7 +6,7 @@
         class="w-fit"
         to="/services/transportation"
       >
-        Международные автомобильные грузоперевозки
+        Международные грузоперевозки
       </NuxtLink>
     </li>
     <li>
@@ -24,7 +24,7 @@
         class="w-fit"
         to="/services/software-development"
       >
-        Разработка ПО для транспортных компаний
+        Разработка ПО
       </NuxtLink>
     </li>
   </ul>
