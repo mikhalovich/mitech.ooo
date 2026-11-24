@@ -21,7 +21,7 @@ export default {
         tablet: '768px',
         'max-tablet': { max: '768px' },
         laptop: '1024px',
-        desktop: '1440px'
+        desktop: '1280px'
       },
 
       maxWidth: {
