@@ -27,7 +27,7 @@
 
 - **Fonts:** `font-primary` (Open Sans — default), `font-logo` (Baumans — only for MITech logo).
 - **Containers:** `max-w-container` (1312px default), `max-w-container-service` (1158px), `max-w-container-blog` (1044px), `max-w-container-narrow` (960px).
-- **Breakpoints:** `mobile` (440px), `tablet` (768px), `laptop` (1024px), `desktop` (1440px).
+- **Breakpoints:** `mobile` (440px), `tablet` (768px), `laptop` (1024px), `desktop` (1280px).
 - **Colors:**
   - Backgrounds: `bg-bg-main` (#FFFFFF), `bg-bg-subtle` (#FCFCFC), `bg-surface-cream` (#FEF6DB), `bg-surface-blue` (#F2F5FB), `bg-surface-blue-alt` (#E8F0FE), `bg-surface-green` (#C7E7D0), `bg-surface-beige` (#F4F2E9).
   - Text: `text-content-main` (#202124), `text-content-muted` (#5F6368), `text-content-light` (#969696), `text-content-blog` (#2C373F).
