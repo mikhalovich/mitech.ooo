@@ -1,27 +1,26 @@
 <template>
-  <div class="relative" @click="handleClickCard">
+  <NuxtLink
+    class="flex flex-col bg-surface-cream rounded-card overflow-hidden transition-shadow hover:shadow-md"
+    :to="{ name: 'blog-id', params: { id } }"
+  >
     <img
-      class="border border-primary rounded mb-9 transition-all object-cover"
-      :src="img.url"
-      :alt="img.alt"
+      class="w-full h-56 object-cover"
+      :src="img?.url"
+      :alt="img?.alt || title"
     />
-    <div>
-      <p class="mb-2 opacity-80">{{ date }}</p>
-      <p class="text-2xl font-semibold mb-1">{{ title }}</p>
-      <prismic-rich-text class="opacity-80 pr-16 description" :field="content" />
+    <div class="flex flex-col gap-3 p-6">
+      <div class="flex items-center gap-1.5">
+        <span class="flex items-center justify-center w-6 h-6 rounded-full bg-bg-main text-sm" aria-hidden="true">📆</span>
+        <span class="text-sm font-semibold uppercase tracking-wider text-content-light">{{ formattedDate }}</span>
+      </div>
+      <p class="text-2xl font-bold text-content-blog">{{ title }}</p>
+      <prismic-rich-text class="text-lg text-content-muted description" :field="content" />
     </div>
-    <NuxtLink class="absolute right-0 bottom-0" :to="{ name: 'blog-id', params: { id } }">
-      <img
-        class="w-14"
-        src="@/assets/svg/arrow.svg"
-        alt="pagination-arrow"
-      />
-    </NuxtLink>
-  </div>
+  </NuxtLink>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   id: {
     type: String,
     required: true
@@ -47,4 +46,20 @@ defineProps({
     default: ""
   }
 });
+
+const formattedDate = computed(() => {
+  const parsed = new Date(props.date);
+  if (!props.date || Number.isNaN(parsed.getTime())) return props.date;
+  return parsed.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' });
+});
 </script>
+
+<style scoped>
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+}
+</style>
