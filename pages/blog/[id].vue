@@ -1,71 +1,101 @@
 <template>
   <div class="w-full font-primary text-content-main">
-    <article v-if="post" class="max-w-container w-full mx-auto px-4 pb-20">
-      <!-- Hero: обложка + хлебные крошки + заголовок + дата -->
+    <article v-if="post" class="max-w-container w-full mx-auto tablet:px-8 desktop:px-4">
+      <!-- Hero: обложка + хлебные крошки + заголовок + описание + дата -->
       <header
-        class="relative isolate overflow-hidden rounded-b-card-xl rounded-t-none min-h-[28rem] tablet:min-h-[15rem] laptop:min-h-[18rem] flex flex-col justify-between gap-8 px-4 tablet:px-14 desktop:px-14 py-6 tablet:py-8 text-white"
+        class="relative isolate overflow-hidden rounded-b-card-lg flex flex-col justify-center p-5 tablet:px-8 tablet:py-10 desktop:py-10 desktop:pl-20 desktop:pr-60 text-bg-main"
       >
         <img
           v-if="post.img?.url"
-          class="absolute inset-0 -z-20 w-full h-full object-cover"
+          class="absolute inset-0 -z-20 w-full h-full object-cover bg-content-main"
           :src="post.img.url"
           :alt="post.img.alt || post.title"
           fetchpriority="high"
         />
         <div
-          class="absolute inset-0 -z-10 bg-gradient-to-r from-content-main/60 via-content-main/20 to-transparent"
+          class="absolute inset-0 -z-10 bg-gradient-to-l from-transparent to-black/70 desktop:to-black/50"
+          aria-hidden="true"
         ></div>
 
-        <nav
-          class="flex flex-wrap items-center gap-x-2 gap-y-1 text-base tablet:text-sm"
-          aria-label="breadcrumb"
-        >
-          <template v-for="(crumb, i) in crumbs" :key="crumb.label">
-            <NuxtLink v-if="crumb.to" :to="crumb.to" class="hover:underline">{{
-              crumb.label
-            }}</NuxtLink>
-            <span v-else>{{ crumb.label }}</span>
-            <svg
-              v-if="i < crumbs.length - 1"
-              class="w-4 h-4 shrink-0 opacity-70"
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M6 3.5 10.5 8 6 12.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </template>
-        </nav>
+        <div class="flex flex-col gap-[52px] desktop:max-w-[697px]">
+          <div class="flex flex-col gap-8">
+            <nav aria-label="breadcrumb">
+              <ol
+                class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm leading-[1.4] tracking-[0.01em] desktop:text-base"
+              >
+                <li
+                  v-for="(crumb, i) in crumbs"
+                  :key="crumb.label"
+                  class="flex items-center gap-1"
+                  :aria-current="i === crumbs.length - 1 ? 'page' : undefined"
+                >
+                  <NuxtLink v-if="crumb.to" :to="crumb.to" class="hover:underline">{{
+                    crumb.label
+                  }}</NuxtLink>
+                  <span v-else>{{ crumb.label }}</span>
+                  <svg
+                    v-if="i < crumbs.length - 1"
+                    class="w-4 h-4 shrink-0 opacity-50"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6 3.5 10.5 8 6 12.5"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </li>
+              </ol>
+            </nav>
 
-        <div class="flex flex-col gap-3 tablet:max-w-2xl">
-          <h1 class="text-3xl tablet:text-4xl font-bold">{{ post.title }}</h1>
+            <div class="flex flex-col gap-3">
+              <h1
+                class="text-xl leading-[1.1] tablet:text-[32px] desktop:text-[40px] font-bold"
+              >
+                {{ post.title }}
+              </h1>
+              <p
+                v-if="lead"
+                class="text-sm leading-[1.4] tracking-[0.01em] text-bg-main/85 tablet:text-base desktop:text-lg line-clamp-3 tablet:line-clamp-2"
+              >
+                {{ lead }}
+              </p>
+            </div>
+          </div>
+
+          <time
+            v-if="formattedDate"
+            :datetime="post.date"
+            class="text-sm font-bold leading-[1.4] uppercase tracking-[0.03em] text-bg-main/85"
+          >
+            {{ formattedDate }}
+          </time>
         </div>
-
-        <time
-          v-if="formattedDate"
-          :datetime="post.date"
-          class="text-base tablet:text-sm font-semibold uppercase tracking-wider text-white/80"
-        >
-          {{ formattedDate }}
-        </time>
       </header>
 
       <!-- Контент статьи -->
-      <div
-        class="max-w-container-blog mx-auto mt-6 tablet:mt-8 bg-surface-cream rounded-card-xl px-6 py-8 tablet:px-9 tablet:py-9 desktop:px-9"
-      >
-        <PrismicRichText :field="post.content" class="article-content" />
-      </div>
+      <section class="px-5 pt-5 pb-10 tablet:px-8 tablet:py-5 desktop:px-20 desktop:py-10">
+        <div
+          class="bg-surface-cream/50 rounded-card px-5 py-4 tablet:px-10 tablet:py-8 desktop:px-[52px] desktop:py-10"
+        >
+          <PrismicRichText :field="post.content" class="article-content" />
+        </div>
+      </section>
 
       <!-- Читайте также -->
-      <section v-if="prevPost || nextPost" class="mt-16">
-        <h2 class="text-2xl tablet:text-3xl font-bold text-content-blog mb-6">Читайте также</h2>
+      <section
+        v-if="prevPost || nextPost"
+        class="px-5 pb-10 tablet:px-0 tablet:pt-5 tablet:pb-10 desktop:pt-4 desktop:pb-14"
+      >
+        <h2
+          class="text-xl leading-[1.1] tablet:text-2xl desktop:text-[32px] font-bold text-content-blog mb-5 tablet:mb-6"
+        >
+          Читайте также
+        </h2>
         <!-- Предыдущая / следующая новость -->
         <nav
           class="grid grid-cols-1 tablet:grid-cols-2 gap-4 tablet:gap-8"
@@ -328,22 +358,28 @@ useHead(() => {
 
 <style scoped>
 .article-content {
-  @apply text-base text-content-main;
+  @apply text-sm leading-[1.4] text-content-main;
 }
 .article-content :deep(> * + *) {
   @apply mt-4;
 }
 .article-content :deep(h2) {
-  @apply text-xl font-bold text-content-main mt-8 mb-4;
+  @apply text-base tablet:text-lg desktop:text-xl font-bold leading-[1.3] tracking-[0.01em] text-content-main mt-6;
+}
+.article-content :deep(h2 + *) {
+  @apply mt-5;
 }
 .article-content :deep(h3) {
-  @apply text-lg font-bold text-content-main mt-6 mb-3;
+  @apply text-sm tablet:text-base desktop:text-lg font-bold leading-[1.3] tracking-[0.01em] text-content-main mt-5;
+}
+.article-content :deep(h3 + *) {
+  @apply mt-3;
 }
 .article-content :deep(> :first-child) {
   @apply mt-0;
 }
 .article-content :deep(p) {
-  @apply text-base leading-relaxed;
+  @apply text-sm leading-[1.4];
 }
 .article-content :deep(strong) {
   @apply font-bold;
@@ -352,13 +388,13 @@ useHead(() => {
   @apply text-accent-blue underline hover:text-accent-blue-hover;
 }
 .article-content :deep(ul) {
-  @apply list-disc pl-6 flex flex-col gap-2;
+  @apply list-disc pl-5 flex flex-col gap-2 text-sm leading-[1.4];
 }
 .article-content :deep(ol) {
-  @apply list-decimal pl-6 flex flex-col gap-2;
+  @apply list-decimal pl-5 flex flex-col gap-2 text-sm leading-[1.4];
 }
 .article-content :deep(blockquote) {
-  @apply border-l-4 border-primary pl-4 italic text-content-muted;
+  @apply border-l-4 border-primary pl-4 italic text-content-muted text-sm leading-[1.4];
 }
 .article-content :deep(img) {
   @apply w-full h-auto rounded-card my-6;
