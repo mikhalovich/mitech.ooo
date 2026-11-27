@@ -1,222 +1,182 @@
 <template>
-  <div class="max-w-container px-4 mx-auto mt-20">
+  <div class="w-full font-primary text-content-main">
     <div
-      class="flex flex-col laptop:flex-row justify-around desktop:justify-between items-center laptop:items-start mb-24 font-primary text-primary"
+      class="max-w-container w-full mx-auto px-5 py-5 tablet:px-8 tablet:py-10 desktop:px-4 mb-10 laptop:mb-24 flex flex-col gap-5 tablet:gap-8"
     >
-      <div class="max-w-medium mb-8 laptop:mb-0 mr-4">
-        <div class="mb-14">
-          <h1 class="text-4xlg font-medium mb-4">Задать вопрос</h1>
-          <p class="text-base font-light">
-            Менеджеры компании с радостью ответят на ваши вопросы, произведут
-            расчет стоимости услуг и подготовят индивидуальное коммерческое
-            предложение.
-          </p>
-        </div>
-        <div>
-          <div
-            class="text-xl tablet:text-2xl font-light [&>*]:mb-4 last:[&>p]:mb-8"
-          >
-            <div>
-              <p><b>Адрес</b>: РБ, г. Гродно,</p>
-              <p>ул. Гаспадарчая, 23/4-1, оф. 205, 230005</p>
-            </div>
-            <p><b>Телефон</b>: <a href="tel:+375297827334">+375297827334</a></p>
-            <p>
-              <b>e-mail</b>:
-              <a href="mailto:contact@mitech.ooo">contact@mitech.ooo</a>
-            </p>
-          </div>
-
-          <div>
-            <div class="relative w-full overflow-hidden">
-              <a
-                href="https://yandex.by/maps/org/mitech_/100614216891/?utm_medium=mapframe&utm_source=maps"
-                style="
-                  color: #eee;
-                  font-size: 12px;
-                  position: absolute;
-                  top: 0px;
-                "
-                >MITech, ЭмАйТех</a
-              ><a
-                href="https://yandex.by/maps/10274/grodno/category/it_company/184106174/?utm_medium=mapframe&utm_source=maps"
-                style="
-                  color: #eee;
-                  font-size: 12px;
-                  position: absolute;
-                  top: 14px;
-                "
-                >IT-компания в Гродно</a
-              ><a
-                href="https://yandex.by/maps/10274/grodno/category/logistics_company/184108185/?utm_medium=mapframe&utm_source=maps"
-                style="
-                  color: #eee;
-                  font-size: 12px;
-                  position: absolute;
-                  top: 28px;
-                "
-                >Логистическая компания в Гродно</a
-              ><iframe
-                class="relative w-full h-80"
-                src="https://yandex.by/map-widget/v1/?ll=23.825658%2C53.711301&mode=search&oid=100614216891&ol=biz&z=18"
-                frameborder="1"
-                allowfullscreen="true"
-              ></iframe>
-            </div>
-          </div>
-        </div>
+      <!-- Заголовок -->
+      <div
+        class="flex flex-col items-center text-center gap-4 tablet:gap-5 desktop:max-w-[60.125rem] desktop:mx-auto"
+      >
+        <h1
+          class="flex flex-col items-center text-xl tablet:text-[2rem] desktop:text-[2.5rem] font-bold leading-tight"
+        >
+          <span class="flex items-center justify-center gap-1 tablet:gap-2">
+            <span>MiTech –</span>
+            <span
+              class="inline-flex items-center gap-1 tablet:gap-2 rounded-full bg-[#E1F7E3] text-accent-green font-semibold py-1 pl-2 pr-3 tablet:py-2 tablet:px-4"
+            >
+              <img
+                src="../assets/svg/contacts-page/phone-highlight.svg"
+                alt=""
+                class="h-7 w-7 tablet:h-10 tablet:w-10 desktop:h-[52px] desktop:w-[52px]"
+              />
+              всегда
+            </span>
+          </span>
+          <span class="-mt-1">на связи</span>
+        </h1>
+        <p class="text-base tablet:text-xl desktop:text-2xl font-normal">
+          Менеджеры компании с радостью ответят на ваши вопросы, произведут
+          расчет стоимости услуг и подготовят индивидуальное коммерческое
+          предложение.
+        </p>
       </div>
 
-      <form
-        class="w-full max-w-medium tablet:max-w-none tablet:w-auto"
-        action="submit"
+      <div
+        class="flex flex-col desktop:flex-row desktop:items-start gap-5 tablet:gap-8"
       >
-        <div class="w-full [&>*]:mb-8 last:[&>*]:mb-0">
-          <div class="flex flex-col desktop:flex-row text-base font-light">
-            <div
-              class="w-full desktop:w-80 [&>label]:flex [&>label]:flex-col desktop:mr-4 [&>label]:mb-4 last:desktop:[&>label]:mb-0"
-            >
-              <label>
-                <span>
-                  Ваше имя:
-                  <mark class="text-base pl-0.5 bg-[white] text-warning"
-                    >*</mark
-                  >
-                </span>
-                <input
-                  type="text"
-                  v-model="formData.name"
-                  class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
-                  :class="{
-                    'border-warning focus:border-warning outline-warning':
-                      v$.name.$error,
-                  }"
-                  @change="v$.name.$touch"
-                />
-                <span v-if="v$.name.$error" class="text-sm text-warning">
-                  {{ v$.name.$errors[0]?.$message }}
-                </span>
-              </label>
+        <!-- Карта и контакты -->
+        <div class="flex flex-col gap-5 desktop:w-1/2 desktop:order-2">
+          <a
+            href="https://yandex.by/maps/org/mitech_/100614216891/?utm_medium=mapframe&utm_source=maps"
+            target="_blank"
+            rel="noopener"
+            class="block w-full overflow-hidden rounded-card h-[13.8rem] tablet:h-[25.25rem]"
+          >
+            <img
+              src="../assets/images/contacts-page/map.jpg"
+              alt="Карта: MITech, г. Гродно, ул. Гаспадарчая, 23/4-1"
+              class="h-full w-full object-cover"
+            />
+          </a>
 
-              <label>
-                <span>
-                  e-mail:
-                  <mark class="text-base pl-0.5 bg-[white] text-warning"
-                    >*</mark
-                  >
-                </span>
-                <input
-                  type="text"
-                  v-model="formData.email"
-                  class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
-                  :class="{
-                    'border-warning focus:border-warning outline-warning':
-                      v$.email.$error,
-                    'border-[#42d392] outline-[#42d392] ': !v$.email.$invalid,
-                  }"
-                  @change="v$.email.$touch"
-                />
-                <span v-if="v$.email.$error" class="text-sm text-warning">
-                  {{ v$.email.$errors[0]?.$message }}
-                </span>
-              </label>
-
-              <label>
-                <span> Телефон:</span>
-                <input
-                  v-model="phone"
-                  class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
-                  type="text"
-                />
-              </label>
-
-              <label>
-                <span> Город:</span>
-                <input
-                  v-model="city"
-                  class="font-normal border border-[#D8D8D8] py-3 px-1 bg-cultured"
-                  type="text"
-                />
-              </label>
-            </div>
-            <div class="desktop:w-[27rem]">
-              <label class="flex flex-col">
-                <span>
-                  Сообщение:
-                  <mark class="text-base pl-0.5 bg-[white] text-warning"
-                    >*</mark
-                  >
-                </span>
-                <textarea
-                  v-model="formData.message"
-                  class="font-normal border border-[#D8D8D8] h-56 desktop:h-[18.75rem] bg-cultured py-1 px-1"
-                  :class="{
-                    'border-warning focus:border-warning outline-warning':
-                      v$.message.$error,
-                    'border-[#42d392] outline-[#42d392] ': !v$.message.$invalid,
-                  }"
-                  @change="v$.message.$touch"
-                ></textarea>
-                <span v-if="v$.message.$error" class="text-sm text-warning">
-                  {{ v$.message.$errors[0]?.$message }}
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div>
-            <p class="text-sm font-normal text-[#7a7a7a]">
-              Подтвердите, что вы не робот:
-              <mark class="text-xl bg-[white] text-warning">*</mark>
+          <address
+            class="not-italic flex flex-col gap-2 text-sm tablet:text-base desktop:text-lg"
+          >
+            <p>
+              <b>Адрес:</b> РБ, г. Гродно, ул. Гаспадарчая, 23/4-1, оф. 205,
+              230005
             </p>
-            <Checkbox v-model="formData.captcha" />
-            <span v-if="v$.captcha.$error" class="text-sm text-warning">
-              {{ v$.captcha.$errors[0]?.$message }}
-            </span>
-          </div>
+            <p>
+              <b>Телефон:</b>
+              <a href="tel:+375297827334">+375297827334</a>
+            </p>
+            <p>
+              <b>Email:</b>
+              <a href="mailto:contact@mitech.ooo">contact@mitech.ooo</a>
+            </p>
+          </address>
+        </div>
 
-          <div>
-            <div class="flex">
+        <!-- Форма -->
+        <form
+          class="w-full desktop:w-1/2 desktop:order-1 flex flex-col gap-3"
+          novalidate
+          @submit.prevent="submitForm"
+        >
+          <section :class="cardClass">
+            <div :class="cardHeadClass">
+              <span :class="iconBoxClass">
+                <img
+                  src="../assets/svg/contacts-page/feedback.svg"
+                  alt=""
+                  class="h-5 w-5"
+                />
+              </span>
+              <h2 :class="cardTitleClass">Обратная связь</h2>
+            </div>
+
+            <div :class="cardBodyClass">
+              <div class="grid grid-cols-1 tablet:grid-cols-2 gap-x-6 gap-y-2">
+                <label
+                  v-for="f in fields"
+                  :key="f.key"
+                  class="flex flex-col gap-1"
+                >
+                  <span :class="labelClass">{{ f.label }}</span>
+                  <span :class="[inputWrapClass, errorBorder(f.key)]">
+                    <input
+                      v-model="formData[f.key]"
+                      :type="f.type"
+                      :name="f.key"
+                      :placeholder="f.placeholder"
+                      :class="inputClass"
+                      @change="v$[f.key].$touch"
+                    />
+                  </span>
+                  <span v-if="v$[f.key].$error" :class="errorClass">
+                    {{ v$[f.key].$errors[0]?.$message }}
+                  </span>
+                </label>
+
+                <label class="flex flex-col gap-1 tablet:col-span-2">
+                  <span :class="labelClass">Комментарии</span>
+                  <textarea
+                    v-model="formData.message"
+                    name="message"
+                    placeholder="Любые замечания/пожелания"
+                    class="w-full h-[8.5rem] tablet:h-40 resize-none p-4 rounded-input border bg-bg-subtle text-sm font-medium text-content-main outline-none transition-colors placeholder:text-content-light focus:border-primary"
+                    :class="errorBorder('message')"
+                    @change="v$.message.$touch"
+                  ></textarea>
+                  <span v-if="v$.message.$error" :class="errorClass">
+                    {{ v$.message.$errors[0]?.$message }}
+                  </span>
+                </label>
+              </div>
+            </div>
+          </section>
+
+          <div class="flex flex-col gap-5 tablet:gap-3">
+            <div>
               <input
-                v-model="checkbox"
+                id="contacts-consent"
+                v-model="formData.checkbox"
                 type="checkbox"
                 class="custom-checkbox"
-                id="checkbox"
-                name="checkbox"
+                :class="{ 'is-error': v$.checkbox.$error }"
+                name="consent"
               />
-              <label class="text-sm tablet:text-base font-light" for="checkbox">
-                <p class="flex flex-col tablet:flex-row">
+              <label
+                for="contacts-consent"
+                class="text-sm tablet:text-base font-medium"
+              >
+                <span>
                   Я согласен на
                   <a
                     href="./lorem.pdf"
                     target="_blank"
-                    class="tablet:pl-1 font-normal underline"
+                    class="underline"
+                    @click.stop
                   >
                     обработку персональных данных
                   </a>
-                </p>
+                </span>
               </label>
-            </div>
-            <div v-if="!checkbox">
-              <p class="text-sm text-warning">
+              <p v-if="v$.checkbox.$error" :class="errorClass" class="mt-1">
                 {{ v$.checkbox.$errors[0]?.$message }}
               </p>
             </div>
+
+            <button
+              type="submit"
+              :disabled="isLoading"
+              class="w-full rounded-input px-6 py-4 text-sm tablet:text-lg font-bold text-content-main transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-content-main"
+              :class="
+                isLoading
+                  ? 'cursor-not-allowed bg-primary opacity-70'
+                  : isButtonDisabled
+                    ? 'bg-primary/60 hover:bg-primary-hover'
+                    : 'bg-primary hover:bg-primary-hover active:bg-primary-hover'
+              "
+            >
+              {{ isLoading ? 'Отправка...' : 'Отправить' }}
+            </button>
           </div>
-          <button
-            @click.prevent="submitForm"
-            type="submit"
-            class="text-base font-normal border-0 rounded-lg px-14 py-[1.125rem] hover:shadow-xl active:translate-y-[3px] active:shadow-buttonActive"
-            :class="{
-              'cursor-not-allowed bg-[#ebebe4]': isButtonDisabled,
-              'bg-secondary': !isButtonDisabled,
-            }"
-          >
-            Отправить
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
+
     <Transition name="fade">
       <Alert v-if="isAlertShowed" />
     </Transition>
@@ -224,127 +184,158 @@
 </template>
 
 <script setup>
-import { useVuelidate } from "@vuelidate/core";
+import { useVuelidate } from '@vuelidate/core';
 import {
   required,
   email,
-  minLength,
   maxLength,
-  helpers,
-} from "@vuelidate/validators";
-import { Checkbox } from "vue-recaptcha";
+  helpers
+} from '@vuelidate/validators';
+import { useChallengeV3 } from 'vue-recaptcha';
 
 useHead({
-  title: "Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость",
+  title: 'Грузоперевозки по РФ, РБ и странам СНГ: рассчитать стоимость',
   meta: [
     {
-      name: "description",
+      name: 'description',
       content:
-        "Контакты MiTech /Адрес: РБ, г. Гродно, ул. Гаспадарчая, 23/4-1, оф. 205, 230005. Тел.: +375297827334, contact@mitech.ooo. Схема проезда",
+        'Контакты MiTech /Адрес: РБ, г. Гродно, ул. Гаспадарчая, 23/4-1, оф. 205, 230005. Тел.: +375297827334, contact@mitech.ooo. Схема проезда'
     },
     {
-      name: "keywords",
-      content: "контакты транспортной компании, адрес транспортной компании",
-    },
-  ],
+      name: 'keywords',
+      content: 'контакты транспортной компании, адрес транспортной компании'
+    }
+  ]
 });
 
-const phone = ref("");
-const city = ref("");
+// Классы на токенах tailwind.config.js (макет design.fig: «Контакты»)
+const cardClass =
+  'rounded-card border border-border-light bg-bg-main shadow-sm overflow-hidden';
+const cardHeadClass =
+  'flex items-center gap-4 p-4 desktop:p-6 border-b border-border-light';
+const cardBodyClass = 'flex flex-col gap-2 p-4 desktop:p-6';
+const iconBoxClass =
+  'flex h-9 w-9 shrink-0 items-center justify-center rounded-input bg-bg-main shadow-md';
+const cardTitleClass = 'text-base tablet:text-xl desktop:text-2xl font-bold';
+const labelClass = 'text-base font-bold';
+const inputWrapClass =
+  'flex items-center gap-2 h-11 px-4 rounded-input border bg-bg-subtle transition-colors focus-within:border-primary';
+const inputClass =
+  'w-full min-w-0 bg-transparent text-sm font-medium text-content-main outline-none placeholder:text-content-light';
+const errorClass = 'text-sm text-error';
+
+const fields = [
+  { key: 'name', label: 'ФИО', placeholder: 'Введите ФИО', type: 'text' },
+  {
+    key: 'phone',
+    label: 'Телефон',
+    placeholder: 'Введите телефон',
+    type: 'tel'
+  },
+  { key: 'email', label: 'Email', placeholder: 'Введите почту', type: 'text' },
+  {
+    key: 'city',
+    label: 'Город',
+    placeholder: 'Введите ваш город',
+    type: 'text'
+  }
+];
+
 const isAlertShowed = ref(false);
-const checkbox = ref(false);
-const formData = reactive({
-  name: "",
-  email: "",
-  message: "",
-  checkbox: checkbox.value,
-  captcha: "",
+const isLoading = ref(false);
+
+const initialData = () => ({
+  name: '',
+  phone: '',
+  email: '',
+  city: '',
+  message: '',
+  checkbox: false
 });
 
-const rules = computed(() => {
-  return {
-    name: {
-      required: helpers.withMessage("Это поле обязательное", required),
-    },
-    email: {
-      required: helpers.withMessage("Это поле обязательное", required),
-      email: helpers.withMessage("e-mail введён некорректно", email),
-    },
-    message: {
-      required: helpers.withMessage("Это поле обязательное", required),
-      minLength: helpers.withMessage(
-        "Сообщение должно быть длиннее тридцати символов",
-        minLength(30),
-      ),
-      maxLength: helpers.withMessage(
-        "Сообщение не должно быть длиннее пятисот символов",
-        maxLength(500),
-      ),
-    },
-    checkbox: {
-      required: helpers.withMessage(
-        "Для отправки разрешите обработку персональных данных",
-        required,
-      ),
-    },
-    captcha: {
-      required: helpers.withMessage("Это поле обязательное", required),
-    },
-  };
-});
+const formData = reactive(initialData());
+
+// Невидимая reCAPTCHA v3, токен получаем перед отправкой (как в ContactForm.vue)
+const { execute: executeRecaptcha } = useChallengeV3('contacts_form_submit');
+
+const phoneFormat = (value) =>
+  !value || (/^[\d\s()+-]+$/.test(value) && value.replace(/\D/g, '').length >= 7);
+
+const rules = computed(() => ({
+  name: {
+    required: helpers.withMessage('Это поле обязательное', required)
+  },
+  phone: {
+    format: helpers.withMessage('Неверный формат', phoneFormat)
+  },
+  email: {
+    required: helpers.withMessage('Это поле обязательное', required),
+    email: helpers.withMessage('e-mail введён некорректно', email)
+  },
+  city: {},
+  message: {
+    maxLength: helpers.withMessage(
+      'Сообщение не должно быть длиннее пятисот символов',
+      maxLength(500)
+    )
+  },
+  checkbox: {
+    required: helpers.withMessage(
+      'Для отправки разрешите обработку персональных данных',
+      required
+    )
+  }
+}));
 
 const isButtonDisabled = computed(() => {
-  const emailPattern = new RegExp("^.+@.+\\..+$");
+  const emailPattern = new RegExp('^.+@.+\\..+$');
   return !(
     formData.name &&
     emailPattern.test(formData.email) &&
-    formData.message.length >= 30 &&
-    formData.message.length <= 500 &&
-    checkbox.value &&
-    formData.captcha
+    formData.checkbox
   );
 });
 
 const v$ = useVuelidate(rules, formData);
 
+const errorBorder = (key) =>
+  v$.value[key]?.$error
+    ? 'border-error'
+    : 'border-border-light hover:border-primary/60';
+
 async function submitForm() {
+  if (isLoading.value) return;
   if (await v$.value.$validate()) {
     const body = {
       name: formData.name,
       email: formData.email,
       message: formData.message,
-      isContact: true,
+      isContact: true
     };
 
-    if (city.value) {
-      body.city = city.value;
+    if (formData.city) {
+      body.city = formData.city;
     }
-    if (phone.value) {
-      body.phone = phone.value;
+    if (formData.phone) {
+      body.phone = formData.phone;
     }
 
+    isLoading.value = true;
     try {
+      body.recaptchaToken = await executeRecaptcha();
       await $fetch(
-        "https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender",
+        'https://hgu39dkq4d.execute-api.eu-north-1.amazonaws.com/default/emailSender',
         {
-          method: "POST",
-          body: JSON.stringify(body),
-        },
+          method: 'POST',
+          body: JSON.stringify(body)
+        }
       );
       isAlertShowed.value = true;
-      Object.assign(formData, {
-        name: "",
-        email: "",
-        message: "",
-        checkbox: null,
-        captcha: "",
-      });
-      city.value = "";
-      phone.value = "";
-      checkbox.value = false;
+      Object.assign(formData, initialData());
       v$.value.$reset();
     } catch (error) {
     } finally {
+      isLoading.value = false;
       setTimeout(() => (isAlertShowed.value = false), 2000);
     }
   }
