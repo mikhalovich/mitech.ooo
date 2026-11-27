@@ -1,21 +1,27 @@
 <template>
   <section
-    class="relative overflow-hidden bg-surface-cream laptop:rounded-card font-primary text-content-main px-4 py-6 laptop:px-14 laptop:py-14"
+    class="relative overflow-hidden rounded-card bg-surface-cream font-primary text-content-main px-6 py-4 tablet:px-8 desktop:px-20 desktop:py-[54px]"
   >
+    <img
+      src="../assets/svg/contact-form/stripes.svg"
+      alt=""
+      aria-hidden="true"
+      class="pointer-events-none absolute -bottom-[129px] -left-[69px] hidden h-[212px] w-[299px] max-w-none desktop:block"
+    />
     <div
-      class="relative flex flex-col laptop:flex-row laptop:items-center laptop:justify-between gap-6 laptop:gap-12"
+      class="relative flex flex-col gap-3 desktop:flex-row desktop:items-start desktop:gap-16"
     >
-      <div class="text-center laptop:text-left laptop:max-w-[28rem]">
-        <h2 class="text-primary font-bold text-3xl laptop:text-5xl mb-2 laptop:mb-6">
+      <div class="text-center desktop:min-w-0 desktop:flex-1 desktop:text-left">
+        <h2 class="text-primary font-bold text-[20px] leading-[normal] tablet:text-[32px] desktop:text-[52px] mb-1 desktop:mb-5">
           Остались вопросы?
         </h2>
-        <p class="text-lg laptop:text-base font-normal">
+        <p class="text-sm leading-[normal] tablet:text-base desktop:max-w-[454px] desktop:text-xl font-normal">
           Опишите что вас интересует и мы обязательно ответим вам в течение 10
           минут
         </p>
       </div>
 
-      <form class="w-full laptop:max-w-[27rem] flex flex-col gap-4" novalidate @submit.prevent="handleSubmit">
+      <form class="w-full desktop:w-[556px] desktop:shrink-0 flex flex-col gap-3 desktop:gap-4" novalidate @submit.prevent="handleSubmit">
         <div>
           <input
             v-model="formData.name"
@@ -27,7 +33,7 @@
             @blur="v$.name.$touch"
             @change="v$.name.$touch"
           />
-          <p v-if="v$.name.$error" class="mt-1 text-sm text-error">
+          <p v-if="v$.name.$error" class="mt-0.5 text-xs desktop:text-sm text-error">
             {{ v$.name.$errors[0]?.$message }}
           </p>
         </div>
@@ -43,7 +49,7 @@
             @blur="v$.phone.$touch"
             @change="v$.phone.$touch"
           />
-          <p v-if="v$.phone.$error" class="mt-1 text-sm text-error">
+          <p v-if="v$.phone.$error" class="mt-0.5 text-xs desktop:text-sm text-error">
             {{ v$.phone.$errors[0]?.$message }}
           </p>
         </div>
@@ -59,7 +65,7 @@
             @blur="v$.email.$touch"
             @change="v$.email.$touch"
           />
-          <p v-if="v$.email.$error" class="mt-1 text-sm text-error">
+          <p v-if="v$.email.$error" class="mt-0.5 text-xs desktop:text-sm text-error">
             {{ v$.email.$errors[0]?.$message }}
           </p>
         </div>
@@ -69,13 +75,13 @@
             :id="`${idPrefix}-consent`"
             v-model="formData.checkbox"
             type="checkbox"
-            class="custom-checkbox"
+            class="custom-checkbox contact-checkbox"
             :class="{ 'is-error': v$.checkbox.$error }"
             name="consent"
           />
           <label
             :for="`${idPrefix}-consent`"
-            class="text-sm laptop:text-base font-normal"
+            class="text-xs tablet:text-sm desktop:text-base font-normal"
           >
             <span>
               Даю согласие на
@@ -89,7 +95,7 @@
               </a>
             </span>
           </label>
-          <p v-if="v$.checkbox.$error" class="mt-1 text-sm text-error">
+          <p v-if="v$.checkbox.$error" class="mt-0.5 text-xs desktop:text-sm text-error">
             {{ v$.checkbox.$errors[0]?.$message }}
           </p>
         </div>
@@ -97,7 +103,7 @@
         <button
           type="submit"
           :disabled="isLoading"
-          class="h-11 w-full rounded-[4px] laptop:rounded-input text-base font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-content-main"
+          class="h-11 w-full rounded desktop:mt-1 desktop:h-[59px] desktop:rounded-input text-sm desktop:text-xl font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-content-main"
           :class="
             isLoading
               ? 'cursor-not-allowed bg-primary text-content-main opacity-70'
@@ -130,9 +136,9 @@ defineProps({
 });
 
 const inputClass =
-  'w-full h-11 px-4 border bg-bg-subtle font-normal text-base outline-none transition-colors rounded-[4px] laptop:rounded-input placeholder:text-content-light';
+  'w-full h-11 px-4 border bg-transparent font-normal text-sm outline-none transition-colors rounded placeholder:text-content-light desktop:h-[57px] desktop:px-6 desktop:text-lg desktop:rounded-input desktop:placeholder:text-black';
 const inputNormalClass =
-  'border-content-main hover:border-primary/60 focus:border-primary text-content-main';
+  'border-black hover:border-primary/60 focus:border-primary text-black';
 const inputErrorClass = 'border-error text-error-dark';
 
 const isAlertShowed = ref(false);
@@ -217,6 +223,15 @@ async function handleSubmit() {
 </script>
 
 <style>
+/* Чекбокс по макету: 20x20, рамка 1px, отступ до текста 8px */
+.custom-checkbox.contact-checkbox + label::before {
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  margin-right: 8px;
+  background-size: 14px 14px;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
